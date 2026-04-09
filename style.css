@@ -162,20 +162,40 @@ a {
     border-bottom: none;
 }
 
-.app-screenshot {
-    width: 140px;
-    height: 240px;
-    border-radius: 20px;
-    border: 1px solid var(--border);
+.app-icon-wrap {
+    width: 120px;
+    height: 120px;
+    border-radius: 24px;
     flex-shrink: 0;
+    overflow: hidden;
+}
+
+.app-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.app-icon-placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid var(--border);
 }
 
-.screenshot-label {
-    font-size: 12px;
-    color: var(--text-tertiary);
+.app-icon-letter {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.coming-soon {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.coming-soon:hover {
+    opacity: 0.6;
 }
 
 .app-info {
@@ -240,9 +260,9 @@ a {
         gap: 20px;
     }
 
-    .app-screenshot {
-        width: 120px;
-        height: 200px;
+    .app-icon-wrap {
+        width: 100px;
+        height: 100px;
     }
 
     .app-name { font-size: 24px; }
