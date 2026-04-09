@@ -13,4 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     fadeEls.forEach(el => observer.observe(el));
+
+    const contactLink = document.getElementById('contact-link');
+    if (contactLink) {
+        const user = 'contact';
+        const domain = 'finndigital.com';
+        contactLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'mailto:' + user + '@' + domain;
+        });
+    }
 });

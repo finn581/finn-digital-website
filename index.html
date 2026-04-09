@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; script-src 'self'; img-src 'self'; connect-src 'self'; frame-ancestors 'none';">
+    <meta name="referrer" content="strict-origin-when-downgrade">
 </head>
 <body>
 
@@ -128,9 +130,9 @@
 
     <footer id="footer" class="footer">
         <div class="footer-links">
-            <a href="mailto:contact@finndigital.com">Contact</a>
-            <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="#" id="contact-link">Contact</a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
         <p class="footer-copy">&copy; 2026 Finn Digital LLC</p>
     </footer>
