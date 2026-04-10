@@ -57,4 +57,84 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 600);
         });
     }
+
+    /* ---- Promo Modal ---- */
+    const promoModal = document.getElementById('promo-modal');
+    const promoOpen = document.getElementById('promo-open');
+    const promoClose = document.getElementById('promo-close');
+    const promoMusic = document.getElementById('promo-music');
+    const promoProgress = document.getElementById('promo-progress');
+
+    if (promoModal && promoOpen) {
+        const promoSlides = promoModal.querySelectorAll('.promo-slide');
+        const promoTimings = [3500, 3500, 4000, 3500, 5000];
+        let promoIdx = 0;
+        let promoTimer = null;
+
+        function resetPromoAnimations(slide) {
+            slide.querySelectorAll('*').forEach(el => {
+                const s = getComputedStyle(el);
+                if (s.animationName && s.animationName !== 'none') {
+                    el.style.animation = 'none';
+                    el.offsetHeight;
+                    el.style.animation = '';
+                }
+            });
+        }
+
+        function showPromoSlide(idx) {
+            promoSlides.forEach(s => s.classList.remove('promo-active'));
+            resetPromoAnimations(promoSlides[idx]);
+            promoSlides[idx].classList.add('promo-active');
+            promoProgress.style.width = ((idx + 1) / promoSlides.length * 100) + '%';
+        }
+
+        function nextPromoSlide() {
+            promoIdx++;
+            if (promoIdx < promoSlides.length) {
+                showPromoSlide(promoIdx);
+                promoTimer = setTimeout(nextPromoSlide, promoTimings[promoIdx]);
+            } else {
+                let vol = promoMusic.volume;
+                const fade = setInterval(() => {
+                    vol -= 0.05;
+                    if (vol <= 0) {
+                        promoMusic.volume = 0;
+                        promoMusic.pause();
+                        clearInterval(fade);
+                    } else {
+                        promoMusic.volume = vol;
+                    }
+                }, 100);
+            }
+        }
+
+        function startPromo() {
+            promoIdx = 0;
+            promoModal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            showPromoSlide(0);
+            promoMusic.volume = 0.6;
+            promoMusic.currentTime = 0;
+            promoMusic.play();
+            promoTimer = setTimeout(nextPromoSlide, promoTimings[0]);
+        }
+
+        function stopPromo() {
+            promoModal.classList.remove('open');
+            document.body.style.overflow = '';
+            promoMusic.pause();
+            promoMusic.currentTime = 0;
+            clearTimeout(promoTimer);
+            promoProgress.style.width = '0';
+        }
+
+        promoOpen.addEventListener('click', startPromo);
+        promoClose.addEventListener('click', stopPromo);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && promoModal.classList.contains('open')) {
+                stopPromo();
+            }
+        });
+    }
 });
