@@ -802,25 +802,34 @@ a {
    PROMO MODAL — RESPONSIVE
    ============================================ */
 @media (max-width: 768px) {
+    .promo-container {
+        overflow: hidden;
+    }
+
+    .promo-center {
+        padding: 0 24px;
+    }
+
     .promo-icon {
-        width: 80px;
-        height: 80px;
-        border-radius: 20px;
+        width: 72px;
+        height: 72px;
+        border-radius: 18px;
     }
 
     .promo-title {
-        font-size: 36px;
+        font-size: 28px;
         letter-spacing: -1px;
+        margin-top: 20px;
     }
 
     .promo-sub {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .promo-split {
         flex-direction: column;
-        gap: 32px;
-        padding: 0 32px;
+        gap: 24px;
+        padding: 0 28px;
         text-align: center;
     }
 
@@ -837,17 +846,17 @@ a {
     }
 
     .promo-heading {
-        font-size: 32px;
+        font-size: 26px;
         letter-spacing: -1px;
     }
 
     .promo-desc {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .promo-phone {
-        width: 160px;
-        height: 346px;
+        width: 150px;
+        height: 325px;
         border-radius: 20px;
     }
 
@@ -857,23 +866,23 @@ a {
     }
 
     .promo-features {
-        flex-wrap: wrap;
-        gap: 12px;
-        justify-content: center;
-        padding: 0 16px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 0 20px;
     }
 
     .promo-feat {
-        width: 140px;
-        padding: 16px 12px;
+        width: auto;
+        padding: 16px 10px;
     }
 
-    .promo-feat-emoji { font-size: 28px; }
-    .promo-feat strong { font-size: 14px; }
-    .promo-feat span:last-child { font-size: 11px; }
+    .promo-feat-emoji { font-size: 24px; }
+    .promo-feat strong { font-size: 13px; }
+    .promo-feat span:last-child { font-size: 10px; }
 
     .promo-triple {
-        gap: 12px;
+        gap: 10px;
     }
 
     .promo-triple .promo-phone {
@@ -883,15 +892,19 @@ a {
     }
 
     .promo-slide-label {
-        font-size: 14px;
+        font-size: 12px;
         letter-spacing: 2px;
-        bottom: 60px;
+        bottom: 50px;
     }
 
     .promo-icon-sm {
-        width: 60px;
-        height: 60px;
-        border-radius: 16px;
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+    }
+
+    .promo-heading + .promo-desc {
+        font-size: 14px;
     }
 
     .promo-appstore {
@@ -901,80 +914,57 @@ a {
     }
 
     .promo-credit {
-        font-size: 12px;
-        margin-top: 32px;
+        font-size: 11px;
+        margin-top: 24px;
     }
 
     .promo-music-credit {
-        font-size: 9px;
-        right: 12px;
-        bottom: 8px;
+        font-size: 8px;
+        right: 10px;
+        bottom: 6px;
+    }
+
+    .promo-close {
+        top: 16px;
+        right: 20px;
+        font-size: 28px;
     }
 }
 
-@media (max-width: 480px) {
-    .promo-icon {
-        width: 64px;
-        height: 64px;
-        border-radius: 16px;
-    }
-
+@media (max-width: 400px) {
     .promo-title {
-        font-size: 28px;
-        margin-top: 20px;
+        font-size: 24px;
     }
 
-    .promo-sub {
-        font-size: 14px;
+    .promo-heading {
+        font-size: 22px;
     }
 
     .promo-split {
         padding: 0 20px;
-    }
-
-    .promo-heading {
-        font-size: 26px;
-    }
-
-    .promo-desc {
-        font-size: 14px;
+        gap: 20px;
     }
 
     .promo-phone {
-        width: 140px;
-        height: 303px;
-        border-radius: 18px;
+        width: 130px;
+        height: 281px;
+        border-radius: 16px;
     }
 
     .promo-features {
+        padding: 0 12px;
         gap: 8px;
-        padding: 0 8px;
     }
 
     .promo-feat {
-        width: 44%;
-        padding: 14px 8px;
-        border-radius: 12px;
+        padding: 12px 8px;
+        border-radius: 10px;
     }
 
     .promo-triple .promo-phone {
-        width: 85px;
-        height: 184px;
+        width: 90px;
+        height: 195px;
         border-radius: 12px;
-    }
-
-    .promo-triple {
-        gap: 8px;
-    }
-
-    .promo-slide-label {
-        font-size: 12px;
-        bottom: 50px;
-    }
-
-    .promo-icon-sm {
-        width: 48px;
-        height: 48px;
     }
 
     .promo-appstore {
