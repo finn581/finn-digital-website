@@ -977,6 +977,7 @@ a {
     }
 
     .hero-tag { font-size: 11px; }
+    .subtitle { font-size: 15px; }
 
     .circle-1 { width: 380px; height: 380px; }
     .circle-2 { width: 260px; height: 260px; }
@@ -985,27 +986,84 @@ a {
 
     .section-title { font-size: 32px; }
 
-    .apps { padding: 80px 16px; }
+    .apps { padding: 80px 20px; }
 
     .app-grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
 
-    .about-text { font-size: 18px; }
+    .app-card-inner {
+        padding: 28px 24px;
+    }
+
+    .app-name {
+        font-size: 20px;
+    }
+
+    .app-desc {
+        font-size: 14px;
+    }
+
+    .app-link-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .app-link-row .app-link {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .about {
+        padding: 60px 24px 80px;
+    }
+
+    .about-text {
+        font-size: 17px;
+        line-height: 1.7;
+    }
 
     .about-stats {
-        gap: 24px;
-        padding: 24px;
+        gap: 20px;
+        padding: 24px 16px;
     }
 
     .stat-number { font-size: 24px; }
 
+    .stat-divider {
+        height: 32px;
+    }
+
     .footer-gradient { width: 60%; }
+
+    .footer-links {
+        gap: 24px;
+    }
 }
 
 @media (max-width: 480px) {
-    .wordmark { font-size: 36px; }
+    .wordmark { font-size: 36px; letter-spacing: -1px; }
     .subtitle { font-size: 14px; }
+
+    .apps { padding: 60px 16px; }
+
     .app-card-inner { padding: 24px 20px; }
+
+    .app-icon-wrap {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+    }
+
+    .section-title { font-size: 28px; }
+    .section-header { margin-bottom: 40px; }
+
+    .about-stats {
+        gap: 16px;
+        padding: 20px 12px;
+    }
+
+    .stat-number { font-size: 20px; }
+    .stat-label { font-size: 10px; letter-spacing: 1.5px; }
 }
