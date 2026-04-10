@@ -799,6 +799,191 @@ a {
 }
 
 /* ============================================
+   PROMO MODAL — RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .promo-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+    }
+
+    .promo-title {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .promo-sub {
+        font-size: 16px;
+    }
+
+    .promo-split {
+        flex-direction: column;
+        gap: 32px;
+        padding: 0 32px;
+        text-align: center;
+    }
+
+    .promo-text-side {
+        max-width: 100%;
+    }
+
+    .promo-label {
+        transform: translateY(-10px);
+    }
+
+    .promo-active .promo-label {
+        animation: promo-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+    }
+
+    .promo-heading {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    .promo-desc {
+        font-size: 15px;
+    }
+
+    .promo-phone {
+        width: 160px;
+        height: 346px;
+        border-radius: 20px;
+    }
+
+    .promo-phone-glow {
+        width: 200px;
+        height: 200px;
+    }
+
+    .promo-features {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        padding: 0 16px;
+    }
+
+    .promo-feat {
+        width: 140px;
+        padding: 16px 12px;
+    }
+
+    .promo-feat-emoji { font-size: 28px; }
+    .promo-feat strong { font-size: 14px; }
+    .promo-feat span:last-child { font-size: 11px; }
+
+    .promo-triple {
+        gap: 12px;
+    }
+
+    .promo-triple .promo-phone {
+        width: 100px;
+        height: 216px;
+        border-radius: 14px;
+    }
+
+    .promo-slide-label {
+        font-size: 14px;
+        letter-spacing: 2px;
+        bottom: 60px;
+    }
+
+    .promo-icon-sm {
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+    }
+
+    .promo-appstore {
+        font-size: 14px;
+        padding: 12px 24px;
+        border-radius: 12px;
+    }
+
+    .promo-credit {
+        font-size: 12px;
+        margin-top: 32px;
+    }
+
+    .promo-music-credit {
+        font-size: 9px;
+        right: 12px;
+        bottom: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+    }
+
+    .promo-title {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    .promo-sub {
+        font-size: 14px;
+    }
+
+    .promo-split {
+        padding: 0 20px;
+    }
+
+    .promo-heading {
+        font-size: 26px;
+    }
+
+    .promo-desc {
+        font-size: 14px;
+    }
+
+    .promo-phone {
+        width: 140px;
+        height: 303px;
+        border-radius: 18px;
+    }
+
+    .promo-features {
+        gap: 8px;
+        padding: 0 8px;
+    }
+
+    .promo-feat {
+        width: 44%;
+        padding: 14px 8px;
+        border-radius: 12px;
+    }
+
+    .promo-triple .promo-phone {
+        width: 85px;
+        height: 184px;
+        border-radius: 12px;
+    }
+
+    .promo-triple {
+        gap: 8px;
+    }
+
+    .promo-slide-label {
+        font-size: 12px;
+        bottom: 50px;
+    }
+
+    .promo-icon-sm {
+        width: 48px;
+        height: 48px;
+    }
+
+    .promo-appstore {
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+}
+
+/* ============================================
    FADE-IN ANIMATION
    ============================================ */
 .fade-in {
