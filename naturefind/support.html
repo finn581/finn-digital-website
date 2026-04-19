@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureFind Support</title>
+    <meta name="description" content="Get help with NatureFind — FAQs, known issues, and how to contact support.">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <style>
+        :root { --bg:#0a0f0a; --surface:#141a14; --text:#e8f0e8; --muted:#9aa89a; --accent:#4ade80; --border:rgba(255,255,255,0.08); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .nav a:hover { color: var(--text); }
+        .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .container { max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
+        h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .sub { color: var(--muted); margin-bottom: 32px; }
+        h2 { font-size: 18px; font-weight: 700; margin: 32px 0 8px; }
+        h3 { font-size: 15px; font-weight: 600; margin: 20px 0 6px; color: var(--text); }
+        p, li { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+        ul { padding-left: 24px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .contact {
+            background: var(--surface); padding: 24px; border-radius: 14px;
+            border: 1px solid var(--border); margin-top: 32px;
+        }
+        .contact h2 { margin-top: 0; }
+        .email { font-family: ui-monospace, Menlo, monospace; font-size: 15px; color: var(--accent); font-weight: 600; }
+        .faq details { margin-bottom: 10px; background: var(--surface); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border); }
+        .faq summary { cursor: pointer; font-weight: 600; color: var(--text); font-size: 15px; }
+        .faq details[open] summary { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="/" class="brand">Finn Digital</a>
+        <div>
+            <a href="index.html">About</a> &nbsp;
+            <a href="privacy.html">Privacy</a> &nbsp;
+            <a href="terms.html">Terms</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>NatureFind Support</h1>
+        <p class="sub">Questions, issues, and how to reach us.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+            <details>
+                <summary>How do I unlock NatureFind Pro?</summary>
+                <p>Open Profile → Upgrade to Pro. Pro is a one-time purchase that unlocks trail polylines, satellite map style, offline map regions, park alerts, AQI, and more. Purchases restore on all your iCloud-linked devices — in Profile tap Restore Purchases if needed.</p>
+            </details>
+
+            <details>
+                <summary>Why don't I see my park reviews anymore?</summary>
+                <p>NatureFind 2.0.3 introduced a unified review collection. Legacy park reviews remain visible on their park detail page. If you wrote a review before 2.0.3 and don't see it, please email us with your Apple ID so we can help recover it.</p>
+            </details>
+
+            <details>
+                <summary>How do I save a place to my Memories?</summary>
+                <p>Open any park, trail, campground, or activity spot. Tap <strong>Add to Memories</strong>. The button flips to yellow with a checkmark once saved. Find your saved memories in Profile → My Memories, where you can attach photos, write reviews, and share to Community or your socials.</p>
+            </details>
+
+            <details>
+                <summary>How do I delete my account?</summary>
+                <p>Profile → Delete Account. This permanently removes your favorites, reviews, sightings, trip reports, memories, and profile photo from our servers. The action is irreversible. If you just want to sign out, use Profile → Sign Out instead.</p>
+            </details>
+
+            <details>
+                <summary>The map is slow or pins aren't loading</summary>
+                <p>Trails, campgrounds, and state parks are fetched from OpenStreetMap and can take 5–15 seconds to load when you pan to a new area. Zoom in to at least street-level to reduce query size. If the map is still stuck, force-quit the app and reopen.</p>
+            </details>
+
+            <details>
+                <summary>Offline maps won't download</summary>
+                <p>Offline maps require NatureFind Pro. Ensure you're on Wi-Fi and have at least 500 MB of free storage. Downloads resume automatically if interrupted. If a download stays stuck at 0 %, go to Profile → Offline Maps and tap the region to retry.</p>
+            </details>
+
+            <details>
+                <summary>I got rejected from Community for a post</summary>
+                <p>Posts can be reported by other users. If your post was removed, it means multiple users flagged it for review. Please see our community guidelines in the Terms of Service. Repeated reports may result in account restrictions.</p>
+            </details>
+
+        </div>
+
+        <div class="contact">
+            <h2>Contact Support</h2>
+            <p>We read every email. Include your iOS version, NatureFind app version, and the steps to reproduce if reporting a bug. We try to respond within 48 hours.</p>
+            <p>Email: <a class="email" href="mailto:finnegantom65@gmail.com">finnegantom65@gmail.com</a></p>
+        </div>
+
+    </div>
+
+</body>
+</html>

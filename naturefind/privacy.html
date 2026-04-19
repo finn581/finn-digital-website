@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureFind Privacy Policy</title>
+    <meta name="description" content="NatureFind Privacy Policy — what we collect, what we don't, and your rights.">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <style>
+        :root { --bg:#0a0f0a; --surface:#141a14; --text:#e8f0e8; --muted:#9aa89a; --accent:#4ade80; --border:rgba(255,255,255,0.08); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .nav a:hover { color: var(--text); }
+        .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .container { max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
+        h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .sub { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
+        h2 { font-size: 18px; font-weight: 700; margin: 32px 0 10px; color: var(--text); }
+        p, li { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+        ul { padding-left: 24px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        strong { color: var(--text); }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="/" class="brand">Finn Digital</a>
+        <div>
+            <a href="index.html">About</a> &nbsp;
+            <a href="support.html">Support</a> &nbsp;
+            <a href="terms.html">Terms</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>NatureFind Privacy Policy</h1>
+        <p class="sub">Last updated: April 19, 2026. Applies to NatureFind 2.0.3 and later on iOS.</p>
+
+        <h2>TL;DR</h2>
+        <p>NatureFind is built with privacy as the default. We collect only what we need to run the app's features. We don't sell your data. We don't run third-party ads. We don't track you across other apps or websites.</p>
+
+        <h2>Who we are</h2>
+        <p>NatureFind is published by Finn Digital LLC. Contact: <a href="mailto:finnegantom65@gmail.com">finnegantom65@gmail.com</a>.</p>
+
+        <h2>What we collect</h2>
+        <ul>
+            <li><strong>Account information</strong> — when you sign in with Apple, Google, or email, we receive your email address and (optionally) your name. We store these in Firebase Authentication to recognize you across sessions.</li>
+            <li><strong>Content you create</strong> — reviews, sightings, trip reports, memories, community posts, and any photos you upload. Stored in Firebase Firestore and Firebase Storage, scoped to your account.</li>
+            <li><strong>Profile information</strong> — your display name and profile photo if you set one. Profile data is publicly readable by other NatureFind users.</li>
+            <li><strong>Location</strong> — when permitted, your device location is used locally to show nearby parks on the map and to sort activities by distance. We do not transmit your location to our servers.</li>
+            <li><strong>Usage events</strong> — basic crash reports and analytics via Firebase Crashlytics and Analytics to identify bugs. No advertising identifiers are collected.</li>
+        </ul>
+
+        <h2>What we don't collect</h2>
+        <ul>
+            <li>We don't collect your contacts, photo library metadata (beyond images you explicitly attach), calendar, or browsing history.</li>
+            <li>We don't use third-party advertising networks or cross-app tracking.</li>
+            <li>We don't sell, rent, or share your personal data with brokers.</li>
+        </ul>
+
+        <h2>Who we share data with</h2>
+        <p>Only the service providers required to run the app:</p>
+        <ul>
+            <li><strong>Google Firebase</strong> (Authentication, Firestore, Storage, Cloud Functions, Crashlytics) — for account, content, and crash-reporting infrastructure.</li>
+            <li><strong>Mapbox</strong> — for map tile rendering. Mapbox may receive your approximate location (city-level) as part of its tile request.</li>
+            <li><strong>Apple App Store</strong> — purchase verification for Pro upgrades.</li>
+            <li><strong>Public APIs</strong> we proxy server-side (Google Places, Recreation.gov, OpenStreetMap, NOAA, NPS) — these receive your query but not your identity.</li>
+        </ul>
+
+        <h2>Publicly visible content</h2>
+        <p>Reviews, sightings, trip reports, and community posts are public within NatureFind. Memories are private to you unless you choose to share them to Community or externally. Your display name and profile photo are visible to other users alongside your public content.</p>
+
+        <h2>Your rights and controls</h2>
+        <ul>
+            <li><strong>Access / export</strong> — email us and we'll send you a copy of everything associated with your account.</li>
+            <li><strong>Deletion</strong> — Profile → Delete Account permanently removes your account, content, and photos from our servers. Public posts are removed immediately; Firestore replicas propagate within minutes.</li>
+            <li><strong>Location access</strong> — adjustable any time in iOS Settings → NatureFind → Location.</li>
+            <li><strong>Photo access</strong> — NatureFind asks for photo library permission only when you tap to upload; you can revoke in iOS Settings.</li>
+        </ul>
+
+        <h2>Children</h2>
+        <p>NatureFind is not directed at children under 13. We don't knowingly collect personal information from children. If you believe a child has created an account, email us and we'll delete it.</p>
+
+        <h2>Security</h2>
+        <p>All traffic is encrypted with TLS. Firestore Security Rules and Storage Security Rules enforce per-user write access. Profile photos and memory photos are writable only by their owner. We do not store passwords — authentication is delegated to Apple, Google, or Firebase's hashed credentials.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>If we make material changes we'll update the "Last updated" date above and notify users via an in-app banner for significant changes.</p>
+
+        <h2>Contact</h2>
+        <p>Questions or requests: <a href="mailto:finnegantom65@gmail.com">finnegantom65@gmail.com</a>.</p>
+
+    </div>
+
+</body>
+</html>
