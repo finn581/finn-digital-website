@@ -8,7 +8,7 @@
     <meta name="apple-itunes-app" content="app-id=6759922299">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none';">
     <meta name="referrer" content="strict-origin-when-downgrade">
     <style>
         :root {
@@ -86,6 +86,29 @@
         }
         footer a { color: var(--muted); text-decoration: none; margin: 0 8px; }
         footer a:hover { color: var(--text); }
+        .promo-video {
+            position: relative;
+            width: 100%;
+            max-width: 820px;
+            margin: 0 auto 48px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--border);
+        }
+        .promo-video video {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .promo-label {
+            text-align: center;
+            font-size: 12px;
+            color: var(--muted);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin: 0 0 14px;
+        }
     </style>
 </head>
 <body>
@@ -106,6 +129,18 @@
             <h1>NatureFind</h1>
             <p class="tagline">Discover national parks, trails, campgrounds, and wildlife across the Americas. Save places to your Memories, review every spot, share your adventures.</p>
         </section>
+
+        <p class="promo-label">Watch the preview</p>
+        <div class="promo-video">
+            <video
+                src="/assets/promo-v2-landscape.mp4"
+                poster="/assets/promo-v2-poster.jpg"
+                controls
+                preload="metadata"
+                playsinline
+                muted
+                loop></video>
+        </div>
 
         <h2>Built for explorers</h2>
         <p>NatureFind is the outdoor companion for iPhone. One app for 400+ US national parks, OpenStreetMap trails, state and local parks, campgrounds, wildlife sightings, and curated destinations across 17 countries in the Americas.</p>
