@@ -395,12 +395,12 @@ a {
     color: var(--text-tertiary);
     border-color: rgba(255, 255, 255, 0.04);
     background: rgba(255, 255, 255, 0.02);
-    cursor: default;
 }
 
 .app-link-soon:hover {
-    background: rgba(255, 255, 255, 0.02);
-    border-color: rgba(255, 255, 255, 0.04);
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.08);
 }
 
 .app-link-row {
