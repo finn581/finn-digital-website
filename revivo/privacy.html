@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+    <title>Revivo Privacy Policy</title>
+    <meta name="description" content="Revivo Privacy Policy — what we collect, what we don't, and your rights.">
+    <link rel="canonical" href="https://finndigital.net/revivo/privacy.html">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <style>
+        :root { --bg:#07101a; --surface:#101a26; --text:#e8f4ff; --muted:#8aabc4; --accent:#22d3ee; --border:rgba(255,255,255,0.08); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .nav a:hover { color: var(--text); }
+        .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .container { max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
+        h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .sub { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
+        h2 { font-size: 18px; font-weight: 700; margin: 32px 0 10px; color: var(--text); }
+        h3 { font-size: 16px; font-weight: 600; margin: 24px 0 8px; color: var(--text); }
+        p, li { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+        ul { padding-left: 24px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        strong { color: var(--text); }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="/" class="brand">Finn Digital</a>
+        <div>
+            <a href="index.html">About</a> &nbsp;
+            <a href="support.html">Support</a> &nbsp;
+            <a href="privacy.html">Privacy</a> &nbsp;
+            <a href="terms.html">Terms</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Privacy Policy</h1>
+                <p class="updated">Last updated: April 23, 2026</p>
+        
+                <p>Revivo ("we", "our", or "us") is operated by Finn Digital LLC. This privacy policy explains what information we collect, how we use it, which third parties receive it, and the choices you have. It applies to the Revivo iOS app and the website revivo.app.</p>
+        
+                <h2>Information We Collect</h2>
+                <ul>
+                    <li><strong>Photos you upload.</strong> Images you choose to enhance or animate are uploaded to our secure cloud storage so the AI pipeline can process them. You remain the owner of your photos at all times. Photos are linked to your Revivo user identifier.</li>
+                    <li><strong>Face detection results.</strong> Before upload, Revivo uses Apple's on-device Vision framework to detect whether a face is present in your photo and its bounding rectangle. This face detection runs locally on your device. No face-print, face embedding, face signature, or biometric identifier is generated, stored, or transmitted. When a face is present and you have chosen to restore it, the image pixels are sent to our face-restoration provider (see Third-Party AI Providers below) solely to produce a higher-quality result, not to identify the person.</li>
+                    <li><strong>Account identifiers.</strong> When you sign in with Apple or Google (optional), we receive a Firebase User ID and, for Apple, optionally a name and relay email address. If you do not sign in, we use an anonymous Firebase user ID that is not linked to any personal identity.</li>
+                    <li><strong>Subscription status.</strong> Apple tells us whether you have an active Revivo subscription and at what tier. We never receive your payment card, Apple ID, or billing details.</li>
+                    <li><strong>Diagnostic data.</strong> If the app crashes, we collect anonymous crash reports via Firebase Crashlytics to diagnose and fix the problem.</li>
+                    <li><strong>Performance data.</strong> Aggregated, non-personally-identifying timing metrics via Firebase Performance Monitoring.</li>
+                    <li><strong>Device information.</strong> Basic device model and iOS version, for compatibility and bug reports.</li>
+                </ul>
+        
+                <h2>How We Use Your Information</h2>
+                <ul>
+                    <li>To enhance, colorize, and animate the photos you upload.</li>
+                    <li>To organize your restored photos into your private Heritage Albums.</li>
+                    <li>To generate captions and short reel scripts for photos you save.</li>
+                    <li>To synthesize narration audio for reels you choose to narrate.</li>
+                    <li>To verify your subscription status and provision the correct features.</li>
+                    <li>To diagnose and fix crashes or technical problems.</li>
+                    <li>To respond to support inquiries you send us.</li>
+                </ul>
+        
+                <h2>How We Do Not Use Your Information</h2>
+                <ul>
+                    <li>We do <strong>not</strong> train any AI models on your photos.</li>
+                    <li>We do <strong>not</strong> sell your personal data or photos to anyone.</li>
+                    <li>We do <strong>not</strong> use your data for third-party advertising, cross-app tracking, or ad targeting.</li>
+                    <li>We do <strong>not</strong> share your photos publicly or with other Revivo users.</li>
+                    <li>We do <strong>not</strong> perform face recognition, biometric identification, or any attempt to identify individuals from their photos.</li>
+                </ul>
+        
+                <h2>Third-Party Sub-Processors</h2>
+                <p>Revivo uses the following third-party services to deliver the app. Each provider receives only the data needed to perform its specific function and is contractually prohibited from retaining or training on your content beyond the duration of the request.</p>
+                <ul>
+                    <li><strong>fal.ai</strong> (photo restoration via NAFNet and CodeFormer; short-form animation via Kling 2.6 Pro). Receives: the image pixels you submit for enhancement or animation. <a href="https://fal.ai/privacy-policy" target="_blank" rel="noopener">fal.ai privacy policy</a>.</li>
+                    <li><strong>Replicate</strong> (upscaling via Real-ESRGAN; colorization via DDColor). Receives: the image pixels you submit for enhancement. <a href="https://replicate.com/privacy" target="_blank" rel="noopener">Replicate privacy policy</a>.</li>
+                    <li><strong>Anthropic</strong> (Claude, for caption and reel-script generation). Receives: short textual prompts describing your photo and optionally a low-resolution version of the enhanced image. <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic privacy policy</a>.</li>
+                    <li><strong>ElevenLabs</strong> (voice synthesis for narrated reels). Receives: the reel-script text you requested to narrate. It does not receive your photos. <a href="https://elevenlabs.io/privacy-policy" target="_blank" rel="noopener">ElevenLabs privacy policy</a>.</li>
+                    <li><strong>Google Firebase</strong> (Authentication, Firestore, Cloud Storage, Cloud Functions, Crashlytics, Performance Monitoring). Hosts your Revivo account, photos, and app metadata in the US region. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy policy</a>.</li>
+                    <li><strong>Apple</strong> (StoreKit for subscriptions; Sign in with Apple for optional account). Handles payments and, if chosen, provides your Apple-relay email. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple privacy policy</a>.</li>
+                </ul>
+                <p>Before your first photo upload, Revivo presents an in-app consent sheet that discloses these sub-processors and requires your affirmative acceptance.</p>
+        
+                <h2>Data Storage &amp; Retention</h2>
+                <p>Your photos and restored results are stored in Google Firebase Storage (US region). Metadata about your photos, albums, and captions is stored in Firestore. All data is encrypted in transit (TLS 1.2+) and at rest.</p>
+                <p>You can delete individual photos, albums, or your entire account at any time from Settings &rsaquo; Delete Account. When you delete a photo or your account, the item is removed from the Revivo app immediately and from Firebase Storage and Firestore within 24 hours. Backup copies made for disaster recovery purposes are purged within 30 days. After 30 days, no copy of your deleted content remains in any Revivo system.</p>
+                <p>Third-party sub-processors process your photos transiently to return the enhanced result and do not retain copies after the request completes.</p>
+                <p>Anonymous crash and performance data is retained for up to 90 days in aggregate form and cannot be linked back to you.</p>
+        
+                <h2>Photo Animation &amp; AI Content</h2>
+                <p>Revivo uses generative AI to animate still photos into short video clips. You retain ownership of animated outputs for personal use. When sharing AI-generated animations publicly, we recommend disclosing that the content was AI-generated. Do not use Revivo to animate a photo of a living person without their knowledge or consent.</p>
+                <p>If a photo or animation violates someone's rights (for example, a photo used without consent), please email <a href="mailto:revivoapp@gmail.com">revivoapp@gmail.com</a> with the subject line "Takedown Request" and we will remove the content within 48 hours in accordance with the TAKE IT DOWN Act.</p>
+        
+                <h2>Your Rights</h2>
+                <p>You may:</p>
+                <ul>
+                    <li>Access, correct, or delete your photos and account data at any time from within the app</li>
+                    <li>Opt out of non-essential communications</li>
+                    <li>Request a copy of your data we hold about you</li>
+                    <li>Withdraw consent to third-party AI processing (this disables enhancement but the app still runs)</li>
+                    <li>Delete your account and all associated data at any time from Settings &rsaquo; Delete Account</li>
+                </ul>
+                <p>California residents (CCPA/CPRA) and residents of the European Economic Area, United Kingdom, and Switzerland (GDPR) have additional rights including the right to know what personal information we collect, the right to data portability, the right to delete, and the right not to be discriminated against for exercising those rights. To exercise any of these rights, contact us at <a href="mailto:revivoapp@gmail.com">revivoapp@gmail.com</a>. We will respond within 30 days.</p>
+                <p>We do not "sell" personal information as defined by the CCPA/CPRA.</p>
+        
+                <h2>International Data Transfers</h2>
+                <p>Revivo's servers and Firebase Storage are located in the United States. By using Revivo from outside the US, you consent to the transfer, storage, and processing of your data in the US, where data-protection laws may differ from those in your country. We apply the same safeguards to all user data regardless of location.</p>
+        
+                <h2>Data Breach Notification</h2>
+                <p>In the event of a confirmed data breach affecting your personal information, we will notify you by email within 72 hours of confirming the breach, in accordance with applicable law.</p>
+        
+                <h2>Children's Privacy</h2>
+                <p>Revivo is not intended for children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided information to us, please contact us so we can delete it.</p>
+        
+                <h2>Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. Material changes will be announced in the app. The "Last updated" date above indicates when the current version took effect.</p>
+        
+                <h2>Contact Us</h2>
+                <p>Finn Digital LLC<br>
+                Email: <a href="mailto:revivoapp@gmail.com">revivoapp@gmail.com</a></p>
+        
+            </div>
+    </div>
+
+</body>
+</html>
