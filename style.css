@@ -1,4 +1,29 @@
 /* ============================================
+   SELF-HOSTED FONTS (Syne + DM Sans, variable, latin only)
+   ============================================ */
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 100 1000;
+    font-display: swap;
+    src: url('assets/fonts/DMSans.woff2') format('woff2-variations');
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 100 1000;
+    font-display: swap;
+    src: url('assets/fonts/DMSans-Italic.woff2') format('woff2-variations');
+}
+@font-face {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 100 1000;
+    font-display: swap;
+    src: url('assets/fonts/Syne.woff2') format('woff2-variations');
+}
+
+/* ============================================
    RESET & CUSTOM PROPERTIES
    ============================================ */
 *, *::before, *::after {

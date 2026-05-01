@@ -23,19 +23,67 @@
     <!-- Apple Smart App Banner (shows for NatureFind on iOS Safari) -->
     <meta name="apple-itunes-app" content="app-id=6759922299">
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://finndigital.net/">
+
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2">
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Finn Digital LLC",
+      "alternateName": "Finn Digital",
+      "url": "https://finndigital.net",
+      "logo": "https://finndigital.net/apple-touch-icon.png",
+      "description": "Independent iOS studio crafting apps that solve real, everyday problems.",
+      "email": "contact@finndigital.net",
+      "founder": { "@type": "Person", "name": "Thomas Finnegan" },
+      "sameAs": ["https://github.com/finn581"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "NatureFind",
+      "operatingSystem": "iOS",
+      "applicationCategory": "TravelApplication",
+      "description": "Discover national parks, trails, campgrounds, and wildlife across the Americas.",
+      "url": "https://finndigital.net/naturefind/",
+      "downloadUrl": "https://apps.apple.com/app/id6759922299",
+      "image": "https://finndigital.net/assets/icons/naturefind.png",
+      "publisher": { "@type": "Organization", "name": "Finn Digital LLC" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "CareFind",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "description": "Find healthcare providers and specialists nearby.",
+      "url": "https://finndigital.net/carefind/",
+      "downloadUrl": "https://apps.apple.com/app/id6760765478",
+      "image": "https://finndigital.net/assets/icons/carefind.png",
+      "publisher": { "@type": "Organization", "name": "Finn Digital LLC" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+
+    <!-- Fonts (self-hosted) -->
+    <link rel="preload" href="assets/fonts/Syne.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/DMSans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css?v=3">
 
     <!-- Security -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; script-src 'self'; img-src 'self'; connect-src 'self'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; img-src 'self'; connect-src 'self'; frame-ancestors 'none';">
     <meta name="referrer" content="strict-origin-when-downgrade">
 </head>
 <body>
@@ -82,13 +130,20 @@
                 <div class="app-card-inner">
                     <div class="app-card-header">
                         <div class="app-icon-wrap">
-                            <img src="assets/icons/naturefind.png" alt="NatureFind" class="app-icon">
+                            <picture>
+                                <source srcset="assets/icons/naturefind.webp" type="image/webp">
+                                <img src="assets/icons/naturefind.png" alt="NatureFind" class="app-icon" width="384" height="384" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <span class="app-number">01</span>
                     </div>
                     <h3 class="app-name">NatureFind</h3>
                     <p class="app-desc">Discover national parks, trails, and campgrounds with real-time data.</p>
                     <div class="app-link-row">
+                        <a href="/naturefind/" class="app-link">
+                            <span>Learn more</span>
+                            <span class="link-arrow">&rarr;</span>
+                        </a>
                         <a href="https://apps.apple.com/app/id6759922299" target="_blank" rel="noopener noreferrer" class="app-link">
                             <span>App Store</span>
                             <span class="link-arrow">&#8599;</span>
@@ -105,16 +160,25 @@
                 <div class="app-card-inner">
                     <div class="app-card-header">
                         <div class="app-icon-wrap">
-                            <img src="assets/icons/carefind.png" alt="CareFind" class="app-icon">
+                            <picture>
+                                <source srcset="assets/icons/carefind.webp" type="image/webp">
+                                <img src="assets/icons/carefind.png" alt="CareFind" class="app-icon" width="384" height="384" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <span class="app-number">02</span>
                     </div>
                     <h3 class="app-name">CareFind</h3>
                     <p class="app-desc">Find healthcare providers and specialists nearby.</p>
-                    <a href="https://apps.apple.com/app/id6760765478" target="_blank" rel="noopener noreferrer" class="app-link">
-                        <span>App Store</span>
-                        <span class="link-arrow">&#8599;</span>
-                    </a>
+                    <div class="app-link-row">
+                        <a href="/carefind/" class="app-link">
+                            <span>Learn more</span>
+                            <span class="link-arrow">&rarr;</span>
+                        </a>
+                        <a href="https://apps.apple.com/app/id6760765478" target="_blank" rel="noopener noreferrer" class="app-link">
+                            <span>App Store</span>
+                            <span class="link-arrow">&#8599;</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -123,7 +187,10 @@
                 <div class="app-card-inner">
                     <div class="app-card-header">
                         <div class="app-icon-wrap">
-                            <img src="assets/icons/easyrealty.png" alt="EasyRealty" class="app-icon">
+                            <picture>
+                                <source srcset="assets/icons/easyrealty.webp" type="image/webp">
+                                <img src="assets/icons/easyrealty.png" alt="EasyRealty" class="app-icon" width="384" height="384" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <span class="app-number">03</span>
                     </div>
@@ -141,7 +208,10 @@
                 <div class="app-card-inner">
                     <div class="app-card-header">
                         <div class="app-icon-wrap">
-                            <img src="assets/icons/pettrace.png" alt="PetTrace" class="app-icon">
+                            <picture>
+                                <source srcset="assets/icons/pettrace.webp" type="image/webp">
+                                <img src="assets/icons/pettrace.png" alt="PetTrace" class="app-icon" width="384" height="384" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <span class="app-number">04</span>
                     </div>
@@ -159,7 +229,10 @@
                 <div class="app-card-inner">
                     <div class="app-card-header">
                         <div class="app-icon-wrap">
-                            <img src="assets/icons/safeplate.png" alt="SafePlate" class="app-icon">
+                            <picture>
+                                <source srcset="assets/icons/safeplate.webp" type="image/webp">
+                                <img src="assets/icons/safeplate.png" alt="SafePlate" class="app-icon" width="384" height="384" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <span class="app-number">05</span>
                     </div>
@@ -177,7 +250,10 @@
                 <div class="app-card-inner">
                     <div class="app-card-header">
                         <div class="app-icon-wrap">
-                            <img src="assets/icons/truehue.png" alt="TrueHue" class="app-icon">
+                            <picture>
+                                <source srcset="assets/icons/truehue.webp" type="image/webp">
+                                <img src="assets/icons/truehue.png" alt="TrueHue" class="app-icon" width="384" height="384" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <span class="app-number">06</span>
                     </div>
@@ -195,7 +271,10 @@
                 <div class="app-card-inner">
                     <div class="app-card-header">
                         <div class="app-icon-wrap">
-                            <img src="assets/icons/revivo.png" alt="Revivo" class="app-icon">
+                            <picture>
+                                <source srcset="assets/icons/revivo.webp" type="image/webp">
+                                <img src="assets/icons/revivo.png" alt="Revivo" class="app-icon" width="384" height="384" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <span class="app-number">07</span>
                     </div>
@@ -256,7 +335,10 @@
             <div class="promo-slide promo-active" data-slide="0">
                 <div class="promo-glow"></div>
                 <div class="promo-center">
-                    <img src="assets/icons/naturefind.png" class="promo-icon" alt="NatureFind">
+                    <picture>
+                        <source srcset="assets/icons/naturefind.webp" type="image/webp">
+                        <img src="assets/icons/naturefind.png" class="promo-icon" alt="NatureFind" width="384" height="384" loading="lazy" decoding="async">
+                    </picture>
                     <div class="promo-title">NatureFind</div>
                     <div class="promo-sub">Your guide to the great outdoors</div>
                 </div>
@@ -271,7 +353,10 @@
                     </div>
                     <div class="promo-phone-side">
                         <div class="promo-phone-glow"></div>
-                        <div class="promo-phone"><img src="assets/promo-map.png" alt="Map"></div>
+                        <div class="promo-phone"><picture>
+                            <source srcset="assets/promo-map.webp" type="image/webp">
+                            <img src="assets/promo-map.jpg" alt="Map" width="720" height="1564" loading="lazy" decoding="async">
+                        </picture></div>
                     </div>
                 </div>
             </div>
@@ -306,9 +391,18 @@
 
             <div class="promo-slide" data-slide="3">
                 <div class="promo-triple">
-                    <div class="promo-phone promo-tilt-left"><img src="assets/promo-activities.png" alt="Activities"></div>
-                    <div class="promo-phone promo-tilt-center"><img src="assets/promo-explore.png" alt="Explore"></div>
-                    <div class="promo-phone promo-tilt-right"><img src="assets/promo-detail.png" alt="Detail"></div>
+                    <div class="promo-phone promo-tilt-left"><picture>
+                            <source srcset="assets/promo-activities.webp" type="image/webp">
+                            <img src="assets/promo-activities.jpg" alt="Activities" width="720" height="1564" loading="lazy" decoding="async">
+                        </picture></div>
+                    <div class="promo-phone promo-tilt-center"><picture>
+                            <source srcset="assets/promo-explore.webp" type="image/webp">
+                            <img src="assets/promo-explore.jpg" alt="Explore" width="720" height="1564" loading="lazy" decoding="async">
+                        </picture></div>
+                    <div class="promo-phone promo-tilt-right"><picture>
+                            <source srcset="assets/promo-detail.webp" type="image/webp">
+                            <img src="assets/promo-detail.jpg" alt="Detail" width="720" height="1564" loading="lazy" decoding="async">
+                        </picture></div>
                 </div>
                 <div class="promo-slide-label">Designed for adventure</div>
             </div>
@@ -316,7 +410,10 @@
             <div class="promo-slide" data-slide="4">
                 <div class="promo-glow"></div>
                 <div class="promo-center">
-                    <img src="assets/icons/naturefind.png" class="promo-icon-sm" alt="NatureFind">
+                    <picture>
+                        <source srcset="assets/icons/naturefind.webp" type="image/webp">
+                        <img src="assets/icons/naturefind.png" class="promo-icon-sm" alt="NatureFind" width="384" height="384" loading="lazy" decoding="async">
+                    </picture>
                     <div class="promo-heading">Download NatureFind</div>
                     <div class="promo-desc">Free on the App Store</div>
                     <a href="https://apps.apple.com/app/id6759922299" target="_blank" rel="noopener noreferrer" class="promo-appstore">&#63743; Download on the App Store</a>
