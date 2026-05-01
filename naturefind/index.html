@@ -25,7 +25,7 @@
     <meta name="twitter:description" content="iOS app for discovering parks, trails, campgrounds, and wildlife across the Americas.">
     <meta name="twitter:image" content="https://finndigital.net/og-image.png">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; font-src 'self'; img-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none';">
     <meta name="referrer" content="strict-origin-when-downgrade">
 
     <!-- Structured data -->
@@ -45,6 +45,14 @@
     }
     </script>
     <style>
+        @font-face {
+            font-family: 'Syne';
+            font-style: normal;
+            font-weight: 100 1000;
+            font-display: swap;
+            src: url('/assets/fonts/Syne.woff2') format('woff2-variations');
+        }
+
         :root {
             --bg: #0a0f0a;
             --surface: #141a14;
@@ -52,6 +60,7 @@
             --muted: #9aa89a;
             --accent: #4ade80;
             --border: rgba(255,255,255,0.08);
+            --font-display: 'Syne', -apple-system, sans-serif;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -61,24 +70,35 @@
             line-height: 1.6;
             min-height: 100vh;
         }
-        .nav {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 20px 32px; border-bottom: 1px solid var(--border);
+        .studio-header {
+            text-align: center;
+            padding: 40px 32px 0;
         }
-        .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
-        .nav a:hover { color: var(--text); }
-        .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .studio-wordmark {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: clamp(28px, 4vw, 40px);
+            letter-spacing: -0.02em;
+            color: var(--text);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .studio-wordmark .dot { color: var(--accent); }
+        .studio-nav {
+            display: flex; justify-content: center; align-items: center; gap: 24px;
+            padding: 16px 32px 24px; border-bottom: 1px solid var(--border);
+        }
+        .studio-nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .studio-nav a:hover { color: var(--text); }
         .container { max-width: 820px; margin: 0 auto; padding: 60px 32px; }
         .hero {
             text-align: center; padding: 60px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 48px;
         }
-        .hero-mark {
-            width: 84px; height: 84px; margin: 0 auto 24px;
-            background: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);
-            border-radius: 24px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 44px;
-            box-shadow: 0 20px 60px rgba(74, 222, 128, 0.3);
+        .hero-icon {
+            width: 160px; height: 160px; margin: 0 auto 28px;
+            border-radius: 36px;
+            box-shadow: 0 24px 64px rgba(74, 222, 128, 0.28);
+            display: block;
         }
         h1 {
             font-size: 44px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px;
@@ -156,19 +176,19 @@
 </head>
 <body>
 
-    <nav class="nav">
-        <a href="/" class="brand">Finn Digital</a>
-        <div>
-            <a href="support.html">Support</a> &nbsp;
-            <a href="privacy.html">Privacy</a> &nbsp;
-            <a href="terms.html">Terms</a>
-        </div>
+    <header class="studio-header">
+        <a href="/" class="studio-wordmark">FINN<span class="dot">.</span>DIGITAL</a>
+    </header>
+    <nav class="studio-nav">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
     </nav>
 
     <div class="container">
 
         <section class="hero">
-            <div class="hero-mark">🌲</div>
+            <img class="hero-icon" src="/assets/icons/naturefind.png" alt="NatureFind app icon" width="160" height="160">
             <h1>NatureFind</h1>
             <p class="tagline">Discover national parks, trails, campgrounds, and wildlife across the Americas. Save places to your Memories, review every spot, share your adventures.</p>
         </section>
