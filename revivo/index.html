@@ -140,6 +140,38 @@
         }
         footer a { color: var(--muted); text-decoration: none; margin: 0 8px; }
         footer a:hover { color: var(--text); }
+        .promo-video {
+            position: relative;
+            width: 100%;
+            max-width: 820px;
+            margin: 0 auto 48px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--border);
+        }
+        .promo-video video {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .promo-label {
+            text-align: center;
+            font-size: 12px;
+            color: var(--muted);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin: 0 0 14px;
+        }
+        .promo-credit {
+            text-align: center;
+            font-size: 11px;
+            color: var(--muted);
+            margin: 12px 0 48px;
+            opacity: 0.7;
+        }
+        .promo-credit a { color: var(--muted); text-decoration: underline; }
+        .promo-credit a:hover { color: var(--text); }
     </style>
 </head>
 <body>
@@ -163,6 +195,19 @@
             <h1>Revivo</h1>
             <p class="tagline">Restore, colorize, and animate the old family photos sitting in a shoebox. AI-powered, beautifully simple, free to start.</p>
         </section>
+
+        <p class="promo-label">Watch the preview</p>
+        <div class="promo-video">
+            <video
+                src="/assets/revivo-promo-landscape.mp4"
+                poster="/assets/revivo-promo-poster.jpg"
+                controls
+                preload="metadata"
+                playsinline
+                muted
+                loop></video>
+        </div>
+        <p class="promo-credit">Music: <em>Constance</em> — Kevin MacLeod · <a href="https://incompetech.com" rel="noopener" target="_blank">incompetech.com</a> · CC-BY 4.0 · Photos: Library of Congress (public domain) — Lewis Hine, Bain News Service, Detroit Publishing Co.</p>
 
         <h2>Bring memories back to life</h2>
         <p>Revivo takes the faded, scratched, black-and-white photos hiding in your camera roll and gives them back to you sharp, color-true, and even moving. Tap a photo, tap Enhance &mdash; that&rsquo;s it.</p>
