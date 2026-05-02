@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+    <title>TrueHue Support</title>
+    <meta name="description" content="TrueHue support — FAQ, troubleshooting, contact.">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <style>
+        :root { --bg:#0a0d14; --surface:#141821; --text:#ece9e0; --muted:#a8a497; --accent:#c9a84c; --border:rgba(255,255,255,0.08); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .nav a:hover { color: var(--text); }
+        .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .container { max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
+        h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .sub { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
+        h2 { font-size: 20px; font-weight: 700; margin: 32px 0 16px; color: var(--text); }
+        p, li { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        strong { color: var(--text); }
+        .contact { background: var(--surface); padding: 24px; border-radius: 14px; border: 1px solid var(--border); margin-top: 32px; }
+        .contact h2 { margin-top: 0; }
+        .email { font-family: ui-monospace, Menlo, monospace; font-size: 15px; color: var(--accent); font-weight: 600; }
+        .faq details { margin-bottom: 10px; background: var(--surface); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border); }
+        .faq summary { cursor: pointer; font-weight: 600; color: var(--text); font-size: 15px; }
+        .faq details[open] summary { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="/" class="brand">Finn Digital</a>
+        <div>
+            <a href="index.html">About</a> &nbsp;
+            <a href="privacy.html">Privacy</a> &nbsp;
+            <a href="terms.html">Terms</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>TrueHue Support</h1>
+        <p class="sub">Questions, issues, and how to reach us.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+            <details>
+                <summary>Why does TrueHue refuse to give me a match sometimes?</summary>
+                <p>Refusal coaching is the core feature, not a bug. Under warm bulbs, dim rooms, or strong shadows, the camera sees a color shift that no algorithm can perfectly correct without context. Rather than guess and give you the wrong paint, TrueHue tells you the lighting is off and suggests one of two fixes: move to better natural light, or use Verify with Flash (Plus) to override ambient lighting with the iPhone torch.</p>
+            </details>
+
+            <details>
+                <summary>How does Verify with Flash work?</summary>
+                <p>The iPhone's LED flash has a known color temperature and intensity profile. When you tap Verify with Flash, TrueHue captures a frame illuminated by the torch instead of the room. That neutralizes warm bulbs, fluorescent flicker, and uneven LED light, giving you a match that's accurate even in a 2700K incandescent room. Verify with Flash is part of TrueHue Plus.</p>
+            </details>
+
+            <details>
+                <summary>What's included in TrueHue Plus?</summary>
+                <p>Plus adds: Verify with Flash, Photo Extraction (drop in any image, get a 5-paint palette), AR Visualizer (paint walls in AR with sheen control), multi-illuminant preview (warm bulb / daylight / cool LED with metameric warning), daily palette, mood search, white-card calibration, cutout-aware paint estimates, and color harmony suggestions per saved color. Plus is $4.99/month or $29.99/year (3-day free trial), or $59 lifetime — one-time, no subscription.</p>
+            </details>
+
+            <details>
+                <summary>How do I restore my Plus purchase on a new device?</summary>
+                <p>Open Settings → tap <strong>Restore Purchases</strong>. As long as you're signed into the same Apple ID that made the original purchase, your Plus subscription or Lifetime unlock will restore immediately.</p>
+            </details>
+
+            <details>
+                <summary>How do I cancel my Plus subscription?</summary>
+                <p>iOS Settings app → tap your name at the top → Subscriptions → TrueHue Plus → Cancel Subscription. The Plus features stay active until the end of the current billing period. Lifetime purchases do not auto-renew and don't need to be cancelled.</p>
+            </details>
+
+            <details>
+                <summary>RoomPlan won't start on my device</summary>
+                <p>RoomPlan requires a LiDAR scanner: iPhone 12 Pro / Pro Max or later (Pro models only) and any iPad Pro 2020 or later. On non-LiDAR devices, the Measure feature falls back to a manual estimation flow.</p>
+            </details>
+
+            <details>
+                <summary>How accurate are the paint matches?</summary>
+                <p>TrueHue compares your scanned color to 30,000+ real paints across 7 brands using delta-E color distance in CIELAB color space. Under good lighting (or with Verify with Flash), the closest match is typically delta-E &lt; 2 — the threshold below which most viewers can't tell two paints apart. The app shows you the match quality alongside each result so you can judge for yourself.</p>
+            </details>
+
+            <details>
+                <summary>Which paint brands are included?</summary>
+                <p>Sherwin-Williams, Benjamin Moore, Behr, Valspar, PPG, Farrow &amp; Ball, and Magnolia Home. Cross-brand matches are included — when you save a color you can see the closest equivalents in every other brand. Pantone, RAL, and NCS cross-references are included for designers.</p>
+            </details>
+
+            <details>
+                <summary>Can I delete my account?</summary>
+                <p>Yes. Settings → Account → Delete Account permanently removes your synced palettes and account record from our servers. Local data on your device can be wiped by uninstalling the app.</p>
+            </details>
+
+            <details>
+                <summary>Is my camera footage stored anywhere?</summary>
+                <p>No. Camera frames are processed in real time on your iPhone and discarded immediately. Nothing is sent to any server. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+            </details>
+
+        </div>
+
+        <div class="contact">
+            <h2>Contact Support</h2>
+            <p>We read every email. Include your iOS version, TrueHue app version (Settings → About), and steps to reproduce if reporting a bug. We try to respond within 48 hours.</p>
+            <p>Email: <a class="email" href="mailto:contact@finndigital.net">contact@finndigital.net</a></p>
+        </div>
+
+    </div>
+
+</body>
+</html>

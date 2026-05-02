@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+    <title>TrueHue Privacy Policy</title>
+    <meta name="description" content="TrueHue Privacy Policy — what we collect, what we don't, and your rights.">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <style>
+        :root { --bg:#0a0d14; --surface:#141821; --text:#ece9e0; --muted:#a8a497; --accent:#c9a84c; --border:rgba(255,255,255,0.08); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .nav a:hover { color: var(--text); }
+        .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .container { max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
+        h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .sub { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
+        h2 { font-size: 20px; font-weight: 700; margin: 32px 0 12px; color: var(--text); }
+        p, li { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+        ul { padding-left: 24px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        strong { color: var(--text); }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="/" class="brand">Finn Digital</a>
+        <div>
+            <a href="index.html">About</a> &nbsp;
+            <a href="support.html">Support</a> &nbsp;
+            <a href="terms.html">Terms</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>TrueHue Privacy Policy</h1>
+        <p class="sub">Last updated: May 2, 2026. Applies to TrueHue 1.0.0 and later on iOS.</p>
+
+        <h2>TL;DR</h2>
+        <p>TrueHue is built to be private by default. Color analysis happens entirely on your iPhone — camera frames never leave the device. We don't run third-party ads, we don't sell your data, and we don't track you across other apps or websites.</p>
+
+        <h2>Who we are</h2>
+        <p>TrueHue is published by Finn Digital LLC. Contact: <a href="mailto:contact@finndigital.net">contact@finndigital.net</a>.</p>
+
+        <h2>What stays on your device</h2>
+        <ul>
+            <li><strong>Camera frames</strong> — every scan is processed locally. The image data never leaves your iPhone.</li>
+            <li><strong>Paint matching</strong> — the 30,000+ paint database ships inside the app. No network call is made to identify a color.</li>
+            <li><strong>RoomPlan scans</strong> — wall measurements, window/door cutouts, and per-room paint estimates are computed on-device and stored locally.</li>
+            <li><strong>Palettes &amp; projects</strong> — by default these live in the app's local SwiftData store on your iPhone.</li>
+        </ul>
+
+        <h2>What we collect (only if you opt in)</h2>
+        <ul>
+            <li><strong>Account information</strong> — when you sign in with Apple or Google, we receive your email address and (with Google) your name. We store these in Firebase Authentication so we can sync your palettes across your devices.</li>
+            <li><strong>Synced content</strong> — if you sign in, your saved palettes, projects, and scan history are synced to Firebase Firestore, scoped to your account so only you can read or write them.</li>
+            <li><strong>Purchases</strong> — Apple's StoreKit handles all payments. We receive only the validation token confirming you have an active subscription or lifetime unlock.</li>
+        </ul>
+
+        <h2>What we don't collect</h2>
+        <ul>
+            <li>We don't run third-party analytics or advertising SDKs.</li>
+            <li>We don't collect your location, contacts, calendar, or browsing history.</li>
+            <li>We don't sell, rent, or share your personal data with brokers.</li>
+            <li>We don't transmit camera frames or scan results to any server.</li>
+        </ul>
+
+        <h2>Who we share data with</h2>
+        <p>Only the service providers required to run the optional sync features:</p>
+        <ul>
+            <li><strong>Apple App Store / StoreKit</strong> — purchase validation for the base app, Plus subscriptions, and Lifetime unlock.</li>
+            <li><strong>Google Firebase</strong> (Authentication, Firestore) — for cloud sync of palettes and projects, only if you sign in.</li>
+        </ul>
+
+        <h2>Photo library access (Plus)</h2>
+        <p>The Plus "Photo Extraction" feature lets you pick a photo from your library and get a 5-paint palette. Photos are processed entirely on-device using Apple's Vision and CoreImage frameworks. The image is never uploaded to our servers and is not retained by TrueHue after extraction.</p>
+
+        <h2>Camera access</h2>
+        <p>Camera access is required for the core scanning feature. Frames are analyzed in real time on-device for color matching. Frames are not recorded, not saved to your photo library, and not transmitted off the device.</p>
+
+        <h2>Your rights and controls</h2>
+        <ul>
+            <li><strong>Access / export</strong> — email us and we'll send you a copy of any account data we hold.</li>
+            <li><strong>Deletion</strong> — Settings → Account → Delete Account permanently removes your synced palettes, projects, and account record from our servers.</li>
+            <li><strong>Camera / photo access</strong> — adjustable any time in iOS Settings → TrueHue.</li>
+            <li><strong>Subscriptions</strong> — manage in iOS Settings → Apple ID → Subscriptions.</li>
+        </ul>
+
+        <h2>Children</h2>
+        <p>TrueHue is not directed at children under 13. We don't knowingly collect personal information from children. If you believe a child has created an account, email us and we'll delete it.</p>
+
+        <h2>Security</h2>
+        <p>All traffic to Firebase is encrypted with TLS. Firestore Security Rules enforce per-user access — only the authenticated owner can read or write their palettes and projects. We do not store passwords; authentication is delegated to Apple Sign In or Google Sign In.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>If we make material changes we'll update the "Last updated" date above and notify users in-app for significant changes.</p>
+
+        <h2>Contact</h2>
+        <p>Questions or requests: <a href="mailto:contact@finndigital.net">contact@finndigital.net</a>.</p>
+
+    </div>
+
+</body>
+</html>
