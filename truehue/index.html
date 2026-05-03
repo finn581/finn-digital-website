@@ -132,6 +132,38 @@
         }
         footer a { color: var(--muted); text-decoration: none; margin: 0 8px; }
         footer a:hover { color: var(--text); }
+        .promo-video {
+            position: relative;
+            width: 100%;
+            max-width: 820px;
+            margin: 0 auto 14px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--border);
+        }
+        .promo-video video {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .promo-label {
+            text-align: center;
+            font-size: 12px;
+            color: var(--muted);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin: 0 0 14px;
+        }
+        .promo-credit {
+            text-align: center;
+            font-size: 11px;
+            color: var(--muted);
+            margin: 12px 0 48px;
+            opacity: 0.7;
+        }
+        .promo-credit a { color: var(--muted); text-decoration: underline; }
+        .promo-credit a:hover { color: var(--text); }
     </style>
 </head>
 <body>
@@ -152,6 +184,19 @@
             <h1>TrueHue</h1>
             <p class="tagline">The honest paint color scanner. Where every other app guesses, TrueHue tells you when the lighting is lying — then verifies your color with the iPhone flash.</p>
         </section>
+
+        <p class="promo-label">Watch the preview</p>
+        <div class="promo-video">
+            <video
+                src="/assets/truehue-promo-landscape.mp4"
+                poster="/assets/truehue-promo-poster.jpg"
+                controls
+                preload="metadata"
+                playsinline
+                muted
+                loop></video>
+        </div>
+        <p class="promo-credit">Music: <em>Inspired</em> by Kevin MacLeod (<a href="https://incompetech.com">incompetech.com</a>) — licensed under Creative Commons: By Attribution 4.0.</p>
 
         <h2>Built for honest matches</h2>
         <p>TrueHue scans any wall, surface, or fabric and matches it against 30,000+ real paints across 7 major brands — Sherwin-Williams, Benjamin Moore, Behr, Valspar, PPG, Farrow &amp; Ball, and Magnolia Home. Cross-brand matches included. Pantone, RAL, and NCS cross-reference for designers.</p>
