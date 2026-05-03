@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+    <title>SafePlate Privacy Policy</title>
+    <meta name="description" content="SafePlate Privacy Policy — what we collect, what we don't, and your rights.">
+    <link rel="canonical" href="https://finndigital.net/safeplate/privacy.html">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <style>
+        :root { --bg:#191C14; --surface:#232819; --text:#F4EFE5; --muted:#A8A497; --accent:#4CAF50; --border:rgba(255,255,255,0.08); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .nav a:hover { color: var(--text); }
+        .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .container { max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
+        h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .updated { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
+        h2 { font-size: 18px; font-weight: 700; margin: 32px 0 10px; color: var(--text); }
+        h3 { font-size: 16px; font-weight: 600; margin: 24px 0 8px; color: var(--text); }
+        p, li { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+        ul { padding-left: 24px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        strong { color: var(--text); }
+        @media (max-width: 600px) { .container { padding: 32px 20px 60px; } .nav { padding: 16px 20px; } }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="/" class="brand">Finn Digital</a>
+        <div>
+            <a href="index.html">About</a> &nbsp;
+            <a href="support.html">Support</a> &nbsp;
+            <a href="privacy.html">Privacy</a> &nbsp;
+            <a href="terms.html">Terms</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: May 3, 2026</p>
+
+        <p>SafePlate ("we", "our", or "us") is operated by Finn Digital LLC. This privacy policy explains what information we collect, how we use it, which third parties receive it, and the choices you have. It applies to the SafePlate iOS app and the website finndigital.net/safeplate.</p>
+
+        <h2>What stays on your device</h2>
+        <ul>
+            <li><strong>Camera frames during a scan.</strong> Barcode reads and food-photo analysis happen on your device. Image data is not uploaded unless you explicitly save the result to your scan history.</li>
+            <li><strong>Family profiles + allergens.</strong> Names, allergens, and severity stay local in SwiftData on your iPhone. Sync to iCloud is your choice.</li>
+            <li><strong>EpiPen reminders.</strong> Stored in iOS local notifications.</li>
+        </ul>
+
+        <h2>What we collect (only if you opt in)</h2>
+        <ul>
+            <li><strong>Account ID.</strong> If you sign in with Apple, we receive an opaque user identifier and (optionally) a relay email so subscriptions and saved palettes can sync across devices.</li>
+            <li><strong>Saved scans.</strong> If you tap "Save to history," we store the resulting hex-product reference, brand, and verdict in Firebase Firestore, scoped to your account. We do not store the raw camera image.</li>
+            <li><strong>Subscription status.</strong> Apple tells us whether you have an active SafePlate or PRO subscription. We never receive payment card or Apple ID details.</li>
+            <li><strong>Diagnostic data.</strong> Anonymous crash reports via Firebase Crashlytics.</li>
+        </ul>
+
+        <h2>What we do not collect</h2>
+        <ul>
+            <li>We do <strong>not</strong> upload, index, or store your camera frames as images.</li>
+            <li>We do <strong>not</strong> train any model on your scans, family profiles, or saved cards.</li>
+            <li>We do <strong>not</strong> sell your personal data to advertisers or data brokers.</li>
+            <li>We do <strong>not</strong> use third-party advertising SDKs.</li>
+            <li>We do <strong>not</strong> share your child&rsquo;s allergens with any third party.</li>
+        </ul>
+
+        <h2>Children's data</h2>
+        <p>SafePlate stores names, ages, and allergens for the children in your family at <strong>your</strong> direction, the parent or guardian. SafePlate is not intended for direct use by children under 13. Family-member data stays under your account and is removed when you delete your account or remove the family member.</p>
+
+        <h2>Third-party services</h2>
+        <ul>
+            <li><strong>Apple StoreKit</strong> &mdash; subscription management.</li>
+            <li><strong>Firebase Auth, Firestore, Storage, Crashlytics</strong> (Google) &mdash; account auth, optional cross-device sync, crash reporting.</li>
+            <li><strong>Apple MapKit</strong> &mdash; restaurant finder map display. No personal data sent.</li>
+            <li><strong>OpenFoodFacts and FDA OpenFDA</strong> (public APIs) &mdash; product database and recall alerts. No personal data sent.</li>
+        </ul>
+
+        <h2>Your rights</h2>
+        <p>You can delete your account and all associated data via Profile &rsaquo; Settings &rsaquo; Delete Account. Data is permanently erased within 30 days. To request a data export, email <a href="mailto:safeplateapp@gmail.com">safeplateapp@gmail.com</a>.</p>
+
+        <h2>Changes</h2>
+        <p>We may update this policy. Material changes will be reflected in the "Last updated" date and announced in-app.</p>
+
+        <h2>Contact</h2>
+        <p>Privacy questions: <a href="mailto:safeplateapp@gmail.com">safeplateapp@gmail.com</a> &mdash; Finn Digital LLC.</p>
+    </div>
+</body>
+</html>

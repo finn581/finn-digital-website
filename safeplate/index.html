@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafePlate — Family Allergy Safety</title>
+    <meta name="description" content="SafePlate is the iPhone app for allergy families. Scan any barcode or food photo, get a per-child safety verdict across 12+ allergens, find safe restaurants, and carry an allergy card in 11 languages.">
+    <meta name="apple-itunes-app" content="app-id=6762074869">
+
+    <link rel="canonical" href="https://finndigital.net/safeplate/">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <meta property="og:title" content="SafePlate — Family Allergy Safety">
+    <meta property="og:description" content="Scan any food. Per-child allergen check. Allergy cards in 11 languages. Family safety, made simple.">
+    <meta property="og:image" content="https://finndigital.net/og-image.png">
+    <meta property="og:url" content="https://finndigital.net/safeplate/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Finn Digital">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SafePlate — Family Allergy Safety">
+    <meta name="twitter:description" content="Scan any food, get a per-child safety check. 11 languages. Made for allergy families.">
+    <meta name="twitter:image" content="https://finndigital.net/og-image.png">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-downgrade">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "SafePlate",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "description": "Family allergy safety app: barcode + photo scanning, per-child allergen verdict, restaurant finder, allergy cards in 11 languages, FDA recall alerts.",
+      "url": "https://finndigital.net/safeplate/",
+      "image": "https://finndigital.net/assets/icons/safeplate.png",
+      "publisher": { "@type": "Organization", "name": "Finn Digital LLC", "url": "https://finndigital.net" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Syne';
+            font-style: normal;
+            font-weight: 100 1000;
+            font-display: swap;
+            src: url('/assets/fonts/Syne.woff2') format('woff2-variations');
+        }
+        :root {
+            --bg: #191C14;
+            --surface: #232819;
+            --text: #F4EFE5;
+            --muted: #A8A497;
+            --accent: #4CAF50;
+            --accent-soft: #8BD08F;
+            --safe: #2E8B57;
+            --warn: #DAA520;
+            --unsafe: #C83737;
+            --border: rgba(255,255,255,0.08);
+            --font-display: 'Syne', -apple-system, sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .studio-header { text-align: center; padding: 40px 32px 0; }
+        .studio-wordmark {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: clamp(28px, 4vw, 40px);
+            letter-spacing: -0.02em;
+            color: var(--text);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .studio-wordmark .dot { color: var(--accent); }
+        .studio-nav {
+            display: flex; justify-content: center; align-items: center; gap: 24px;
+            padding: 16px 32px 24px; border-bottom: 1px solid var(--border);
+        }
+        .studio-nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .studio-nav a:hover { color: var(--text); }
+        .container { max-width: 1080px; margin: 0 auto; padding: 60px 48px; }
+        .hero {
+            text-align: center; padding: 60px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 48px;
+        }
+        .hero-icon {
+            width: 160px; height: 160px; margin: 0 auto 28px;
+            border-radius: 36px;
+            box-shadow: 0 24px 64px rgba(76, 175, 80, 0.30);
+            display: block;
+            background: #fff;
+        }
+        h1 {
+            font-size: clamp(36px, 5.5vw, 56px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px;
+            background: linear-gradient(135deg, #fff, var(--accent-soft));
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+            line-height: 1.05;
+        }
+        .tagline { font-size: clamp(15px, 1.6vw, 19px); color: var(--muted); max-width: 640px; margin: 0 auto; line-height: 1.55; }
+        h2 { font-size: clamp(20px, 2.4vw, 26px); font-weight: 700; margin: 48px 0 16px; color: var(--text); }
+        p { color: var(--muted); margin-bottom: 16px; font-size: 15px; }
+        .features {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px; margin: 24px 0;
+        }
+        .feature {
+            background: var(--surface); padding: 20px; border-radius: 14px;
+            border: 1px solid var(--border);
+        }
+        .feature-icon { font-size: 28px; margin-bottom: 10px; }
+        .feature-title { color: var(--text); font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+        .feature-desc { color: var(--muted); font-size: 13px; line-height: 1.5; }
+        .feature.pro { border-color: rgba(218,165,32,0.35); }
+        .feature.pro .feature-title::after { content: " PRO"; color: var(--warn); font-size: 10px; font-weight: 800; letter-spacing: 0.5px; }
+        .cta {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--safe); color: #fff; text-decoration: none;
+            padding: 14px 28px; border-radius: 999px; font-weight: 700;
+            font-size: 15px; margin-top: 8px;
+            transition: transform 0.15s ease;
+        }
+        .cta:hover { transform: translateY(-2px); }
+        .links {
+            display: flex; gap: 24px; flex-wrap: wrap;
+            margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);
+        }
+        .links a { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 500; }
+        footer {
+            text-align: center; color: var(--muted); font-size: 12px;
+            padding: 40px 16px; border-top: 1px solid var(--border); margin-top: 60px;
+        }
+        footer a { color: var(--muted); text-decoration: none; margin: 0 8px; }
+        footer a:hover { color: var(--text); }
+        .promo-video {
+            position: relative;
+            width: 100%;
+            max-width: 1080px;
+            aspect-ratio: 16 / 9;
+            margin: 0 auto 14px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--border);
+        }
+        .promo-video video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .promo-label {
+            text-align: center;
+            font-size: 12px;
+            color: var(--muted);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin: 0 0 14px;
+        }
+        .promo-credit {
+            text-align: center;
+            font-size: 11px;
+            color: var(--muted);
+            margin: 12px 0 48px;
+            opacity: 0.7;
+        }
+        .promo-credit a { color: var(--muted); text-decoration: underline; }
+        .promo-credit a:hover { color: var(--text); }
+        .stat-row {
+            display: flex; flex-wrap: wrap; gap: 18px;
+            justify-content: center; margin: 16px 0 8px;
+        }
+        .stat {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 12px; padding: 14px 22px;
+            display: flex; flex-direction: column; align-items: center;
+            min-width: 130px;
+        }
+        .stat-num {
+            font-family: var(--font-display);
+            font-size: 28px; font-weight: 800; color: var(--accent);
+            letter-spacing: -0.02em;
+        }
+        .stat-lbl {
+            font-size: 11px; color: var(--muted);
+            letter-spacing: 0.1em; text-transform: uppercase;
+            margin-top: 2px;
+        }
+        .price-row {
+            display: flex; flex-wrap: wrap; gap: 14px; margin: 20px 0 8px;
+        }
+        .price {
+            flex: 1; min-width: 200px;
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 14px; padding: 18px 20px;
+            display: flex; flex-direction: column; gap: 4px;
+        }
+        .price.featured { border-color: rgba(218,165,32,0.45); }
+        .price-name { font-size: 13px; color: var(--muted); letter-spacing: 0.5px; text-transform: uppercase; font-weight: 600; }
+        .price-amount { font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--text); }
+        .price-detail { font-size: 12px; color: var(--muted); }
+        .price-badge { display: inline-block; align-self: flex-start; padding: 3px 9px; background: rgba(218,165,32,0.18); color: var(--warn); border-radius: 999px; font-size: 10px; font-weight: 800; letter-spacing: 0.6px; margin-top: 4px; }
+
+        /* Tablet */
+        @media (max-width: 900px) {
+            .container { padding: 48px 32px; }
+            .hero { padding: 40px 0 32px; margin-bottom: 36px; }
+            .hero-icon { width: 140px; height: 140px; margin-bottom: 22px; border-radius: 30px; }
+            .features { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+        }
+        /* Phone */
+        @media (max-width: 600px) {
+            .studio-header { padding: 28px 20px 0; }
+            .studio-nav { padding: 14px 20px 20px; gap: 18px; }
+            .container { padding: 32px 20px; }
+            .hero { padding: 24px 0 28px; margin-bottom: 28px; }
+            .hero-icon { width: 112px; height: 112px; margin-bottom: 18px; border-radius: 24px; }
+            .tagline { font-size: 15px; }
+            h2 { margin: 36px 0 12px; }
+            .features { grid-template-columns: 1fr; gap: 12px; }
+            .feature { padding: 18px; }
+            .promo-video { border-radius: 12px; box-shadow: 0 12px 36px rgba(0,0,0,0.5); }
+            .promo-label { font-size: 11px; }
+            .cta { padding: 14px 24px; font-size: 15px; width: 100%; max-width: 320px; justify-content: center; }
+            .links { gap: 16px 20px; }
+            footer { padding: 28px 20px; }
+            .price { min-width: 0; }
+        }
+        /* Compact phone */
+        @media (max-width: 380px) {
+            .container { padding: 28px 16px; }
+            .hero-icon { width: 96px; height: 96px; }
+            h1 { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="studio-header">
+        <a href="/" class="studio-wordmark">FINN<span class="dot">.</span>DIGITAL</a>
+    </header>
+    <nav class="studio-nav">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+    </nav>
+
+    <div class="container">
+
+        <section class="hero">
+            <picture>
+                <source srcset="/assets/icons/safeplate.webp" type="image/webp">
+                <img class="hero-icon" src="/assets/icons/safeplate.png" alt="SafePlate app icon" width="160" height="160">
+            </picture>
+            <h1>SafePlate</h1>
+            <p class="tagline">Allergy parents stop guessing. Scan any barcode or food photo and SafePlate flags every allergen for every child in your family — even the ones hiding behind "natural flavor" or "hydrolyzed soy protein."</p>
+        </section>
+
+        <p class="promo-label">Watch the preview</p>
+        <div class="promo-video">
+            <video
+                src="/assets/safeplate-promo-landscape.mp4"
+                poster="/assets/safeplate-promo-poster.jpg"
+                controls
+                preload="metadata"
+                playsinline
+                muted
+                loop></video>
+        </div>
+        <p class="promo-credit">Music: <em>Inspired</em> by Kevin MacLeod (<a href="https://incompetech.com">incompetech.com</a>) — licensed under Creative Commons: By Attribution 4.0.</p>
+
+        <h2>Built for allergy families</h2>
+        <p>SafePlate keeps a profile per child with their specific allergens and severity. Every scan is checked against the right kid &mdash; so the cracker that&rsquo;s safe for your oldest gets flagged the moment your peanut-allergic 5-year-old reaches for it. Emergency features (SOS button, EpiPen tracker, recall alerts) are <strong>always free</strong>, no subscription required.</p>
+
+        <div class="stat-row">
+            <div class="stat"><span class="stat-num">12+</span><span class="stat-lbl">allergens tracked</span></div>
+            <div class="stat"><span class="stat-num">11</span><span class="stat-lbl">card languages</span></div>
+            <div class="stat"><span class="stat-num">∞</span><span class="stat-lbl">family profiles</span></div>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">▥</div>
+                <div class="feature-title">Barcode + label scanner</div>
+                <div class="feature-desc">Point at any product. Per-child allergen check in under a second, with severity badges from mild to anaphylaxis.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📷</div>
+                <div class="feature-title">AI Food Photo Scanner</div>
+                <div class="feature-desc">No barcode? Photograph the dish. We identify ingredients and run the full allergen check.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🍴</div>
+                <div class="feature-title">Restaurant finder</div>
+                <div class="feature-desc">Map view of allergy-aware restaurants near you, filtered to your child&rsquo;s allergens, with reviews from real allergy families.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🌍</div>
+                <div class="feature-title">Allergy cards in 11 languages</div>
+                <div class="feature-desc">Show your waiter a clear card in their language. No more anxious miming in Madrid or Tokyo.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💉</div>
+                <div class="feature-title">EpiPen tracker</div>
+                <div class="feature-desc">Reminders before each pen expires. Never get caught with a useless one in your bag.</div>
+            </div>
+            <div class="feature pro">
+                <div class="feature-icon">🚨</div>
+                <div class="feature-title">FDA recall alerts</div>
+                <div class="feature-desc">Real-time alerts the moment a recall lands on anything in your scan history.</div>
+            </div>
+        </div>
+
+        <h2>Pricing</h2>
+        <p>Free to download. Emergency features and unlimited basic scanning included. SafePlate PRO unlocks the premium toolbox with a 7-day free trial.</p>
+
+        <div class="price-row">
+            <div class="price">
+                <div class="price-name">Monthly</div>
+                <div class="price-amount">$4.99<span style="font-size:15px;font-weight:500;color:var(--muted);">/mo</span></div>
+                <div class="price-detail">7-day free trial</div>
+            </div>
+            <div class="price featured">
+                <div class="price-name">Annual</div>
+                <div class="price-amount">$39.99<span style="font-size:15px;font-weight:500;color:var(--muted);">/yr</span></div>
+                <div class="price-detail">$3.33/mo · 7-day free trial</div>
+                <div class="price-badge">SAVE 33%</div>
+            </div>
+        </div>
+
+        <h2>Get SafePlate</h2>
+        <p>Coming soon to the iOS App Store. Tap below to be the first to know when it launches.</p>
+        <a class="cta" href="mailto:contact@finndigital.net?subject=Notify%20me%20when%20SafePlate%20launches&body=Please%20let%20me%20know%20when%20SafePlate%20is%20available%20on%20the%20App%20Store.">Notify me at launch &rarr;</a>
+
+        <div class="links">
+            <a href="support.html">Support</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="/">Finn Digital</a>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 Finn Digital LLC · <a href="/">finndigital.net</a> · <a href="mailto:contact@finndigital.net">Contact</a>
+    </footer>
+
+</body>
+</html>
