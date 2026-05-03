@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; font-src 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+    <title>CareFind Privacy Policy</title>
+    <meta name="description" content="CareFind Privacy Policy — what we collect, what we don't, and your rights.">
+    <link rel="canonical" href="https://finndigital.net/carefind/privacy.html">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <style>
+        :root { --bg:#0E2238; --surface:#1A2D45; --text:#F1F6FA; --muted:#8FAEC6; --accent:#5BB2C7; --border:rgba(255,255,255,0.08); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .nav a:hover { color: var(--text); }
+        .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .container { max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
+        h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .updated { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
+        h2 { font-size: 18px; font-weight: 700; margin: 32px 0 10px; color: var(--text); }
+        p, li { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+        ul { padding-left: 24px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        strong { color: var(--text); }
+        @media (max-width: 600px) { .container { padding: 32px 20px 60px; } .nav { padding: 16px 20px; } }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="/" class="brand">Finn Digital</a>
+        <div>
+            <a href="index.html">About</a> &nbsp;
+            <a href="support.html">Support</a> &nbsp;
+            <a href="privacy.html">Privacy</a> &nbsp;
+            <a href="terms.html">Terms</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: May 3, 2026</p>
+
+        <p>CareFind ("we", "our", or "us") is operated by Finn Digital LLC. This privacy policy explains what information we collect, how we use it, which third parties receive it, and the choices you have. It applies to the CareFind iOS app and the website finndigital.net/carefind.</p>
+
+        <h2>What stays on your device</h2>
+        <ul>
+            <li><strong>Health journal entries.</strong> Symptom logs, mood notes, and care reminders stay in SwiftData on your iPhone unless you explicitly enable iCloud sync.</li>
+            <li><strong>Saved providers.</strong> Your favorites list lives locally. If you sign in, it syncs to your CareFind account so you can access it on a new device.</li>
+            <li><strong>Medication scans.</strong> Pill bottle photos are processed on-device with Apple Vision OCR. The image is never uploaded.</li>
+            <li><strong>Family member info.</strong> Names, ages, and conditions for family members are stored locally and (if synced) only in your private account.</li>
+        </ul>
+
+        <h2>What we collect (only if you opt in)</h2>
+        <ul>
+            <li><strong>Account ID.</strong> Sign-in with Apple gives us an opaque user identifier and (optionally) a relay email so subscriptions and saved providers can sync between devices.</li>
+            <li><strong>Subscription status.</strong> Apple StoreKit reports whether you have an active CareFind+ or Family subscription. We never receive payment card or Apple ID details.</li>
+            <li><strong>Search queries.</strong> Anonymous, aggregate query terms (e.g., "knee pain Bay Area") help us tune the symptom-to-specialist matcher. Queries are not linked to your identity.</li>
+            <li><strong>Diagnostic data.</strong> Anonymous crash reports via Firebase Crashlytics.</li>
+        </ul>
+
+        <h2>What we do not collect</h2>
+        <ul>
+            <li>We do <strong>not</strong> sell your data to advertisers, data brokers, insurance companies, or pharmaceutical firms.</li>
+            <li>We do <strong>not</strong> use third-party advertising SDKs.</li>
+            <li>We do <strong>not</strong> train AI models on your health journal, family info, or medication scans.</li>
+            <li>We do <strong>not</strong> accept payment from healthcare providers for ranking, placement, or visibility in CareFind.</li>
+        </ul>
+
+        <h2>Provider data sources</h2>
+        <p>Provider records come from public federal databases &mdash; NPPES (HRSA), CMS Medicare datasets, NLM credential lookups &mdash; plus Google Places for veterinary listings. These sources are public and contain no information about you.</p>
+
+        <h2>Your rights</h2>
+        <p>You can delete your account and all associated data via Profile &rsaquo; Settings &rsaquo; Delete Account. Data is permanently erased within 30 days. To request a data export, email <a href="mailto:carefindapp@gmail.com">carefindapp@gmail.com</a>.</p>
+
+        <h2>Children</h2>
+        <p>CareFind is not directed at children under 13. Family-member records (which may include minor children) are entered by you, the parent or guardian, and remain under your account.</p>
+
+        <h2>Changes</h2>
+        <p>We may update this policy. Material changes will be reflected in the "Last updated" date and announced in-app.</p>
+
+        <h2>Contact</h2>
+        <p>Privacy questions: <a href="mailto:carefindapp@gmail.com">carefindapp@gmail.com</a> &mdash; Finn Digital LLC.</p>
+    </div>
+</body>
+</html>
