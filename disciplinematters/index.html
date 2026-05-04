@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discipline Matters — A System for Becoming</title>
+    <meta name="description" content="Discipline Matters is an iOS app for men committed to daily discipline. Smart morning alarm, workouts, AI nutrition, GPS, evening wind-down, and a 40-week journey backed by Atomic Habits, Meditations, and 26 more books.">
+    <meta name="apple-itunes-app" content="app-id=6766293475">
+
+    <link rel="canonical" href="https://finndigital.net/disciplinematters/">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Discipline Matters — A System for Becoming">
+    <meta property="og:description" content="iOS app for daily discipline. Morning anchors, workouts, nutrition, sleep, and a 40-week journey.">
+    <meta property="og:image" content="https://finndigital.net/og-image.png">
+    <meta property="og:url" content="https://finndigital.net/disciplinematters/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Finn Digital">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discipline Matters — A System for Becoming">
+    <meta name="twitter:description" content="iOS app for daily discipline. Built around five rhythms — Morning, Workout, Nutrition, Progress, Evening.">
+    <meta name="twitter:image" content="https://finndigital.net/og-image.png">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-downgrade">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Discipline Matters",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "description": "A daily training ground for becoming who you said you'd become. Morning anchors, workouts, nutrition, sleep, and a 40-week journey.",
+      "url": "https://finndigital.net/disciplinematters/",
+      "downloadUrl": "https://apps.apple.com/app/id6766293475",
+      "image": "https://finndigital.net/assets/icons/disciplinematters.png",
+      "publisher": { "@type": "Organization", "name": "Finn Digital LLC", "url": "https://finndigital.net" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Syne';
+            font-style: normal;
+            font-weight: 100 1000;
+            font-display: swap;
+            src: url('/assets/fonts/Syne.woff2') format('woff2-variations');
+        }
+
+        :root {
+            --bg: #0E0B08;
+            --surface: #16110C;
+            --text: #F2EAD8;
+            --muted: #9F9684;
+            --accent: #C9A06B;
+            --border: rgba(201,160,107,0.18);
+            --font-display: 'Syne', -apple-system, sans-serif;
+            --font-serif: ui-serif, "New York", Georgia, serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .studio-header {
+            text-align: center;
+            padding: 40px 32px 0;
+        }
+        .studio-wordmark {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: clamp(28px, 4vw, 40px);
+            letter-spacing: -0.02em;
+            color: var(--text);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .studio-wordmark .dot { color: var(--accent); }
+        .studio-nav {
+            display: flex; justify-content: center; align-items: center; gap: 24px;
+            padding: 16px 32px 24px; border-bottom: 1px solid var(--border);
+        }
+        .studio-nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .studio-nav a:hover { color: var(--text); }
+        .container { max-width: 820px; margin: 0 auto; padding: 60px 32px; }
+        .hero {
+            text-align: center; padding: 60px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 48px;
+        }
+        .hero-icon {
+            width: 160px; height: 160px; margin: 0 auto 28px;
+            border-radius: 36px;
+            box-shadow: 0 24px 64px rgba(201, 160, 107, 0.28);
+            display: block;
+        }
+        h1 {
+            font-family: var(--font-serif);
+            font-size: 48px; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 14px;
+            color: var(--text);
+        }
+        .tagline { font-size: 18px; color: var(--muted); max-width: 540px; margin: 0 auto; line-height: 1.55; }
+        h2 {
+            font-family: var(--font-serif);
+            font-size: 28px; font-weight: 500; margin: 48px 0 16px; color: var(--text);
+            letter-spacing: -0.01em;
+        }
+        p { color: var(--muted); margin-bottom: 16px; font-size: 15px; }
+        .features {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px; margin: 24px 0;
+        }
+        .feature {
+            background: var(--surface); padding: 20px; border-radius: 14px;
+            border: 1px solid var(--border);
+        }
+        .feature-icon { font-size: 28px; margin-bottom: 10px; }
+        .feature-title { color: var(--text); font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+        .feature-desc { color: var(--muted); font-size: 13px; line-height: 1.5; }
+        .cta {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--accent); color: var(--bg); text-decoration: none;
+            padding: 14px 28px; border-radius: 999px; font-weight: 700;
+            font-size: 15px; margin-top: 8px;
+            transition: transform 0.15s ease;
+        }
+        .cta:hover { transform: translateY(-2px); }
+        .links {
+            display: flex; gap: 24px; flex-wrap: wrap;
+            margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);
+        }
+        .links a { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 500; }
+        footer {
+            text-align: center; color: var(--muted); font-size: 12px;
+            padding: 40px 16px; border-top: 1px solid var(--border); margin-top: 60px;
+        }
+        footer a { color: var(--muted); text-decoration: none; margin: 0 8px; }
+        footer a:hover { color: var(--text); }
+        blockquote {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-size: 18px;
+            line-height: 1.55;
+            color: var(--text);
+            border-left: 2px solid var(--accent);
+            padding: 8px 0 8px 24px;
+            margin: 32px 0;
+        }
+        blockquote .attribution {
+            display: block;
+            font-style: normal;
+            font-family: -apple-system, sans-serif;
+            font-size: 13px;
+            color: var(--muted);
+            margin-top: 10px;
+            letter-spacing: 0.04em;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="studio-header">
+        <a href="/" class="studio-wordmark">FINN<span class="dot">.</span>DIGITAL</a>
+    </header>
+    <nav class="studio-nav">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+    </nav>
+
+    <div class="container">
+
+        <section class="hero">
+            <img class="hero-icon" src="/assets/icons/disciplinematters.png" alt="Discipline Matters app icon" width="160" height="160">
+            <h1>Discipline Matters</h1>
+            <p class="tagline">A daily training ground for becoming who you said you'd become. Built around five rhythms — Morning, Workout, Nutrition, Progress, Evening.</p>
+        </section>
+
+        <blockquote>
+            "The chief task in life is simply this: identify and separate matters so that I can say clearly which are externals not under my control."
+            <span class="attribution">— Epictetus, Discourses</span>
+        </blockquote>
+
+        <h2>Built for men committed to discipline</h2>
+        <p>Discipline Matters is the iPhone companion for the man rebuilding his life on intention. Smart alarm with cognitive challenges. Personalized workouts with Apple Health. AI-assisted nutrition. GPS run tracking. HomeKit-aware evening wind-down. A 40-week flagship journey. Optional small-group cohorts. Quotes from Marcus Aurelius, Cal Newport, Ryan Holiday, James Clear, and 24 more authors — every day, with full attribution and tap-through to the source book.</p>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">☀️</div>
+                <div class="feature-title">Morning Anchor</div>
+                <div class="feature-desc">Smart alarm that wakes you with a cognitive challenge. 10-step Becoming flow drawing from 28 motivation books.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🏋️</div>
+                <div class="feature-title">Workout</div>
+                <div class="feature-desc">Personalized programs synced through Apple Health. Live sessions with heart rate, calories, and route.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🥗</div>
+                <div class="feature-title">Nutrition</div>
+                <div class="feature-desc">70 high-protein recipes. AI meal planning. Macro tracking that doesn't punish a missed log.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">Progress</div>
+                <div class="feature-desc">Year heatmap. Streak system that survives life — not gamified, not shaming.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🌙</div>
+                <div class="feature-title">Evening</div>
+                <div class="feature-desc">HomeKit-aware lighting. Generative sleep audio. Sleep stage analysis from Apple Health.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📖</div>
+                <div class="feature-title">Become 40</div>
+                <div class="feature-desc">A 40-week guided transformation. Each week has a theme, a summary, and three daily actions.</div>
+            </div>
+        </div>
+
+        <h2>Premium tiers</h2>
+        <p><strong style="color: var(--text)">Plus</strong> ($9.99/mo, $59.99/yr with 7-day free trial, or $149.99 lifetime) unlocks every workout program, full meal library, advanced analytics, GPS routes, HomeKit evening flow, and the Become 40 journey.</p>
+        <p><strong style="color: var(--text)">Coach+</strong> ($14.99/mo) adds a 60–90 second AI Briefing tailored to your last seven days, premium voice, generative sleep audio, and Live Activities.</p>
+        <p><strong style="color: var(--text)">Family Plan</strong> ($24.99/mo) shares Coach+ with up to five family members through Apple Family Sharing.</p>
+
+        <h2>Get Discipline Matters</h2>
+        <p>Free to start. 7-day free trial on Plus. Cancel anytime.</p>
+        <a class="cta" href="https://apps.apple.com/app/id6766293475">Download on the App Store →</a>
+
+        <div class="links">
+            <a href="support.html">Support</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="/">Finn Digital</a>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 Finn Digital LLC · <a href="/">finndigital.net</a> · <a href="mailto:contact@finndigital.net">Contact</a>
+    </footer>
+
+</body>
+</html>

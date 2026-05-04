@@ -126,4 +126,28 @@
         <changefreq>monthly</changefreq>
         <priority>0.4</priority>
     </url>
+    <url>
+        <loc>https://finndigital.net/disciplinematters/</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://finndigital.net/disciplinematters/privacy.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://finndigital.net/disciplinematters/terms.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://finndigital.net/disciplinematters/support.html</loc>
+        <lastmod>2026-05-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
 </urlset>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+    <title>Discipline Matters Privacy Policy</title>
+    <meta name="description" content="Discipline Matters Privacy Policy — what we collect, what we don't, and your rights.">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <style>
+        :root { --bg:#0E0B08; --surface:#16110C; --text:#F2EAD8; --muted:#9F9684; --accent:#C9A06B; --border:rgba(201,160,107,0.18); --font-serif: ui-serif, "New York", Georgia, serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .nav a:hover { color: var(--text); }
+        .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .container { max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
+        h1 { font-family: var(--font-serif); font-size: 36px; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .sub { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
+        h2 { font-family: var(--font-serif); font-size: 22px; font-weight: 500; margin: 36px 0 12px; color: var(--text); }
+        p, li { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+        ul { padding-left: 24px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        strong { color: var(--text); }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="/" class="brand">Finn Digital</a>
+        <div>
+            <a href="index.html">About</a> &nbsp;
+            <a href="support.html">Support</a> &nbsp;
+            <a href="terms.html">Terms</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>Discipline Matters Privacy Policy</h1>
+        <p class="sub">Last updated: May 4, 2026. Applies to Discipline Matters 1.0 and later on iOS.</p>
+
+        <h2>TL;DR</h2>
+        <p>Discipline Matters is built around the rule that the work you do on yourself should stay yours. Health data, GPS routes, voice journals, and reflections are stored on your device — we never upload them. We don't sell data. We don't run ads. We don't track you across other apps or websites. The only thing that leaves your phone is what we need to authenticate you and (for Coach+ subscribers who tap the AI Briefing) a summarized week of activity sent to Anthropic to generate the briefing.</p>
+
+        <h2>Who we are</h2>
+        <p>Discipline Matters is published by Finn Digital LLC, 9472 SW 67th LN, Gainesville, FL 32608. Contact: <a href="mailto:support@finndigital.net">support@finndigital.net</a>.</p>
+
+        <h2>What we collect</h2>
+
+        <p><strong>Account info</strong> — your email and display name, when you sign up. Used to authenticate you with Firebase Authentication and sync settings across your devices. We do not see your password (handled by Apple Sign-In, Sign in with Google, or Firebase's hashed-credential flow).</p>
+
+        <p><strong>Health &amp; fitness data</strong> — sleep stages, workouts, hydration, heart rate, mindful minutes — read from Apple Health <strong>only with your explicit permission</strong>. Stored locally on your device. We do not upload your raw health data to our servers.</p>
+
+        <p><strong>Location</strong> — GPS routes during workouts you choose to record. Captured on-device, stored locally. We do not continuously track your location — recording is opt-in per workout.</p>
+
+        <p><strong>Voice journal entries</strong> — recorded on-device, transcribed on-device via Apple Speech, stored locally. Audio never leaves your phone.</p>
+
+        <p><strong>App usage data</strong> — anonymous, aggregated information about which tabs and features you use. Sent to Firebase Analytics in non-identifying form to help us improve the product.</p>
+
+        <p><strong>Crash diagnostics</strong> — anonymous crash logs sent to Firebase Crashlytics so we can fix bugs. No personal data is included.</p>
+
+        <p><strong>Subscription status</strong> — managed by Apple's StoreKit. We can see whether you have an active Plus or Coach+ subscription. We never see payment details.</p>
+
+        <h2>Coach+ AI Briefing</h2>
+        <p>If you subscribe to Coach+ and tap the AI Briefing card, a <strong>summary</strong> of your last seven days of activity (e.g., "5 workouts this week, average sleep 7.2h, longest streak 14 days") is sent to Anthropic's Claude API to generate your personalized briefing. The summary contains aggregate counts only — never raw health values, journal contents, or location data. Anthropic does not train models on this data per their <a href="https://www.anthropic.com/legal/privacy" rel="noopener" target="_blank">privacy policy</a>. The request is proxied through our Cloud Function so your account ID is the only identifier sent.</p>
+
+        <h2>What we do not collect</h2>
+        <ul>
+            <li>We do not sell or share your data with advertisers or data brokers.</li>
+            <li>We do not use third-party tracking SDKs.</li>
+            <li>We do not access your photo library, contacts, or browsing history.</li>
+            <li>The microphone is used only for voice journal recording you explicitly start.</li>
+            <li>We do not collect children's data; the app is intended for adult users.</li>
+        </ul>
+
+        <h2>Permissions we ask for</h2>
+        <ul>
+            <li><strong>Apple Health</strong> — read sleep, workouts, hydration, heart rate (optional, used for the morning briefing and progress charts).</li>
+            <li><strong>Notifications</strong> — required for the smart alarm and reminders.</li>
+            <li><strong>Location (When In Use)</strong> — only requested if you start a GPS-tracked workout.</li>
+            <li><strong>Camera</strong> — used by alarm-dismissal challenges that scan barcodes.</li>
+            <li><strong>Microphone &amp; Speech Recognition</strong> — used only for voice journal entries you explicitly start. Transcription is on-device.</li>
+            <li><strong>Motion</strong> — used for shake-to-dismiss alarm challenges and step counting.</li>
+            <li><strong>HomeKit</strong> — optional, lets the app dim your smart bulbs as a sunrise wake-up.</li>
+        </ul>
+
+        <h2>How long we keep data</h2>
+        <ul>
+            <li><strong>Account data</strong>: until you delete your account from inside the app (Settings → Account → Delete Account). Deletion is immediate and permanent.</li>
+            <li><strong>Health, location, journal data</strong>: stays on your device. Deleting the app removes everything.</li>
+            <li><strong>Anonymous analytics + crash data</strong>: 14 months (Firebase default).</li>
+            <li><strong>AI Briefing request logs</strong>: 30 days for debugging, then automatically deleted.</li>
+        </ul>
+
+        <h2>Your rights</h2>
+        <ul>
+            <li><strong>Access</strong> — email <a href="mailto:support@finndigital.net">support@finndigital.net</a> to request a copy of any data tied to your account.</li>
+            <li><strong>Deletion</strong> — delete your account in-app or email us; complete deletion within 30 days.</li>
+            <li><strong>Export</strong> — export your local data anytime from Settings → Data → Export.</li>
+            <li><strong>EU/UK/CA users</strong>: you have additional rights under GDPR / UK GDPR / PIPEDA — email us to exercise them.</li>
+            <li><strong>California users</strong>: under CCPA/CPRA, you have the right to know, delete, and not be discriminated against. Same email.</li>
+        </ul>
+
+        <h2>Security</h2>
+        <p>All network traffic uses HTTPS / TLS 1.2+. Authentication is handled by Firebase Auth (Google's BAA-eligible auth platform). Firebase App Check protects our backend from credential abuse. We minimize what crosses the network — health data, journal text, and routes never leave your device.</p>
+
+        <h2>Children</h2>
+        <p>Discipline Matters is rated 4+ but is intended for adult users committed to building disciplined daily routines. We do not knowingly collect data from children under 13.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>If we make material changes, we will update this page and notify subscribers via in-app notice before the change takes effect.</p>
+
+        <h2>Contact</h2>
+        <p>Questions? Email <a href="mailto:support@finndigital.net">support@finndigital.net</a> or write to Finn Digital LLC, 9472 SW 67th LN, Gainesville, FL 32608.</p>
+
+    </div>
+
+</body>
+</html>
