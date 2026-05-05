@@ -162,6 +162,44 @@
             margin-top: 10px;
             letter-spacing: 0.04em;
         }
+        .promo-label {
+            display: block;
+            text-align: center;
+            font-family: var(--font-display);
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin: 40px 0 14px;
+        }
+        .promo-video {
+            position: relative;
+            width: 100%;
+            max-width: 820px;
+            aspect-ratio: 16 / 9;
+            margin: 0 auto 12px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.6), 0 0 0 1px var(--border);
+            background: var(--surface);
+        }
+        .promo-video video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .promo-credit {
+            text-align: center;
+            font-size: 12px;
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
+        .promo-credit a { color: var(--accent); text-decoration: none; }
+        @media (max-width: 600px) {
+            .promo-video { border-radius: 12px; box-shadow: 0 12px 36px rgba(0,0,0,0.5); }
+            .promo-label { font-size: 11px; }
+        }
     </style>
 </head>
 <body>
@@ -187,6 +225,19 @@
             "The body is given; the man chooses."
             <span class="attribution">— from the app, on first launch</span>
         </blockquote>
+
+        <p class="promo-label">Watch the preview</p>
+        <div class="promo-video">
+            <video
+                src="/assets/disciplinematters-promo-landscape.mp4"
+                poster="/assets/disciplinematters-promo-poster.jpg"
+                controls
+                autoplay
+                playsinline
+                muted
+                loop></video>
+        </div>
+        <p class="promo-credit">Music: <em>Lightless Dawn</em> by Kevin MacLeod (<a href="https://incompetech.com">incompetech.com</a>) — licensed under Creative Commons: By Attribution 4.0.</p>
 
         <h2>Not another habit tracker</h2>
         <p>Discipline Matters is the system you wish you had built when you said you'd become someone different. It is not gamified. It does not shame. It reads as a magazine and runs as a system — six modules, one editorial voice, every day a sealed entry in a ledger.</p>
