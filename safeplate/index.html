@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SafePlate — Family Allergy Safety</title>
-    <meta name="description" content="SafePlate is the iPhone app for allergy families. Scan any barcode or food photo, get a per-child safety verdict across 12+ allergens, find safe restaurants, and carry an allergy card in 11 languages.">
-    <meta name="apple-itunes-app" content="app-id=6762074869">
+    <title>SafePlate — Allergen Tracking for Families</title>
+    <meta name="description" content="SafePlate is an informational iPhone app for families managing food allergies. Scan a barcode or food photo and the app lists ingredients and highlights matches against each family member's allergen profile. Allergy cards in 11 languages. Not a medical device.">
+    <meta name="apple-itunes-app" content="app-id=6761733448">
 
     <link rel="canonical" href="https://finndigital.net/safeplate/">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <meta property="og:title" content="SafePlate — Family Allergy Safety">
-    <meta property="og:description" content="Scan any food. Per-child allergen check. Allergy cards in 11 languages. Family safety, made simple.">
+    <meta property="og:title" content="SafePlate — Allergen Tracking for Families">
+    <meta property="og:description" content="Scan a barcode or food photo. The app lists ingredients and highlights matches against each family member's allergen profile. Allergy cards in 11 languages. An informational tool — always read the label.">
     <meta property="og:image" content="https://finndigital.net/og-image.png">
     <meta property="og:url" content="https://finndigital.net/safeplate/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Finn Digital">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SafePlate — Family Allergy Safety">
-    <meta name="twitter:description" content="Scan any food, get a per-child safety check. 11 languages. Made for allergy families.">
+    <meta name="twitter:title" content="SafePlate — Allergen Tracking for Families">
+    <meta name="twitter:description" content="Scan a barcode or food photo. The app lists ingredients and highlights matches against each family member's allergen profile. 11 languages. Always read the label.">
     <meta name="twitter:image" content="https://finndigital.net/og-image.png">
 
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
@@ -32,8 +32,8 @@
       "@type": "MobileApplication",
       "name": "SafePlate",
       "operatingSystem": "iOS",
-      "applicationCategory": "HealthApplication",
-      "description": "Family allergy safety app: barcode + photo scanning, per-child allergen verdict, restaurant finder, allergy cards in 11 languages, FDA recall alerts.",
+      "applicationCategory": "LifestyleApplication",
+      "description": "Informational allergen-tracking app for families: barcode and photo ingredient scanning, per-profile allergen highlighting, restaurant finder, allergy cards in 11 languages, FDA recall alerts. SafePlate is not a medical device.",
       "url": "https://finndigital.net/safeplate/",
       "downloadUrl": "https://apps.apple.com/app/id6761733448",
       "image": "https://finndigital.net/assets/icons/safeplate.png",
@@ -207,6 +207,27 @@
         .price-amount { font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--text); }
         .price-detail { font-size: 12px; color: var(--muted); }
         .price-badge { display: inline-block; align-self: flex-start; padding: 3px 9px; background: rgba(218,165,32,0.18); color: var(--warn); border-radius: 999px; font-size: 10px; font-weight: 800; letter-spacing: 0.6px; margin-top: 4px; }
+        .disclaimer {
+            background: rgba(200,55,55,0.08);
+            border: 1px solid rgba(200,55,55,0.30);
+            border-radius: 14px;
+            padding: 20px 22px;
+            margin: 36px 0 24px;
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .disclaimer h3 {
+            color: var(--unsafe);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .disclaimer p { color: var(--text); margin-bottom: 8px; font-size: 14px; }
+        .disclaimer p:last-child { margin-bottom: 0; }
+        .disclaimer strong { color: var(--unsafe); }
 
         /* Tablet */
         @media (max-width: 900px) {
@@ -260,7 +281,7 @@
                 <img class="hero-icon" src="/assets/icons/safeplate.png" alt="SafePlate app icon" width="160" height="160">
             </picture>
             <h1>SafePlate</h1>
-            <p class="tagline">Allergy parents stop guessing. Scan any barcode or food photo and SafePlate flags every allergen for every child in your family — even the ones hiding behind "natural flavor" or "hydrolyzed soy protein."</p>
+            <p class="tagline">An informational allergen-tracking app for families. Scan a barcode or food photo and SafePlate lists the ingredients it reads, then highlights any that match the allergen profile you&rsquo;ve set up for each family member &mdash; including common synonyms like &ldquo;hydrolyzed soy protein&rdquo; or &ldquo;casein.&rdquo; Always confirm with the manufacturer&rsquo;s label.</p>
         </section>
 
         <p class="promo-label">Watch the preview</p>
@@ -276,7 +297,7 @@
         <p class="promo-credit">Music: <em>Inspired</em> by Kevin MacLeod (<a href="https://incompetech.com">incompetech.com</a>) — licensed under Creative Commons: By Attribution 4.0.</p>
 
         <h2>Built for allergy families</h2>
-        <p>SafePlate keeps a profile per child with their specific allergens and severity. Every scan is checked against the right kid &mdash; so the cracker that&rsquo;s safe for your oldest gets flagged the moment your peanut-allergic 5-year-old reaches for it. Emergency features (SOS button, EpiPen tracker, recall alerts) are <strong>always free</strong>, no subscription required.</p>
+        <p>SafePlate lets you keep a profile per family member with the allergens you&rsquo;ve added and the severity tier you&rsquo;ve assigned. When you scan a product, the app shows the ingredients it read and highlights any matches against each profile, so you can decide what to serve. Free, never-paywalled features include the contact-share &ldquo;SOS&rdquo; screen, EpiPen expiration reminders, and FDA recall alerts. SafePlate is an informational tool &mdash; the manufacturer&rsquo;s allergen statement remains the source of truth.</p>
 
         <div class="stat-row">
             <div class="stat"><span class="stat-num">12+</span><span class="stat-lbl">allergens tracked</span></div>
@@ -288,32 +309,32 @@
             <div class="feature">
                 <div class="feature-icon">▥</div>
                 <div class="feature-title">Barcode + label scanner</div>
-                <div class="feature-desc">Point at any product. Per-child allergen check in under a second, with severity badges from mild to anaphylaxis.</div>
+                <div class="feature-desc">Point at any product. The app lists the ingredients it reads and highlights matches against each family member&rsquo;s profile, using the severity tier you set yourself.</div>
             </div>
             <div class="feature">
                 <div class="feature-icon">📷</div>
-                <div class="feature-title">AI Food Photo Scanner</div>
-                <div class="feature-desc">No barcode? Photograph the dish. We identify ingredients and run the full allergen check.</div>
+                <div class="feature-title">Food photo ingredient reader</div>
+                <div class="feature-desc">No barcode? Photograph the label. The app reads the ingredient text and compares it to the allergens you&rsquo;ve added.</div>
             </div>
             <div class="feature">
                 <div class="feature-icon">🍴</div>
                 <div class="feature-title">Restaurant finder</div>
-                <div class="feature-desc">Map view of allergy-aware restaurants near you, filtered to your child&rsquo;s allergens, with reviews from real allergy families.</div>
+                <div class="feature-desc">Map of nearby restaurants, filtered by user-submitted allergen tags, with notes contributed by other allergy families. Always call ahead to confirm.</div>
             </div>
             <div class="feature">
                 <div class="feature-icon">🌍</div>
                 <div class="feature-title">Allergy cards in 11 languages</div>
-                <div class="feature-desc">Show your waiter a clear card in their language. No more anxious miming in Madrid or Tokyo.</div>
+                <div class="feature-desc">Hand your waiter a card listing your allergens in their language. No more anxious miming in Madrid or Tokyo.</div>
             </div>
             <div class="feature">
                 <div class="feature-icon">💉</div>
-                <div class="feature-title">EpiPen tracker</div>
-                <div class="feature-desc">Reminders before each pen expires. Never get caught with a useless one in your bag.</div>
+                <div class="feature-title">EpiPen expiration reminder</div>
+                <div class="feature-desc">A calendar-style reminder before each auto-injector you log expires. Personal reminder only &mdash; the app does not order or dispense anything.</div>
             </div>
             <div class="feature pro">
                 <div class="feature-icon">🚨</div>
                 <div class="feature-title">FDA recall alerts</div>
-                <div class="feature-desc">Real-time alerts the moment a recall lands on anything in your scan history.</div>
+                <div class="feature-desc">Notifications when the public OpenFDA database posts a recall affecting anything in your scan history.</div>
             </div>
         </div>
 
@@ -334,6 +355,13 @@
             </div>
         </div>
 
+        <div class="disclaimer">
+            <h3>Important &mdash; please read</h3>
+            <p><strong>SafePlate is an informational tool, not a medical device.</strong> It is not registered with, cleared by, or approved by the U.S. Food and Drug Administration (FDA), the European Medicines Agency, the U.K. Medicines and Healthcare products Regulatory Agency (MHRA), Health Canada, or any other regulatory authority. SafePlate is not intended to diagnose, prevent, treat, cure, or mitigate any disease, allergy, or condition.</p>
+            <p>Ingredient text, allergen flags, recall notifications, and restaurant tags are provided for convenience and may be incomplete, out of date, or incorrect. <strong>Always read the manufacturer&rsquo;s label and ask the restaurant directly</strong> before serving any food to a person with a food allergy. If you suspect an allergic reaction, <strong>call 911 (or your local emergency number) immediately</strong> &mdash; SafePlate does not call emergency services on your behalf.</p>
+            <p>Use of SafePlate is subject to the full <a href="terms.html" style="color: var(--unsafe); text-decoration: underline;">Terms of Service</a>, including a limitation of liability and an assumption-of-risk acknowledgment.</p>
+        </div>
+
         <h2>Get SafePlate</h2>
         <p>Free on the iOS App Store. Universal app for iPhone and iPad. Optional SafePlate PRO unlocks the premium toolbox with a 7-day free trial.</p>
         <a class="cta" href="https://apps.apple.com/app/id6761733448">Download on the App Store &rarr;</a>
@@ -348,6 +376,7 @@
     </div>
 
     <footer>
+        <p style="max-width: 760px; margin: 0 auto 14px; padding: 0 16px; font-size: 11px; color: var(--muted); line-height: 1.55;">SafePlate is an informational tool for personal allergen tracking. It is not a medical device, is not FDA cleared, and is not a substitute for reading the manufacturer&rsquo;s label or consulting a qualified medical professional. In an emergency, call 911.</p>
         © 2026 Finn Digital LLC · <a href="/">finndigital.net</a> · <a href="mailto:contact@finndigital.net">Contact</a>
     </footer>
 
