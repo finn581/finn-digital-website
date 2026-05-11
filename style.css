@@ -436,10 +436,31 @@ a {
     gap: 8px;
     margin-top: 20px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .app-link-row .app-link {
     margin-top: 0;
+}
+
+.app-store-link {
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+    border-radius: 8px;
+    transition: transform 0.3s var(--ease-out-expo), opacity 0.3s ease;
+    will-change: transform;
+}
+
+.app-store-link:hover {
+    transform: translateY(-1px);
+    opacity: 0.88;
+}
+
+.app-store-badge {
+    display: block;
+    height: 40px;
+    width: auto;
 }
 
 .promo-btn {
@@ -748,17 +769,18 @@ a {
 .promo-appstore {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
     margin-top: 32px;
-    padding: 14px 32px;
-    background: #fff;
-    border-radius: 14px;
-    color: #000;
-    font-size: 17px;
-    font-weight: 700;
-    font-family: var(--font-body);
+    line-height: 0;
+    border-radius: 10px;
     opacity: 0;
     transform: translateY(16px);
+    transition: transform 0.3s var(--ease-out-expo), opacity 0.3s ease;
+}
+
+.promo-appstore-badge {
+    display: block;
+    height: 60px;
+    width: auto;
 }
 
 .promo-active .promo-appstore {
@@ -935,10 +957,8 @@ a {
         font-size: 14px;
     }
 
-    .promo-appstore {
-        font-size: 14px;
-        padding: 12px 24px;
-        border-radius: 12px;
+    .promo-appstore-badge {
+        height: 48px;
     }
 
     .promo-credit {
