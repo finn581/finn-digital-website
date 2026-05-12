@@ -51,6 +51,7 @@
     --color-truehue: #c084fc;
     --color-revivo: #22d3ee;
     --color-disciplinematters: #c9a06b;
+    --color-krate: #f59e0b;
 
     --font-display: 'Syne', sans-serif;
     --font-body: 'DM Sans', sans-serif;
@@ -220,6 +221,8 @@ a {
 .dot-revivo:hover { box-shadow: 0 0 16px rgba(34, 211, 238, 0.6); }
 .dot-disciplinematters { background: var(--color-disciplinematters); }
 .dot-disciplinematters:hover { box-shadow: 0 0 16px rgba(201, 160, 107, 0.6); }
+.dot-krate { background: var(--color-krate); }
+.dot-krate:hover { box-shadow: 0 0 16px rgba(245, 158, 11, 0.6); }
 
 .scroll-indicator {
     position: absolute;

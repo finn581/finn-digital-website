@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krate — Phone-First Cockpit for C-Store Owners</title>
+    <meta name="description" content="Krate is an iOS app built for independent convenience store owners. Scan DSD invoices, automate scan-data submissions, and stay ahead of compliance renewals — all from your phone.">
+
+    <link rel="canonical" href="https://finndigital.net/krate/">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Krate — Phone-First Cockpit for C-Store Owners">
+    <meta property="og:description" content="Scan DSD invoices, automate scan-data submissions, and track compliance renewals from your iPhone.">
+    <meta property="og:image" content="https://finndigital.net/og-image.png">
+    <meta property="og:url" content="https://finndigital.net/krate/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Finn Digital">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Krate — Phone-First Cockpit for C-Store Owners">
+    <meta name="twitter:description" content="Scan DSD invoices, automate scan-data, and track compliance — from your phone.">
+    <meta name="twitter:image" content="https://finndigital.net/og-image.png">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-downgrade">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Krate",
+      "operatingSystem": "iOS",
+      "applicationCategory": "BusinessApplication",
+      "description": "Phone-first cockpit for independent convenience store owners. Scan DSD invoices, automate scan-data submissions, and stay ahead of compliance renewals.",
+      "url": "https://finndigital.net/krate/",
+      "image": "https://finndigital.net/krate/icon-160.png",
+      "publisher": { "@type": "Organization", "name": "Finn Digital LLC", "url": "https://finndigital.net" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Syne';
+            font-style: normal;
+            font-weight: 100 1000;
+            font-display: swap;
+            src: url('/assets/fonts/Syne.woff2') format('woff2-variations');
+        }
+
+        :root {
+            --bg: #0a0a0f;
+            --surface: #13131c;
+            --text: #e8e8f0;
+            --muted: #8888a8;
+            --accent: #f59e0b;
+            --border: rgba(255,255,255,0.08);
+            --font-display: 'Syne', -apple-system, sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .studio-header {
+            text-align: center;
+            padding: 40px 32px 0;
+        }
+        .studio-wordmark {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: clamp(28px, 4vw, 40px);
+            letter-spacing: -0.02em;
+            color: var(--text);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .studio-wordmark .dot { color: var(--accent); }
+        .studio-nav {
+            display: flex; justify-content: center; align-items: center; gap: 24px;
+            padding: 16px 32px 24px; border-bottom: 1px solid var(--border);
+        }
+        .studio-nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .studio-nav a:hover { color: var(--text); }
+        .container { max-width: 820px; margin: 0 auto; padding: 60px 32px; }
+        .hero {
+            text-align: center; padding: 60px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 48px;
+        }
+        .hero-icon {
+            width: 160px; height: 160px; margin: 0 auto 28px;
+            border-radius: 36px;
+            box-shadow: 0 24px 64px rgba(245, 158, 11, 0.28);
+            display: block;
+        }
+        .hero-icon-placeholder {
+            width: 160px; height: 160px; margin: 0 auto 28px;
+            border-radius: 36px;
+            background: linear-gradient(135deg, #f59e0b, #92400e);
+            box-shadow: 0 24px 64px rgba(245, 158, 11, 0.28);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 64px;
+        }
+        h1 {
+            font-size: 44px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px;
+            background: linear-gradient(135deg, #fff, #f59e0b);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+        .tagline { font-size: 18px; color: var(--muted); max-width: 540px; margin: 0 auto; }
+        h2 {
+            font-size: 24px; font-weight: 700; margin: 48px 0 16px; color: var(--text);
+        }
+        p { color: var(--muted); margin-bottom: 16px; font-size: 15px; }
+        .features {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px; margin: 24px 0;
+        }
+        .feature {
+            background: var(--surface); padding: 20px; border-radius: 14px;
+            border: 1px solid var(--border);
+        }
+        .feature-icon { font-size: 28px; margin-bottom: 10px; }
+        .feature-title { color: var(--text); font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+        .feature-desc { color: var(--muted); font-size: 13px; line-height: 1.5; }
+        .pricing-table {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 16px; overflow: hidden; margin: 24px 0;
+        }
+        .pricing-row {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 16px 24px; border-bottom: 1px solid var(--border);
+        }
+        .pricing-row:last-child { border-bottom: none; }
+        .pricing-row.header { background: rgba(245,158,11,0.08); }
+        .pricing-label { color: var(--text); font-weight: 600; font-size: 15px; }
+        .pricing-sublabel { color: var(--muted); font-size: 13px; margin-top: 2px; }
+        .pricing-price { color: var(--accent); font-weight: 700; font-size: 18px; text-align: right; }
+        .pricing-note { color: var(--muted); font-size: 12px; text-align: right; margin-top: 2px; }
+        .badge {
+            display: inline-block; background: rgba(245,158,11,0.15); color: var(--accent);
+            font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 99px;
+            letter-spacing: 0.04em; text-transform: uppercase; margin-left: 8px;
+        }
+        .disclaimer {
+            background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+            border-radius: 10px; padding: 16px 20px; margin: 24px 0;
+            font-size: 13px; color: var(--muted); line-height: 1.6;
+        }
+        .cta {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--accent); color: #0a0a0f; text-decoration: none;
+            padding: 14px 28px; border-radius: 999px; font-weight: 700;
+            font-size: 15px; margin-top: 8px;
+            transition: transform 0.15s ease;
+        }
+        .cta:hover { transform: translateY(-2px); }
+        .cta-secondary {
+            display: inline-flex; align-items: center; gap: 10px;
+            border: 1px solid var(--accent); color: var(--accent); text-decoration: none;
+            padding: 13px 28px; border-radius: 999px; font-weight: 600;
+            font-size: 15px; margin-top: 8px; margin-left: 12px;
+            transition: transform 0.15s ease, background 0.15s ease;
+        }
+        .cta-secondary:hover { background: rgba(245,158,11,0.08); transform: translateY(-2px); }
+        .cta-row { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+        .links {
+            display: flex; gap: 24px; flex-wrap: wrap;
+            margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);
+        }
+        .links a { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 500; }
+        .nacs-callout {
+            background: linear-gradient(135deg, rgba(245,158,11,0.12), rgba(245,158,11,0.04));
+            border: 1px solid rgba(245,158,11,0.3);
+            border-radius: 14px; padding: 24px; margin: 32px 0;
+            display: flex; align-items: flex-start; gap: 16px;
+        }
+        .nacs-icon { font-size: 32px; flex-shrink: 0; }
+        .nacs-text h3 { color: var(--text); font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+        .nacs-text p { color: var(--muted); font-size: 14px; margin: 0; }
+        footer {
+            text-align: center; color: var(--muted); font-size: 12px;
+            padding: 40px 16px; border-top: 1px solid var(--border); margin-top: 60px;
+        }
+        footer a { color: var(--muted); text-decoration: none; margin: 0 8px; }
+        footer a:hover { color: var(--text); }
+    </style>
+</head>
+<body>
+
+    <header class="studio-header">
+        <a href="/" class="studio-wordmark">FINN<span class="dot">.</span>DIGITAL</a>
+    </header>
+    <nav class="studio-nav">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:finnegantom65@gmail.com">Support</a>
+    </nav>
+
+    <div class="container">
+
+        <section class="hero">
+            <div class="hero-icon-placeholder">&#128218;</div>
+            <h1>Krate</h1>
+            <p class="tagline">The phone-first cockpit for independent convenience store owners.</p>
+        </section>
+
+        <h2>Built for the people who keep the lights on</h2>
+        <p>Independent c-store operators run on razor-thin margins, paper invoices, and an inbox full of manufacturer program deadlines. Krate is the iPhone app that puts your entire back office in your pocket — from the loading dock to the smoke case.</p>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">&#128247;</div>
+                <div class="feature-title">DSD Invoice Scanner</div>
+                <div class="feature-desc">Scan any Direct Store Delivery invoice with your camera. Vision AI extracts SKUs, quantities, and unit costs in seconds. No typing. No mis-keying.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#128200;</div>
+                <div class="feature-title">Scan-Data Autopilot</div>
+                <div class="feature-desc">Submit your weekly scan-data to manufacturer programs automatically. Krate formats the file, logs each submission, and keeps your rebate pipeline moving without the manual export routine.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#9989;</div>
+                <div class="feature-title">Compliance Calendar</div>
+                <div class="feature-desc">License renewals, program opt-in windows, FDA tobacco retailer requirements — Krate tracks every deadline and sends push reminders before you miss the window.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#128178;</div>
+                <div class="feature-title">Rebate Tracker</div>
+                <div class="feature-desc">See every manufacturer rebate you have in-flight: pending, submitted, and paid. Know exactly where your money is, store by store.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#127970;</div>
+                <div class="feature-title">Multi-Store Ready</div>
+                <div class="feature-desc">Manage multiple locations from a single account. Invoices, compliance calendars, and scan-data are scoped per store so nothing bleeds across locations.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">&#128274;</div>
+                <div class="feature-title">Private &amp; Secure</div>
+                <div class="feature-desc">Your invoice data and program credentials never leave Firebase's encrypted infrastructure. Scan-data submissions go through your credentials, on your behalf.</div>
+            </div>
+        </div>
+
+        <h2>Pricing</h2>
+        <p>Krate is free for 30 days. After your trial, billing is per store, per month — no per-seat fees, no hidden overage charges.</p>
+
+        <div class="pricing-table">
+            <div class="pricing-row header">
+                <div>
+                    <div class="pricing-label">Krate Free Trial</div>
+                    <div class="pricing-sublabel">First 30 days, all features unlocked</div>
+                </div>
+                <div>
+                    <div class="pricing-price">$0</div>
+                    <div class="pricing-note">No card required</div>
+                </div>
+            </div>
+            <div class="pricing-row">
+                <div>
+                    <div class="pricing-label">Krate Base <span class="badge">Per Store</span></div>
+                    <div class="pricing-sublabel">DSD scanner, compliance calendar, rebate tracker</div>
+                </div>
+                <div>
+                    <div class="pricing-price">$79 / mo</div>
+                    <div class="pricing-note">Per store location</div>
+                </div>
+            </div>
+            <div class="pricing-row">
+                <div>
+                    <div class="pricing-label">Scan-Data Autopilot <span class="badge">Add-On</span></div>
+                    <div class="pricing-sublabel">Automated weekly scan-data submissions</div>
+                </div>
+                <div>
+                    <div class="pricing-price">$49 / mo</div>
+                    <div class="pricing-note">Per store, requires Base</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nacs-callout">
+            <div class="nacs-icon">&#127981;</div>
+            <div class="nacs-text">
+                <h3>See Krate at NACS Show 2026</h3>
+                <p>We'll be on the floor at the 2026 NACS Show in Las Vegas. Stop by to see a live demo of the DSD scanner and scan-data autopilot. Questions before then? Email us at <a href="mailto:finnegantom65@gmail.com" style="color: var(--accent);">finnegantom65@gmail.com</a>.</p>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <strong style="color: var(--text);">Independent software disclosure.</strong> Krate is not affiliated with, endorsed by, or in partnership with Altria Group, Reynolds American / RJR, ITG Brands, JUUL Labs, the FDA, the USDA, or any tobacco or CPG manufacturer. Krate is a productivity tool that helps store owners manage their own records and program submissions. You are solely responsible for the accuracy of data you submit to manufacturer programs and for maintaining all licenses required by your jurisdiction. Krate's compliance reminders are informational only — always verify deadlines directly with the issuing authority.
+        </div>
+
+        <h2>Get Krate</h2>
+        <p>Available on the iOS App Store. Start your 30-day free trial — no credit card required at signup.</p>
+        <div class="cta-row">
+            <a class="cta" href="https://apps.apple.com/app/krate" aria-label="Download Krate on the App Store">Download on the App Store &rarr;</a>
+            <a class="cta-secondary" href="mailto:finnegantom65@gmail.com?subject=Krate%20Demo%20Request">Request a Demo</a>
+        </div>
+
+        <div class="links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="mailto:finnegantom65@gmail.com">Support</a>
+            <a href="/">Finn Digital</a>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Finn Digital LLC &middot; <a href="/">finndigital.net</a> &middot; <a href="mailto:finnegantom65@gmail.com">Contact</a>
+    </footer>
+
+</body>
+</html>

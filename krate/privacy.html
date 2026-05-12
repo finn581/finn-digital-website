@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+    <title>Krate Privacy Policy</title>
+    <meta name="description" content="Krate Privacy Policy — what data we collect, how we use it, and your rights as a user.">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <style>
+        :root { --bg:#0a0a0f; --surface:#13131c; --text:#e8e8f0; --muted:#8888a8; --accent:#f59e0b; --border:rgba(255,255,255,0.08); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .nav a:hover { color: var(--text); }
+        .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .container { max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
+        h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .sub { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
+        h2 { font-size: 18px; font-weight: 700; margin: 32px 0 10px; color: var(--text); }
+        p, li { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+        ul { padding-left: 24px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        strong { color: var(--text); }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="/" class="brand">Finn Digital</a>
+        <div>
+            <a href="index.html">About</a> &nbsp;
+            <a href="terms.html">Terms</a> &nbsp;
+            <a href="mailto:finnegantom65@gmail.com">Support</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>Krate Privacy Policy</h1>
+        <p class="sub">Effective date: May 12, 2026. Applies to Krate 1.0 and later on iOS.</p>
+
+        <h2>Introduction</h2>
+        <p>Krate is published by <strong>Finn Digital LLC</strong> ("we," "us," or "our"). This policy explains what personal and business data we collect when you use the Krate iOS app, how we use it, and your rights regarding that data.</p>
+        <p>We collect only what is necessary to deliver Krate's features. We do not sell your data. We do not run third-party advertising.</p>
+
+        <h2>Data We Collect</h2>
+        <p>The following data categories are collected. All data is linked to your account and used for app functionality — never for cross-app or cross-site tracking.</p>
+
+        <ul>
+            <li>
+                <strong>Identity &amp; contact</strong> — your email address, phone number, and display name, collected at sign-up or profile creation. Used to authenticate your account, send transactional emails (receipts, submission confirmations), and contact you about your subscription.
+            </li>
+            <li>
+                <strong>Invoice photos</strong> — photos of DSD invoices captured in-app. Processed on-device by Apple Vision and, when AI extraction is requested, sent to our secure Firebase Cloud Functions endpoint for further processing. Photos are stored in Firebase Storage, scoped to your account, and are never used for any purpose other than extracting invoice data for you.
+            </li>
+            <li>
+                <strong>Precise location</strong> — when you enable location access, used to pre-fill the store address on a new invoice or store record. Location data is not transmitted to our servers; it is used locally on your device only.
+            </li>
+            <li>
+                <strong>User ID</strong> — a unique identifier assigned to your account in Firebase Authentication. Used to scope all your data (stores, invoices, submissions) and to identify your subscription status.
+            </li>
+            <li>
+                <strong>Purchase history</strong> — your Krate subscription tier, trial status, and billing dates. This information is stored in Firebase Firestore and passed to Stripe for payment processing. We do not store full credit card numbers.
+            </li>
+            <li>
+                <strong>Product interaction (analytics)</strong> — screen views, feature usage events (e.g., "invoice scanned," "scan-data submitted"), and session duration. Collected via Firebase Analytics. No advertising identifiers are used.
+            </li>
+            <li>
+                <strong>Product interaction (app functionality)</strong> — invoice records, scanned SKUs, submission logs, compliance calendar entries, and rebate tracking data. Stored in Firebase Firestore, scoped to your account and store.
+            </li>
+            <li>
+                <strong>Crash data</strong> — stack traces and device metadata collected automatically when the app crashes, via Firebase Crashlytics. Used to identify and fix bugs. No personally identifiable information is attached to crash reports.
+            </li>
+        </ul>
+
+        <h2>How We Use Your Data</h2>
+        <ul>
+            <li>To operate the app: authenticate your session, display your stores and invoices, submit scan-data on your behalf, and send compliance reminders.</li>
+            <li>To process payments: pass billing data to Stripe to charge your subscription and issue receipts.</li>
+            <li>To communicate with you: send transactional emails (submission confirmations, receipts, password resets) via Mailgun. We do not send marketing emails without your explicit opt-in.</li>
+            <li>To improve the app: analyze aggregated, anonymized usage patterns and crash reports to prioritize bug fixes and new features.</li>
+            <li>To provide AI-assisted extraction: forward invoice photo data to our AI pipeline (powered by Apple Vision on-device and Anthropic Claude for structured extraction) solely to extract line-item data for your records.</li>
+        </ul>
+
+        <h2>Third-Party Services</h2>
+        <p>We share data with the following service providers, limited to what is necessary for each service:</p>
+        <ul>
+            <li><strong>Google Firebase</strong> (Authentication, Firestore, Storage, Cloud Functions, Crashlytics, Analytics) — core infrastructure for accounts, data storage, and crash reporting.</li>
+            <li><strong>Stripe</strong> — payment processing for subscriptions. Stripe's privacy policy governs how they handle payment card data. We do not store raw card numbers.</li>
+            <li><strong>Mailgun</strong> — transactional email delivery (receipts, submission confirmations). Mailgun receives your email address when we send you a message.</li>
+            <li><strong>Anthropic (Claude)</strong> — AI-powered structured data extraction from invoice text. Invoked server-side via Firebase Cloud Functions. Invoice line-item text is sent to Anthropic's API and is subject to Anthropic's data usage policy.</li>
+            <li><strong>Apple Vision</strong> — on-device OCR for invoice scanning. All processing occurs locally; no data is sent to Apple as part of this feature.</li>
+        </ul>
+
+        <h2>Scan-Data Submissions</h2>
+        <p>When you use Krate's scan-data autopilot feature, Krate submits scan-data reports to manufacturer portals using credentials you provide. You authorize these submissions and are solely responsible for the accuracy of the underlying data. Krate logs each submission for your records. Your portal credentials are stored encrypted in Firebase and are never shared with third parties beyond the submission endpoint you configure.</p>
+
+        <h2>Data Retention</h2>
+        <ul>
+            <li>Invoice records, scan-data logs, and compliance entries are retained as long as your account is active.</li>
+            <li>On account deletion, all your data (Firestore documents, Storage objects, authentication record) is permanently deleted within 30 days.</li>
+            <li>Crash logs and anonymized analytics aggregates may be retained for up to 2 years in aggregated, non-identifiable form.</li>
+            <li>Stripe retains billing records as required by financial regulations (typically 7 years).</li>
+        </ul>
+
+        <h2>Your Rights</h2>
+        <p>Regardless of where you are located, you have the following rights:</p>
+        <ul>
+            <li><strong>Access</strong> — request a copy of all data associated with your account.</li>
+            <li><strong>Correction</strong> — request correction of inaccurate personal data.</li>
+            <li><strong>Deletion</strong> — delete your account from the app (Settings → Delete Account) or by emailing us. All account data is removed from our servers within 30 days.</li>
+            <li><strong>Portability</strong> — request an export of your invoice records and submission logs in a machine-readable format.</li>
+            <li><strong>Opt-out of analytics</strong> — disable Firebase Analytics by toggling "Analytics" off in Krate's Settings screen. This does not affect core app functionality.</li>
+        </ul>
+        <p><strong>California residents (CCPA):</strong> You have the right to know what personal information we collect, to delete it, and to opt out of any sale (we do not sell personal information). To exercise your rights, email us at the address below.</p>
+        <p><strong>EEA/UK residents (GDPR):</strong> Our lawful basis for processing is contractual necessity (to deliver the subscription service you purchased) and legitimate interest (crash reporting and analytics to improve the app). You may lodge a complaint with your local supervisory authority if you believe we have violated your rights.</p>
+
+        <h2>Children</h2>
+        <p>Krate is a business tool intended for adults operating retail establishments. We do not knowingly collect personal information from anyone under 18. If you believe a minor has created an account, contact us and we will delete it.</p>
+
+        <h2>Security</h2>
+        <p>All data in transit is encrypted with TLS. Firestore and Storage Security Rules enforce per-user access — no user can read another user's data. Stripe handles card data under PCI DSS compliance. We do not store passwords; authentication is delegated to Firebase's secure credential store.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>If we make material changes to this policy we will update the effective date above and notify active subscribers by email at least 14 days before the changes take effect.</p>
+
+        <h2>Contact</h2>
+        <p>Privacy questions, data requests, or account deletion: <a href="mailto:finnegantom65@gmail.com">finnegantom65@gmail.com</a></p>
+        <p>Finn Digital LLC, Gainesville, FL 32608, United States.</p>
+
+    </div>
+
+</body>
+</html>
