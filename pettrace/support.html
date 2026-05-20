@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+    <title>PetTrace Support</title>
+    <meta name="description" content="Get help with PetTrace — FAQs, known issues, and how to contact support.">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <style>
+        :root { --bg:#0B0F14; --surface:#121821; --text:#e8edf3; --muted:#9aa5b3; --accent:#F59E0B; --border:rgba(255,255,255,0.08); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .nav a:hover { color: var(--text); }
+        .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .container { max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
+        h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .sub { color: var(--muted); margin-bottom: 32px; }
+        h2 { font-size: 18px; font-weight: 700; margin: 32px 0 8px; }
+        h3 { font-size: 15px; font-weight: 600; margin: 20px 0 6px; color: var(--text); }
+        p, li { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+        ul { padding-left: 24px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .contact { background: var(--surface); padding: 24px; border-radius: 14px; border: 1px solid var(--border); margin-top: 32px; }
+        .contact h2 { margin-top: 0; }
+        .email { font-family: ui-monospace, Menlo, monospace; font-size: 15px; color: var(--accent); font-weight: 600; }
+        .faq details { margin-bottom: 10px; background: var(--surface); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--border); }
+        .faq summary { cursor: pointer; font-weight: 600; color: var(--text); font-size: 15px; }
+        .faq details[open] summary { margin-bottom: 10px; }
+        .urgent { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.3); border-radius: 10px; padding: 16px 18px; margin-bottom: 24px; }
+        .urgent strong { color: #fca5a5; }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="/" class="brand">Finn Digital</a>
+        <div>
+            <a href="index.html">About</a> &nbsp;
+            <a href="privacy.html">Privacy</a> &nbsp;
+            <a href="terms.html">Terms</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>PetTrace Support</h1>
+        <p class="sub">Questions, issues, and how to reach us.</p>
+
+        <div class="urgent">
+            <p style="margin:0;"><strong>Pet emergency?</strong> Don't email us — call your veterinarian or the ASPCA Animal Poison Control Center at <strong style="color:var(--accent);">888-426-4435</strong>. PetTrace is informational only.</p>
+        </div>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+
+            <details>
+                <summary>How do I unlock PetTrace Pro?</summary>
+                <p>Open Settings → Upgrade to Pro. Pro is a one-time $19.99 purchase that unlocks unlimited plant scans, unlimited pets, the AI Recovery Advisor on demand, and always-on tracker monitoring. Pro restores on all your iCloud-linked devices — in Settings tap Restore Purchases if needed.</p>
+            </details>
+
+            <details>
+                <summary>Is the plant scanner medical advice?</summary>
+                <p>No. The Plant Scanner identifies a plant and summarizes general toxicity information for dogs and cats. It is not veterinary advice. If your pet has ingested anything you're worried about, call your vet or ASPCA Poison Control at 888-426-4435 immediately.</p>
+            </details>
+
+            <details>
+                <summary>What's the AI Recovery Advisor?</summary>
+                <p>If your pet goes missing, tap AI Advisor and answer a short structured questionnaire (where, when, distinguishing features). PetTrace generates a time-phased action plan based on common best practices. It's a starting point — not a substitute for calling animal control, your microchip registry, and your local shelters.</p>
+            </details>
+
+            <details>
+                <summary>How do NFC and QR tags work?</summary>
+                <p>From a pet's profile, tap Create Tag. PetTrace writes a unique URL to the NFC chip (or generates a printable QR code). When someone scans the tag with any iPhone or Android, they see a public profile with your pet's name, photo, and a "found me" contact form — only the fields you marked public. You can rotate the URL any time, which invalidates the old one.</p>
+            </details>
+
+            <details>
+                <summary>Why doesn't PetTrace show my AirTag location?</summary>
+                <p>Apple restricts AirTag location data to its own Find My app — no third-party app, including PetTrace, can read it. Our "Find with AirTag" button is a deep-link that opens Find My for you.</p>
+            </details>
+
+            <details>
+                <summary>I connected Tractive but no location is showing</summary>
+                <p>Tractive uses an unofficial private API that PetTrace integrates with. If Tractive changes the API, the integration can temporarily break until we ship an update. Try disconnecting and reconnecting in Settings → Trackers. If it's still broken after 24 hours, email us with your iOS version and the timestamp of the last successful ping.</p>
+            </details>
+
+            <details>
+                <summary>How do I delete my account?</summary>
+                <p>Settings → Delete Account in the app, or use the <a href="delete-account.html">web deletion form</a>. This permanently removes your account, pet profiles, photos, tag identifiers, and tracker connections from our servers. Any Pro purchase remains tied to your Apple ID — if you reinstall later, Restore Purchases brings it back.</p>
+            </details>
+
+            <details>
+                <summary>The map is slow or pins aren't appearing</summary>
+                <p>Sightings and tracker pins load from Firebase as you pan. Zoom in to street level to reduce query size. If the map is stuck, force-quit and reopen the app. If it's still wrong, please email us with screenshots.</p>
+            </details>
+
+            <details>
+                <summary>Does PetTrace work offline?</summary>
+                <p>Plant scanning runs entirely on-device and works offline once the model is downloaded. Pet profiles, tracker location, the Advisor, and tag rotation require an internet connection.</p>
+            </details>
+
+        </div>
+
+        <div class="contact">
+            <h2>Contact Support</h2>
+            <p>We read every email. Include your iOS version, PetTrace app version, and the steps to reproduce if you're reporting a bug. We try to respond within 48 hours.</p>
+            <p>Email: <a class="email" href="mailto:contact@finndigital.net">contact@finndigital.net</a></p>
+        </div>
+
+    </div>
+
+</body>
+</html>

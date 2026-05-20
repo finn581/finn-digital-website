@@ -152,8 +152,38 @@
     </url>
     <url>
         <loc>https://finndigital.net/pettrace/</loc>
-        <lastmod>2026-05-06</lastmod>
+        <lastmod>2026-05-20</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://finndigital.net/pettrace/privacy.html</loc>
+        <lastmod>2026-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://finndigital.net/pettrace/terms.html</loc>
+        <lastmod>2026-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://finndigital.net/pettrace/support.html</loc>
+        <lastmod>2026-05-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://finndigital.net/pettrace/delete-account.html</loc>
+        <lastmod>2026-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://finndigital.net/pettrace/affiliate-disclosure.html</loc>
+        <lastmod>2026-05-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
     </url>
 </urlset>

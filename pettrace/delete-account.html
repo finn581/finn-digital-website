@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.googleusercontent.com; font-src 'self'; connect-src 'self' https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://us-central1-pettrace-2.cloudfunctions.net https://firestore.googleapis.com; frame-src https://pettrace-2.firebaseapp.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'">
+    <title>Delete your PetTrace account</title>
+    <meta name="description" content="Permanently delete your PetTrace account and all associated data.">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <style>
+        :root { --bg:#0B0F14; --surface:#121821; --text:#e8edf3; --muted:#9aa5b3; --accent:#F59E0B; --border:rgba(255,255,255,0.08); --danger:#ef4444; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .nav a:hover { color: var(--text); }
+        .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .container { max-width: 540px; margin: 0 auto; padding: 48px 32px 80px; }
+        h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .sub { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
+        p { color: var(--muted); font-size: 15px; margin-bottom: 16px; }
+        strong { color: var(--text); }
+        a { color: var(--accent); text-decoration: none; }
+        input { width: 100%; padding: 12px 14px; margin: 8px 0; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px; font-size: 15px; font-family: inherit; }
+        input:focus { outline: none; border-color: var(--accent); }
+        button { padding: 12px 20px; margin: 4px 0; border: 0; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; font-family: inherit; }
+        button.primary { background: var(--accent); color: var(--bg); }
+        button.primary:hover { background: #d68608; }
+        button.primary:disabled { background: #3a2f15; color: var(--muted); cursor: not-allowed; }
+        button.danger { background: var(--danger); color: white; width: 100%; }
+        button.danger:hover { background: #dc2626; }
+        button.danger:disabled { background: #4a2a2a; color: var(--muted); cursor: not-allowed; }
+        .ghost { background: transparent; color: var(--muted); padding: 8px 0; }
+        .ghost:hover { color: var(--text); }
+        .status { margin-top: 24px; padding: 12px 14px; border-radius: 8px; font-size: 14px; }
+        .status.error { background: rgba(239,68,68,0.1); color: var(--danger); border: 1px solid rgba(239,68,68,0.3); }
+        .status.ok { background: rgba(245,158,11,0.12); color: var(--accent); border: 1px solid rgba(245,158,11,0.3); }
+        .row { display: flex; gap: 8px; }
+        .row button { flex: 1; }
+        .scope { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; margin-bottom: 20px; }
+        .scope strong { color: var(--text); }
+        .scope ul { padding-left: 20px; color: var(--muted); }
+        .scope li { font-size: 14px; margin-bottom: 4px; }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a class="brand" href="/">FINN.DIGITAL</a>
+        <div>
+            <a href="/pettrace/">PetTrace</a>
+            &nbsp;·&nbsp;
+            <a href="/pettrace/privacy.html">Privacy</a>
+            &nbsp;·&nbsp;
+            <a href="/pettrace/support.html">Support</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Delete your PetTrace account</h1>
+        <p class="sub">This permanently removes your account and all associated data. This cannot be undone.</p>
+
+        <div class="scope">
+            <p style="margin-bottom:8px;"><strong>What gets deleted</strong></p>
+            <ul>
+                <li>Your Firebase Authentication user record</li>
+                <li>All pet profiles, photos, notes, and tag identifiers</li>
+                <li>Plant scan history</li>
+                <li>Recovery Advisor session logs</li>
+                <li>Tractive credentials (if connected) — the integration is also disconnected on Tractive's side</li>
+                <li>Affiliate click history and crash reports tied to your account</li>
+            </ul>
+            <p style="margin:12px 0 0;font-size:13px;color:var(--muted);">Backups roll off within 60 days. Any in-app Pro purchase remains tied to your Apple ID — if you reinstall, you can Restore Purchases in the new account.</p>
+        </div>
+
+        <div id="signed-out">
+            <p>Sign in with the credentials tied to the account you want to delete.</p>
+            <input id="email" type="email" placeholder="Email" autocomplete="email" />
+            <input id="password" type="password" placeholder="Password" autocomplete="current-password" />
+            <button id="signin" class="primary" style="width:100%;">Sign in</button>
+            <button id="signin-google" class="ghost" style="width:100%; margin-top:8px;">Continue with Google</button>
+            <p style="margin-top:18px;font-size:13px;">Signed in with Apple and can't sign in here? Email <a href="mailto:contact@finndigital.net?subject=PetTrace%20Account%20Deletion">contact@finndigital.net</a> from the Apple-ID address; we'll process the deletion within 5 business days.</p>
+        </div>
+
+        <div id="signed-in" style="display:none;">
+            <p>Signed in as <strong id="user-email"></strong></p>
+            <p>Type <code style="color:var(--text);background:var(--surface);padding:2px 6px;border-radius:4px;">DELETE</code> to confirm:</p>
+            <input id="confirm" placeholder="DELETE" autocomplete="off" />
+            <button id="delete" class="danger" disabled>Delete my account permanently</button>
+            <button id="cancel" class="ghost" style="width:100%; margin-top:8px;">Cancel</button>
+        </div>
+
+        <div id="status" class="status" style="display:none;"></div>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+    <script>
+        // Firebase web config for pettrace-2 (public values; safe to expose)
+        const firebaseConfig = {
+            apiKey: "AIzaSyC0_pZH-jgOotU-gARmfRsIyYdrZfAsDbQ",
+            authDomain: "pettrace-2.firebaseapp.com",
+            projectId: "pettrace-2",
+        };
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const FUNCTION_URL = "https://us-central1-pettrace-2.cloudfunctions.net/deleteAccount";
+
+        const $ = (id) => document.getElementById(id);
+        const status = $("status");
+        function showStatus(msg, kind) {
+            status.textContent = msg;
+            status.className = "status " + kind;
+            status.style.display = "block";
+        }
+
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                $("signed-out").style.display = "none";
+                $("signed-in").style.display = "block";
+                $("user-email").textContent = user.email || user.uid;
+            } else {
+                $("signed-out").style.display = "block";
+                $("signed-in").style.display = "none";
+                $("confirm").value = "";
+                $("delete").disabled = true;
+            }
+        });
+
+        $("signin").addEventListener("click", () => {
+            const email = $("email").value.trim();
+            const password = $("password").value;
+            if (!email || !password) {
+                showStatus("Email and password required.", "error");
+                return;
+            }
+            status.style.display = "none";
+            auth.signInWithEmailAndPassword(email, password)
+                .catch((e) => showStatus("Sign-in failed: " + e.message, "error"));
+        });
+
+        $("signin-google").addEventListener("click", () => {
+            const provider = new firebase.auth.GoogleAuthProvider();
+            auth.signInWithPopup(provider)
+                .catch((e) => showStatus("Google sign-in failed: " + e.message, "error"));
+        });
+
+        $("confirm").addEventListener("input", (e) => {
+            $("delete").disabled = e.target.value !== "DELETE";
+        });
+
+        $("cancel").addEventListener("click", () => auth.signOut());
+
+        $("delete").addEventListener("click", async () => {
+            $("delete").disabled = true;
+            showStatus("Deleting…", "ok");
+            try {
+                const idToken = await auth.currentUser.getIdToken();
+                const res = await fetch(FUNCTION_URL, {
+                    method: "POST",
+                    headers: { Authorization: "Bearer " + idToken },
+                });
+                if (!res.ok) {
+                    const text = await res.text();
+                    throw new Error(text || ("HTTP " + res.status));
+                }
+                await auth.signOut().catch(() => {});
+                showStatus("Your account has been deleted.", "ok");
+                $("signed-out").style.display = "none";
+                $("signed-in").style.display = "none";
+            } catch (e) {
+                showStatus("Delete failed: " + e.message, "error");
+                $("delete").disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

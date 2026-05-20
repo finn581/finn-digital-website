@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+    <title>PetTrace Privacy Policy</title>
+    <meta name="description" content="PetTrace Privacy Policy — what we collect, what we don't, and your rights.">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <style>
+        :root { --bg:#0B0F14; --surface:#121821; --text:#e8edf3; --muted:#9aa5b3; --accent:#F59E0B; --border:rgba(255,255,255,0.08); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .nav a:hover { color: var(--text); }
+        .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .container { max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
+        h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .sub { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
+        h2 { font-size: 18px; font-weight: 700; margin: 32px 0 10px; color: var(--text); }
+        p, li { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+        ul { padding-left: 24px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        strong { color: var(--text); }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="/" class="brand">Finn Digital</a>
+        <div>
+            <a href="index.html">About</a> &nbsp;
+            <a href="support.html">Support</a> &nbsp;
+            <a href="terms.html">Terms</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1>PetTrace Privacy Policy</h1>
+        <p class="sub">Last updated: May 20, 2026. Applies to PetTrace 2.0 and later on iOS.</p>
+
+        <h2>TL;DR</h2>
+        <p>PetTrace is a pet-safety utility built privacy-first. Plant identification runs on your device; we don't send your pet's photos to identify them. We don't sell your data, run third-party ads, or track you across other apps. The only personal data that leaves your device is what we need to deliver a feature you asked for.</p>
+
+        <h2>Who we are</h2>
+        <p>PetTrace is published by <strong>Finn Digital LLC</strong>, 9472 SW 67th LN, Gainesville, FL 32608, USA. Contact: <a href="mailto:contact@finndigital.net">contact@finndigital.net</a>.</p>
+
+        <h2>What we collect</h2>
+        <ul>
+            <li><strong>Account information</strong> — when you sign in with Apple, Google, or email, we receive your email address and (optionally) your name. Stored in Firebase Authentication.</li>
+            <li><strong>Pet profiles</strong> — names, species, breed, photos, microchip number, distinguishing features, medical notes, and any QR/NFC tag identifiers you generate. Stored in Firebase Firestore, scoped to your account.</li>
+            <li><strong>Plant scan history</strong> — when you scan a plant, the Core ML classifier runs entirely on-device. We store the species ID and a timestamp so you can see your scan history. We do <strong>not</strong> upload your camera image.</li>
+            <li><strong>AI Recovery Advisor inputs</strong> — when you ask the Advisor for a recovery plan, the structured questionnaire (pet name, last-seen location, time, distinguishing features) is sent to our Cloud Function which calls Anthropic's Claude API. The generated plan is shown to you and not stored on our servers beyond a short audit log for safety review.</li>
+            <li><strong>Tracker data</strong> — if you connect a Tractive GPS tracker, your Tractive credentials are exchanged for an access token stored encrypted on our backend; location pings flow Tractive → our Cloud Function → your device. If you pair a generic BLE tag, the last-seen location is computed and stored locally on your device only.</li>
+            <li><strong>Location</strong> — used for the map view, Tractive tracker positions, BLE tag last-seen pins, and the "last seen" field in the Recovery Advisor. Location is not transmitted to our servers except when you submit it as part of an Advisor request.</li>
+            <li><strong>Affiliate click events</strong> — when you tap a Chewy or Petco link from the Rx Food Locator, we log that a tap occurred (provider name, surface) for our own conversion analytics. We do not share your identity with the affiliate network — attribution is handled by their cookie on the destination site.</li>
+            <li><strong>Usage events</strong> — Firebase Crashlytics and Analytics collect crash reports and basic usage events to fix bugs. No advertising identifiers (IDFA) are collected.</li>
+            <li><strong>Purchase receipts</strong> — Apple sends us a signed receipt when you buy the $19.99 PetTrace Pro unlock. We use this only to verify your entitlement; we never see your credit-card or Apple ID password.</li>
+        </ul>
+
+        <h2>What we don't collect</h2>
+        <ul>
+            <li>Your camera roll, contacts, calendar, microphone, or browsing history.</li>
+            <li>Your pet's photo for AI identification — pet photo matching runs entirely on-device using Apple Vision (VNFeaturePrint).</li>
+            <li>AirTag location. AirTag is closed to third-party apps; we cannot and do not read AirTag positions. Our "Find with AirTag" feature is only a deep-link into Apple's Find My app.</li>
+            <li>Advertising or cross-app tracking identifiers.</li>
+            <li>Data we sell, rent, or share with data brokers.</li>
+        </ul>
+
+        <h2>Who we share data with</h2>
+        <p>Only the service providers required to operate features you use:</p>
+        <ul>
+            <li><strong>Google Firebase</strong> (Authentication, Firestore, Cloud Storage, Cloud Functions, Cloud Messaging, App Check, Crashlytics, Analytics) — account, pet profiles, and infrastructure.</li>
+            <li><strong>Anthropic (Claude API)</strong> — receives the structured Advisor questionnaire and the per-species plant toxicity context to generate text reports. Anthropic processes these under their commercial terms and does not train on inputs from our API account.</li>
+            <li><strong>Tractive</strong> — only if you connect a Tractive tracker. Your Tractive credentials and location data are exchanged with Tractive's servers under their privacy policy.</li>
+            <li><strong>Apple App Store</strong> — purchase verification for the Pro upgrade.</li>
+            <li><strong>Chewy &amp; Petco</strong> — when you tap an affiliate link, you're sent to their website. From that point on, their privacy policies apply.</li>
+        </ul>
+
+        <h2>Web pet profiles &amp; QR / NFC tags</h2>
+        <p>If you create a QR code or NFC tag from your pet's profile, the encoded URL points at a publicly accessible page hosted on our servers. That page shows whatever fields you marked as "show on tag" — typically pet name, your phone number, and a "found me" contact form. Anything you mark private stays private. You can rotate the tag URL at any time from the pet's profile, which invalidates the old URL.</p>
+
+        <h2>Lost-pet alerts</h2>
+        <p>When a pet is flagged lost (manually or by a tracker breach), we may send you a push notification via Apple Push Notification service. If you opt into community sharing in a future release, we will ask for explicit consent before broadcasting your pet's photo and last-seen area to nearby users.</p>
+
+        <h2>Your rights and controls</h2>
+        <ul>
+            <li><strong>Access / export</strong> — email us and we'll send you a copy of everything associated with your account.</li>
+            <li><strong>Deletion</strong> — Settings → Delete Account permanently removes your account, pet profiles, photos, tag identifiers, and Tractive tokens from our servers. You can also use the <a href="delete-account.html">web deletion form</a>.</li>
+            <li><strong>Disconnect Tractive</strong> — Settings → Trackers → Disconnect revokes the stored token immediately.</li>
+            <li><strong>Location, camera, photos, Bluetooth</strong> — all adjustable in iOS Settings → PetTrace at any time.</li>
+            <li><strong>Push notifications</strong> — turn off in iOS Settings → PetTrace → Notifications.</li>
+        </ul>
+
+        <h2>Children</h2>
+        <p>PetTrace is not directed at children under 13. We don't knowingly collect personal information from children. If you believe a child has created an account, email us and we'll delete it.</p>
+
+        <h2>Security</h2>
+        <p>All traffic is encrypted with TLS. Firestore and Storage Security Rules enforce per-user access to pet data. Tractive tokens are encrypted with a key held in Google Secret Manager. Authentication is delegated to Apple, Google, or Firebase's hashed credentials — we never store passwords. PetTrace uses Firebase App Check (App Attest) to prevent unauthorized API calls.</p>
+
+        <h2>International users</h2>
+        <p>PetTrace is operated from the United States. If you use the app from outside the US, your data is processed in the US under the safeguards described above. If you are in the EU/UK, you have rights of access, correction, deletion, and portability — email us to exercise them.</p>
+
+        <h2>Changes to this policy</h2>
+        <p>If we make material changes we'll update the "Last updated" date above and notify users via an in-app banner.</p>
+
+        <h2>Contact</h2>
+        <p>Questions or requests: <a href="mailto:contact@finndigital.net">contact@finndigital.net</a>.</p>
+
+    </div>
+
+</body>
+</html>
