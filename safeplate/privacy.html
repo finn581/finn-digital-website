@@ -42,13 +42,14 @@
 
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: May 3, 2026</p>
+        <p class="updated">Last updated: June 3, 2026</p>
 
         <p>SafePlate ("we", "our", or "us") is operated by Finn Digital LLC. This privacy policy explains what information we collect, how we use it, which third parties receive it, and the choices you have. It applies to the SafePlate iOS app and the website finndigital.net/safeplate.</p>
 
         <h2>What stays on your device</h2>
         <ul>
-            <li><strong>Camera frames during a scan.</strong> Barcode reads and food-photo analysis happen on your device. Image data is not uploaded unless you explicitly save the result to your scan history.</li>
+            <li><strong>Barcode reads.</strong> Scanning a barcode happens on your device. Only the barcode number is used to look up the product &mdash; your camera frames are not uploaded.</li>
+            <li><strong>On-device scanning option.</strong> If you decline AI scanning, all food-photo analysis stays on your device and no image leaves your phone. (See "AI-powered scanning" below for the opt-in cloud option.)</li>
             <li><strong>Family profiles + allergens.</strong> Names, allergens, and severity stay local in SwiftData on your iPhone. Sync to iCloud is your choice.</li>
             <li><strong>EpiPen reminders.</strong> Stored in iOS local notifications.</li>
         </ul>
@@ -61,9 +62,19 @@
             <li><strong>Diagnostic data.</strong> Anonymous crash reports via Firebase Crashlytics.</li>
         </ul>
 
+        <h2>AI-powered scanning (opt-in)</h2>
+        <p>SafePlate offers optional AI-powered scanning that identifies the foods on a plate (Plate Intel) and reads packaged-food labels. When you turn it on:</p>
+        <ul>
+            <li>The photo you capture is sent to <strong>Google's Gemini models via Google Cloud Vertex AI</strong> to identify the foods or text in the image.</li>
+            <li>It is <strong>opt-in</strong>: the first time it would run, SafePlate asks for your consent. Decline and scanning stays entirely on your device.</li>
+            <li>The photo is used <strong>only</strong> to analyze that one scan and is <strong>not stored</strong> by SafePlate afterward.</li>
+            <li>Under Google Cloud's terms, Vertex AI does not use your content to train its foundation models. The image is not linked to your identity and is never used for advertising or tracking.</li>
+            <li>The allergen and health information shown after a scan is produced by SafePlate's own logic from your saved profiles. Results are informational and are not medical advice.</li>
+        </ul>
+
         <h2>What we do not collect</h2>
         <ul>
-            <li>We do <strong>not</strong> upload, index, or store your camera frames as images.</li>
+            <li>Outside the opt-in AI scan above, we do <strong>not</strong> upload, index, or store your camera frames as images.</li>
             <li>We do <strong>not</strong> train any model on your scans, family profiles, or saved cards.</li>
             <li>We do <strong>not</strong> sell your personal data to advertisers or data brokers.</li>
             <li>We do <strong>not</strong> use third-party advertising SDKs.</li>
@@ -79,6 +90,7 @@
             <li><strong>Firebase Auth, Firestore, Storage, Crashlytics</strong> (Google) &mdash; account auth, optional cross-device sync, crash reporting.</li>
             <li><strong>Apple MapKit</strong> &mdash; restaurant finder map display. No personal data sent.</li>
             <li><strong>OpenFoodFacts and FDA OpenFDA</strong> (public APIs) &mdash; product database and recall alerts. No personal data sent.</li>
+            <li><strong>Google Cloud Vertex AI (Gemini)</strong> &mdash; used only when you opt in to AI-powered scanning, to analyze the photo you capture. Photos are not stored and are not used to train Google's models.</li>
         </ul>
 
         <h2>Your rights</h2>
