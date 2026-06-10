@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetTrace — A Guardian in Your Pocket</title>
-    <meta name="description" content="PetTrace is an iOS pet-safety utility. Scan plants for toxicity to dogs and cats, photograph a stray to match it against nearby lost-pet listings, generate a Claude-powered recovery plan in panic, and write QR or NFC tags that take any finder straight to your pet's profile. Coming soon.">
+    <meta name="description" content="PetTrace is an iOS pet-safety utility. Scan plants for toxicity to dogs and cats, photograph a stray to match it against nearby lost-pet listings, generate a Claude-powered recovery plan in panic, and write QR or NFC tags that take any finder straight to your pet's profile. Free on the App Store.">
 
     <link rel="canonical" href="https://finndigital.net/pettrace/">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -37,8 +37,10 @@
       "applicationCategory": "LifestyleApplication",
       "description": "Pet-safety utility for iOS: plant toxicity scanner, AI pet visual matching for lost-pet recovery, Claude-powered recovery advisor, QR and NFC pet tags, and shelter map. PetTrace is an informational tool, not a veterinary device.",
       "url": "https://finndigital.net/pettrace/",
+      "downloadUrl": "https://apps.apple.com/app/id6761043968",
       "image": "https://finndigital.net/assets/icons/pettrace.png",
-      "publisher": { "@type": "Organization", "name": "Finn Digital LLC", "url": "https://finndigital.net" }
+      "publisher": { "@type": "Organization", "name": "Finn Digital LLC", "url": "https://finndigital.net" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
     }
     </script>
     <style>
@@ -143,6 +145,12 @@
             transition: transform 0.15s ease;
         }
         .cta:hover { transform: translateY(-2px); }
+        .appstore-cta {
+            display: inline-block; margin-top: 8px;
+            transition: transform 0.15s ease;
+        }
+        .appstore-cta:hover { transform: translateY(-2px); }
+        .appstore-cta img { display: block; height: 56px; width: auto; }
         .links {
             display: flex; gap: 24px; flex-wrap: wrap;
             margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);
@@ -268,7 +276,7 @@
                 <source srcset="/assets/icons/pettrace.webp" type="image/webp">
                 <img class="hero-icon" src="/assets/icons/pettrace.png" alt="PetTrace app icon" width="160" height="160">
             </picture>
-            <span class="soon-badge">Coming soon · iOS</span>
+            <span class="soon-badge">Now on the App Store · iOS</span>
             <h1>PetTrace</h1>
             <p class="tagline">A guardian in your pocket. AI scanners, recovery plans, and smart tags &mdash; every layer of pet safety, in one app.</p>
         </section>
@@ -331,9 +339,11 @@
             <strong>An informational utility, not a veterinary device.</strong> PetTrace's plant toxicity readings are designed to inform — always confirm with poison control and your veterinarian. Pet matches and recovery advice support, but do not replace, contacting nearby shelters and your local authorities.
         </div>
 
-        <h2>Be the first to know</h2>
-        <p>PetTrace is in pre-launch. Email and we'll send you a link the day it ships — no list, no tracker, just a one-time note from a real person.</p>
-        <a class="cta" href="mailto:contact@finndigital.net?subject=Notify%20me%20when%20PetTrace%20launches&body=Please%20let%20me%20know%20when%20PetTrace%20is%20available.">Notify me at launch →</a>
+        <h2>Get PetTrace</h2>
+        <p>PetTrace is free on the App Store. Scan plants at the curb, match a stray to nearby lost listings, build a recovery plan in the moment of panic, and write QR + NFC tags &mdash; start protecting your pet today.</p>
+        <a class="appstore-cta" href="https://apps.apple.com/app/id6761043968" target="_blank" rel="noopener noreferrer" aria-label="Download PetTrace on the App Store">
+            <img src="/assets/app-store-badge.svg" alt="Download on the App Store" width="180" height="60" loading="lazy" decoding="async">
+        </a>
 
         <div class="links">
             <a href="privacy.html">Privacy</a>
