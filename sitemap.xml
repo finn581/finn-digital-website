@@ -187,6 +187,30 @@
         <priority>0.3</priority>
     </url>
     <url>
+        <loc>https://finndigital.net/easyrealty/</loc>
+        <lastmod>2026-06-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://finndigital.net/easyrealty/privacy.html</loc>
+        <lastmod>2026-06-14</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://finndigital.net/easyrealty/terms.html</loc>
+        <lastmod>2026-06-14</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://finndigital.net/easyrealty/support.html</loc>
+        <lastmod>2026-06-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
         <loc>https://finndigital.net/krate/</loc>
         <lastmod>2026-06-14</lastmod>
         <changefreq>weekly</changefreq>
