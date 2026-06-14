@@ -160,6 +160,12 @@
             transition: transform 0.15s ease;
         }
         .cta:hover { transform: translateY(-2px); }
+        .appstore-badge {
+            display: inline-flex; align-items: center; margin-top: 8px;
+            text-decoration: none; transition: transform 0.15s ease;
+        }
+        .appstore-badge:hover { transform: translateY(-2px); }
+        .appstore-badge img { display: block; height: 54px; width: auto; }
         .cta-secondary {
             display: inline-flex; align-items: center; gap: 10px;
             border: 1px solid var(--accent); color: var(--accent); text-decoration: none;
@@ -351,7 +357,9 @@
         <h2>Get Krate</h2>
         <p>Available on the iOS App Store. Start your 30-day free trial — then $99/month per store, billed through your Apple ID. Cancel anytime.</p>
         <div class="cta-row">
-            <a class="cta" href="https://apps.apple.com/app/id6769082443" target="_blank" rel="noopener noreferrer" aria-label="Download Krate on the App Store">Download on the App Store &rarr;</a>
+            <a class="appstore-badge" href="https://apps.apple.com/app/id6769082443" target="_blank" rel="noopener noreferrer" aria-label="Download Krate on the App Store">
+                <img src="/assets/app-store-badge.svg" alt="Download on the App Store" width="163" height="54">
+            </a>
             <a class="cta-secondary" href="mailto:contact@finndigital.net?subject=Krate%20Demo%20Request">Request a Demo</a>
         </div>
 
