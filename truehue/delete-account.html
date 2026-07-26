@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.googleusercontent.com; font-src 'self'; connect-src 'self' https://identitytoolkit.googleapis.com https://securetoken.googleapis.com; frame-src https://truehue-ios.firebaseapp.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'">
+    <title>Delete your TrueHue account</title>
+    <meta name="description" content="Permanently delete your TrueHue account and all associated data.">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <style>
+        :root { --bg:#0a0f1f; --surface:#161b28; --text:#f4ecdd; --muted:#9aa3b5; --accent:#c9a84c; --border:rgba(255,255,255,0.08); --danger:#ef4444; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 8px; }
+        .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .nav a:hover { color: var(--text); }
+        .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .container { max-width: 540px; margin: 0 auto; padding: 48px 32px 80px; }
+        h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+        h2 { font-size: 16px; font-weight: 700; margin: 32px 0 8px; }
+        .sub { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
+        p { color: var(--muted); font-size: 15px; margin-bottom: 16px; }
+        ul { color: var(--muted); font-size: 15px; margin: 0 0 16px 20px; }
+        li { margin-bottom: 6px; }
+        strong { color: var(--text); }
+        a { color: var(--accent); text-decoration: none; }
+        input { width: 100%; padding: 12px 14px; margin: 8px 0; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px; font-size: 15px; font-family: inherit; }
+        input:focus { outline: none; border-color: var(--accent); }
+        button { padding: 12px 20px; margin: 4px 0; border: 0; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; font-family: inherit; }
+        button.primary { background: var(--accent); color: #0a0f1f; }
+        button.primary:hover { background: #d9b95e; }
+        button.danger { background: var(--danger); color: white; width: 100%; }
+        button.danger:hover { background: #dc2626; }
+        button.danger:disabled { background: #4a2a2a; color: var(--muted); cursor: not-allowed; }
+        .ghost { background: transparent; color: var(--muted); padding: 8px 0; }
+        .ghost:hover { color: var(--text); }
+        .status { margin-top: 24px; padding: 12px 14px; border-radius: 8px; font-size: 14px; }
+        .status.error { background: rgba(239,68,68,0.1); color: var(--danger); border: 1px solid rgba(239,68,68,0.3); }
+        .status.ok { background: rgba(201,168,76,0.12); color: var(--accent); border: 1px solid rgba(201,168,76,0.3); }
+        code { color: var(--text); background: var(--surface); padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a class="brand" href="/">FINN.DIGITAL</a>
+        <div>
+            <a href="/truehue/">TrueHue</a>
+            &nbsp;·&nbsp;
+            <a href="/truehue/privacy.html">Privacy</a>
+            &nbsp;·&nbsp;
+            <a href="/truehue/support.html">Support</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Delete your TrueHue account</h1>
+        <p class="sub">This permanently removes your TrueHue account. It cannot be undone.</p>
+
+        <h2>What gets deleted</h2>
+        <ul>
+            <li>Your TrueHue sign-in account and its email address</li>
+            <li>Your saved app preferences tied to that account</li>
+        </ul>
+
+        <h2>What is stored only on your device</h2>
+        <p>
+            TrueHue keeps your scans, palettes, projects and clients <strong>on your
+            phone</strong> — they are never uploaded to our servers. Deleting your account
+            here does not erase them. To remove that data, delete your account from inside
+            the app (Settings → Delete account), or uninstall TrueHue.
+        </p>
+
+        <h2>Subscriptions</h2>
+        <p>
+            Deleting your account does <strong>not</strong> cancel a TrueHue Plus
+            subscription. Cancel it in the Google Play Store under
+            Payments &amp; subscriptions, or on the App Store under Subscriptions,
+            depending on where you purchased.
+        </p>
+
+        <h2>Delete now</h2>
+        <div id="signed-out">
+            <p>Sign in with the credentials tied to the account you want to delete.</p>
+            <input id="email" type="email" placeholder="Email" autocomplete="email" />
+            <input id="password" type="password" placeholder="Password" autocomplete="current-password" />
+            <button id="signin" class="primary" style="width:100%;">Sign in</button>
+            <button id="signin-google" class="ghost" style="width:100%; margin-top:8px;">Continue with Google</button>
+        </div>
+
+        <div id="signed-in" style="display:none;">
+            <p>Signed in as <strong id="user-email"></strong></p>
+            <p>Type <code>DELETE</code> to confirm:</p>
+            <input id="confirm" placeholder="DELETE" autocomplete="off" />
+            <button id="delete" class="danger" disabled>Delete my account permanently</button>
+            <button id="cancel" class="ghost" style="width:100%; margin-top:8px;">Cancel</button>
+        </div>
+
+        <div id="status" class="status" style="display:none;"></div>
+
+        <p style="margin-top:32px;font-size:13px;">
+            Trouble deleting? Email <a href="mailto:support@finndigital.net">support@finndigital.net</a>
+            and we will remove the account within 30 days.
+        </p>
+    </main>
+
+    <!-- Pinned with Subresource Integrity: this page can delete an account, so a
+         compromised CDN response must fail closed rather than execute. Hashes are
+         of the exact 10.13.2 files; bumping the version requires new hashes. -->
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"
+            integrity="sha384-+65NgAKqXr1Nb7sBmV6O09pL8ASqZsi29OE718meKinGAWaa70VE5V6LNjXVBjIA"
+            crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"
+            integrity="sha384-I1LYojsZ5RM1cOda44Z2h42Qa6YfsQ1XkXxREnhp4ueYBR/4d1pG1K+NZM537Vsj"
+            crossorigin="anonymous"></script>
+    <script>
+        // Firebase web config for truehue-ios (public values; safe to expose).
+        const firebaseConfig = {
+            apiKey: "AIzaSyAKZZfi-qpLEzS-9O7-FbU9Q-wRs9ZzHoY",
+            authDomain: "truehue-ios.firebaseapp.com",
+            projectId: "truehue-ios",
+        };
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        const $ = (id) => document.getElementById(id);
+        const status = $("status");
+        function showStatus(msg, kind) {
+            status.textContent = msg;
+            status.className = "status " + kind;
+            status.style.display = "block";
+        }
+
+        auth.onAuthStateChanged((user) => {
+            // Anonymous guests have nothing server-side worth a delete flow, and
+            // they cannot re-authenticate here — treat them as signed out.
+            if (user && !user.isAnonymous) {
+                $("signed-out").style.display = "none";
+                $("signed-in").style.display = "block";
+                $("user-email").textContent = user.email || user.uid;
+            } else {
+                $("signed-out").style.display = "block";
+                $("signed-in").style.display = "none";
+                $("confirm").value = "";
+                $("delete").disabled = true;
+            }
+        });
+
+        $("signin").addEventListener("click", () => {
+            const email = $("email").value.trim();
+            const password = $("password").value;
+            if (!email || !password) {
+                showStatus("Email and password required.", "error");
+                return;
+            }
+            status.style.display = "none";
+            auth.signInWithEmailAndPassword(email, password)
+                .catch((e) => showStatus("Sign-in failed: " + e.message, "error"));
+        });
+
+        $("signin-google").addEventListener("click", () => {
+            const provider = new firebase.auth.GoogleAuthProvider();
+            auth.signInWithPopup(provider)
+                .catch((e) => showStatus("Google sign-in failed: " + e.message, "error"));
+        });
+
+        $("confirm").addEventListener("input", (e) => {
+            $("delete").disabled = e.target.value !== "DELETE";
+        });
+
+        $("cancel").addEventListener("click", () => auth.signOut());
+
+        $("delete").addEventListener("click", async () => {
+            $("delete").disabled = true;
+            showStatus("Deleting…", "ok");
+            try {
+                // TrueHue stores no per-user documents server-side (no Firestore
+                // or Storage in the app), so removing the Auth user IS the
+                // complete server-side deletion. Firebase requires a recent
+                // login for this, which the sign-in above satisfies.
+                await auth.currentUser.delete();
+                showStatus("Your account has been deleted.", "ok");
+                $("signed-out").style.display = "none";
+                $("signed-in").style.display = "none";
+            } catch (e) {
+                const msg = (e && e.code === "auth/requires-recent-login")
+                    ? "For security, please sign in again and retry immediately."
+                    : "Delete failed: " + e.message;
+                showStatus(msg, "error");
+                $("delete").disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
