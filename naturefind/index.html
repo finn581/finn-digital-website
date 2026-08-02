@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NatureFind — Explore the Americas Outdoors</title>
-    <meta name="description" content="NatureFind is an iOS app for discovering national parks, trails, campgrounds, and wildlife across the Americas. Save places to Memories, review every spot, share your adventures.">
+    <meta name="description" content="NatureFind is an iOS and Android app for discovering national parks, trails, campgrounds, and wildlife across the Americas. Save places to Memories, review every spot, share your adventures.">
     <meta name="apple-itunes-app" content="app-id=6759922299">
 
     <link rel="canonical" href="https://finndigital.net/naturefind/">
@@ -13,7 +13,7 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="NatureFind — Explore the Americas Outdoors">
-    <meta property="og:description" content="iOS app for discovering national parks, trails, campgrounds, and wildlife across the Americas.">
+    <meta property="og:description" content="iOS and Android app for discovering national parks, trails, campgrounds, and wildlife across the Americas.">
     <meta property="og:image" content="https://finndigital.net/og-image.png">
     <meta property="og:url" content="https://finndigital.net/naturefind/">
     <meta property="og:type" content="website">
@@ -22,7 +22,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="NatureFind — Explore the Americas Outdoors">
-    <meta name="twitter:description" content="iOS app for discovering parks, trails, campgrounds, and wildlife across the Americas.">
+    <meta name="twitter:description" content="iOS and Android app for discovering parks, trails, campgrounds, and wildlife across the Americas.">
     <meta name="twitter:image" content="https://finndigital.net/og-image.png">
 
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
@@ -34,11 +34,11 @@
       "@context": "https://schema.org",
       "@type": "MobileApplication",
       "name": "NatureFind",
-      "operatingSystem": "iOS",
+      "operatingSystem": "iOS, Android",
       "applicationCategory": "TravelApplication",
       "description": "Discover national parks, trails, campgrounds, and wildlife across the Americas. Save places to Memories, review every spot, share your adventures.",
       "url": "https://finndigital.net/naturefind/",
-      "downloadUrl": "https://apps.apple.com/app/id6759922299",
+      "downloadUrl": ["https://apps.apple.com/app/id6759922299", "https://play.google.com/store/apps/details?id=com.finn581.naturefind"],
       "image": "https://finndigital.net/assets/icons/naturefind.png",
       "publisher": { "@type": "Organization", "name": "Finn Digital LLC", "url": "https://finndigital.net" },
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -129,6 +129,16 @@
             transition: transform 0.15s ease;
         }
         .cta:hover { transform: translateY(-2px); }
+        .store-badges {
+            display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+            margin-top: 8px;
+        }
+        .store-badges a {
+            display: inline-flex; line-height: 0; border-radius: 8px;
+            transition: transform 0.15s ease;
+        }
+        .store-badges a:hover { transform: translateY(-2px); }
+        .store-badges img { display: block; height: 48px; width: auto; }
         .links {
             display: flex; gap: 24px; flex-wrap: wrap;
             margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);
@@ -233,8 +243,15 @@
         </div>
 
         <h2>Get NatureFind</h2>
-        <p>Free on the iOS App Store. Optional Pro unlock adds satellite imagery, trail polylines, alerts, and offline maps.</p>
-        <a class="cta" href="https://apps.apple.com/app/id6759922299">Download on the App Store →</a>
+        <p>Free on the App Store and Google Play. Optional Pro unlock adds satellite imagery, trail polylines, alerts, and offline maps.</p>
+        <div class="store-badges">
+            <a href="https://apps.apple.com/app/id6759922299" aria-label="Download NatureFind on the App Store">
+                <img src="/assets/app-store-badge.svg" alt="Download on the App Store" width="144" height="48" loading="lazy" decoding="async">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.finn581.naturefind" aria-label="Get NatureFind on Google Play">
+                <img src="/assets/google-play-badge.svg" alt="Get it on Google Play" width="162" height="48" loading="lazy" decoding="async">
+            </a>
+        </div>
 
         <div class="links">
             <a href="support.html">Support</a>
@@ -247,6 +264,7 @@
 
     <footer>
         © 2026 Finn Digital LLC · <a href="/">finndigital.net</a> · <a href="mailto:contact@finndigital.net">Contact</a>
+        <div style="margin-top: 8px; font-size: 10px; opacity: 0.6;">Google Play and the Google Play logo are trademarks of Google LLC. App Store is a trademark of Apple Inc.</div>
     </footer>
 
 </body>
