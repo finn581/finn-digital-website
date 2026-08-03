@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.finndigital.truehue",
+      "sha256_cert_fingerprints": [
+        "A9:9B:1F:B5:81:F8:59:1B:D8:50:03:1E:8C:9B:32:C7:19:24:F1:AD:1C:F9:0F:34:F3:C2:73:25:78:A5:1C:EF",
+        "9E:58:90:19:20:41:9A:F8:FB:F7:04:54:FC:E2:6D:7F:99:6B:C2:8D:2F:C3:85:EF:46:20:3D:75:3F:FE:34:F0"
+      ]
+    }
+  }
+]

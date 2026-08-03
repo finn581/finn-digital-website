@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Signing in — TrueHue</title>
+    <style>
+        :root {
+            --bg: #0a0d14;
+            --surface: #121826;
+            --border: rgba(255,255,255,0.1);
+            --text: #f4f6fb;
+            --muted: #9aa4b8;
+            --accent: #6ea8ff;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0; min-height: 100vh;
+            display: flex; align-items: center; justify-content: center;
+            padding: 24px;
+            background: var(--bg); color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6; text-align: center;
+        }
+        .card {
+            max-width: 420px; width: 100%;
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 20px; padding: 40px 28px;
+        }
+        img { width: 72px; height: 72px; border-radius: 16px; margin-bottom: 20px; }
+        h1 { font-size: 22px; margin: 0 0 12px; }
+        p { color: var(--muted); font-size: 15px; margin: 0 0 12px; }
+        .hint {
+            margin-top: 24px; padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-size: 13px; color: var(--muted);
+        }
+        a { color: var(--accent); }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="/assets/icons/truehue.png" alt="TrueHue">
+        <h1>Almost there</h1>
+        <p>Apple has confirmed your sign-in. Return to the TrueHue app to finish — it picks up from here automatically.</p>
+        <p>If TrueHue didn't reopen on its own, switch back to it from your recent apps.</p>
+        <div class="hint">
+            Still stuck? <a href="mailto:contact@finndigital.net?subject=TrueHue%20Sign-In">Contact support</a>
+            &middot; <a href="/truehue/">TrueHue</a>
+        </div>
+    </div>
+</body>
+</html>
