@@ -31,11 +31,11 @@
       "@context": "https://schema.org",
       "@type": "MobileApplication",
       "name": "TrueHue",
-      "operatingSystem": "iOS",
+      "operatingSystem": "iOS, Android",
       "applicationCategory": "LifestyleApplication",
       "description": "Honest paint color scanner. Match any wall to 30,000+ paints across 7 brands with refusal coaching when lighting would skew the result.",
       "url": "https://finndigital.net/truehue/",
-      "downloadUrl": "https://apps.apple.com/app/id6762074869",
+      "downloadUrl": ["https://apps.apple.com/app/id6762074869", "https://play.google.com/store/apps/details?id=com.finndigital.truehue"],
       "image": "https://finndigital.net/assets/icons/truehue.png",
       "publisher": { "@type": "Organization", "name": "Finn Digital LLC", "url": "https://finndigital.net" },
       "offers": { "@type": "Offer", "price": "0.99", "priceCurrency": "USD" }
@@ -122,6 +122,16 @@
             transition: transform 0.15s ease;
         }
         .cta:hover { transform: translateY(-2px); }
+        .store-badges {
+            display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+            margin-top: 8px;
+        }
+        .store-badges a {
+            display: inline-flex; line-height: 0; border-radius: 8px;
+            transition: transform 0.15s ease;
+        }
+        .store-badges a:hover { transform: translateY(-2px); }
+        .store-badges img { display: block; height: 48px; width: auto; }
         .links {
             display: flex; gap: 24px; flex-wrap: wrap;
             margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);
@@ -260,11 +270,18 @@
 
         <h2>TrueHue Plus</h2>
         <p>The base app at $0.99 covers full color scanning. Plus adds the premium toolbox: Flash verification, Photo Extraction (drop in any photo, get a 5-paint palette), AR Visualizer, multi-illuminant preview, daily palette tuned to your taste, mood search, white-card calibration, cutout-aware paint estimates, and color harmony suggestions.</p>
-        <p><strong>Plus pricing:</strong> $4.99/month or $29.99/year (3-day free trial), or $59 lifetime — one-time, no subscription.</p>
+        <p><strong>Plus pricing:</strong> $4.99/month or $29.99/year on iOS (3-day free trial) and Android, or $59 lifetime on iOS — one-time, no subscription.</p>
 
         <h2>Get TrueHue</h2>
-        <p>$0.99 on the iOS App Store. Universal app for iPhone and iPad.</p>
-        <a class="cta" href="https://apps.apple.com/app/id6762074869">Download on the App Store →</a>
+        <p>$0.99 on the iOS App Store — universal app for iPhone and iPad. Free on Google Play for Android.</p>
+        <div class="store-badges">
+            <a href="https://apps.apple.com/app/id6762074869" aria-label="Download TrueHue on the App Store">
+                <img src="/assets/app-store-badge.svg" alt="Download on the App Store" width="144" height="48" loading="lazy" decoding="async">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.finndigital.truehue" aria-label="Get TrueHue on Google Play">
+                <img src="/assets/google-play-badge.svg?v=2" alt="Get it on Google Play" width="162" height="48" loading="lazy" decoding="async">
+            </a>
+        </div>
 
         <div class="links">
             <a href="support.html">Support</a>
