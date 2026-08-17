@@ -13,7 +13,7 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="Revivo — AI Photo Restoration & Animation">
-    <meta property="og:description" content="iOS app that restores, colorizes, and animates old family photos with AI. Free on the App Store.">
+    <meta property="og:description" content="iOS app that restores, colorizes, and animates old family photos with AI. Free on the App Store and Google Play.">
     <meta property="og:image" content="https://finndigital.net/og-image.png?v=2">
     <meta property="og:url" content="https://finndigital.net/revivo/">
     <meta property="og:type" content="website">
@@ -34,11 +34,11 @@
       "@context": "https://schema.org",
       "@type": "MobileApplication",
       "name": "Revivo",
-      "operatingSystem": "iOS",
+      "operatingSystem": "iOS, Android",
       "applicationCategory": "PhotoApplication",
       "description": "AI photo restoration and animation. Restore, colorize, and animate old family photos.",
       "url": "https://finndigital.net/revivo/",
-      "downloadUrl": "https://apps.apple.com/app/id6763101831",
+      "downloadUrl": ["https://apps.apple.com/app/id6763101831", "https://play.google.com/store/apps/details?id=com.finn581.revivo"],
       "image": "https://finndigital.net/assets/icons/revivo.png",
       "publisher": { "@type": "Organization", "name": "Finn Digital LLC", "url": "https://finndigital.net" },
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -129,6 +129,16 @@
             transition: transform 0.15s ease;
         }
         .cta:hover { transform: translateY(-2px); }
+        .store-badges {
+            display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+            margin-top: 8px;
+        }
+        .store-badges a {
+            display: inline-flex; line-height: 0; border-radius: 8px;
+            transition: transform 0.15s ease;
+        }
+        .store-badges a:hover { transform: translateY(-2px); }
+        .store-badges img { display: block; height: 48px; width: auto; }
         .links {
             display: flex; gap: 24px; flex-wrap: wrap;
             margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);
@@ -236,8 +246,15 @@
         </div>
 
         <h2>Get Revivo</h2>
-        <p>Free on the iOS App Store. Premium unlocks unlimited enhancements, animation, and Heritage Albums.</p>
-        <a class="cta" href="https://apps.apple.com/app/id6763101831">Download on the App Store →</a>
+        <p>Free on the iOS App Store and Google Play. Premium unlocks unlimited enhancements, animation, and Heritage Albums.</p>
+        <div class="store-badges">
+            <a href="https://apps.apple.com/app/id6763101831" aria-label="Download Revivo on the App Store">
+                <img src="/assets/app-store-badge.svg" alt="Download on the App Store" width="144" height="48" loading="lazy" decoding="async">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.finn581.revivo" aria-label="Get Revivo on Google Play">
+                <img src="/assets/google-play-badge.svg?v=2" alt="Get it on Google Play" width="162" height="48" loading="lazy" decoding="async">
+            </a>
+        </div>
 
         <div class="links">
             <a href="support.html">Support</a>
