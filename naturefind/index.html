@@ -182,6 +182,20 @@
         }
         .promo-credit a { color: var(--muted); text-decoration: underline; }
         .promo-credit a:hover { color: var(--text); }
+        .demo-clip {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            border-radius: 24px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--border);
+        }
+        .demo-clip video {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -215,6 +229,20 @@
                 loop></video>
         </div>
         <p class="promo-credit">Music: <em>Get A Move On</em> — Jason Shaw · <a href="https://audionautix.com" rel="noopener" target="_blank">audionautix.com</a> · CC-BY 4.0</p>
+
+        <p class="promo-label">AI wildlife ID, in real time</p>
+        <div class="demo-clip">
+            <video
+                src="/assets/naturefind-species-demo.mp4"
+                poster="/assets/naturefind-species-demo-poster.jpg"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-label="Screen recording: choosing a wildlife photo and receiving an AI species identification for American Bison"></video>
+        </div>
+        <p class="promo-credit">Photograph any animal or plant — NatureFind names the species, with range and safety notes, in seconds.</p>
 
         <h2>Built for explorers</h2>
         <p>NatureFind is the outdoor companion for iPhone. One app for 400+ US national parks, OpenStreetMap trails, state and local parks, campgrounds, wildlife sightings, and curated destinations across 17 countries in the Americas.</p>
@@ -257,6 +285,7 @@
             <a href="support.html">Support</a>
             <a href="privacy.html">Privacy Policy</a>
             <a href="terms.html">Terms of Service</a>
+            <a href="press/">Media &amp; Assets</a>
             <a href="/">Finn Digital</a>
         </div>
 
