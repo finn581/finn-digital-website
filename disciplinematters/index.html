@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discipline Matters — A System for Becoming</title>
-    <meta name="description" content="Discipline Matters is an iOS app for anyone committed to daily discipline. Challenge alarm, workouts, AI nutrition, GPS runs, evening wind-down, and a 40-week journey backed by Atomic Habits, Meditations, and 26 more books.">
+    <meta name="description" content="Discipline Matters is an iOS and Android app for anyone committed to daily discipline. Challenge alarm, workouts, AI nutrition, GPS runs, evening wind-down, and a 40-week journey backed by Atomic Habits, Meditations, and 26 more books.">
     <meta name="apple-itunes-app" content="app-id=6766293475">
 
     <link rel="canonical" href="https://finndigital.net/disciplinematters/">
@@ -13,7 +13,7 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="Discipline Matters — A System for Becoming">
-    <meta property="og:description" content="iOS app for daily discipline. Morning anchors, workouts, nutrition, sleep, and a 40-week journey.">
+    <meta property="og:description" content="iOS and Android app for daily discipline. Morning anchors, workouts, nutrition, sleep, and a 40-week journey. On the App Store and Google Play.">
     <meta property="og:image" content="https://finndigital.net/og-image.png?v=2">
     <meta property="og:url" content="https://finndigital.net/disciplinematters/">
     <meta property="og:type" content="website">
@@ -22,7 +22,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Discipline Matters — A System for Becoming">
-    <meta name="twitter:description" content="iOS app for daily discipline. Built around five rhythms — Morning, Workout, Nutrition, Progress, Evening.">
+    <meta name="twitter:description" content="iOS and Android app for daily discipline. Built around five rhythms — Morning, Workout, Nutrition, Progress, Evening.">
     <meta name="twitter:image" content="https://finndigital.net/og-image.png?v=2">
 
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
@@ -34,11 +34,11 @@
       "@context": "https://schema.org",
       "@type": "MobileApplication",
       "name": "Discipline Matters",
-      "operatingSystem": "iOS",
+      "operatingSystem": "iOS, Android",
       "applicationCategory": "LifestyleApplication",
       "description": "A daily wellness and habit-building app: morning anchors, workouts, nutrition, sleep, and a 40-week journey. Informational tool — not a medical device.",
       "url": "https://finndigital.net/disciplinematters/",
-      "downloadUrl": "https://apps.apple.com/app/id6766293475",
+      "downloadUrl": ["https://apps.apple.com/app/id6766293475", "https://play.google.com/store/apps/details?id=com.disciplinematters.app"],
       "image": "https://finndigital.net/assets/icons/disciplinematters.png",
       "publisher": { "@type": "Organization", "name": "Finn Digital LLC", "url": "https://finndigital.net" },
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -132,6 +132,16 @@
             transition: transform 0.15s ease;
         }
         .cta:hover { transform: translateY(-2px); }
+        .store-badges {
+            display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+            margin-top: 8px;
+        }
+        .store-badges a {
+            display: inline-flex; line-height: 0; border-radius: 8px;
+            transition: transform 0.15s ease;
+        }
+        .store-badges a:hover { transform: translateY(-2px); }
+        .store-badges img { display: block; height: 48px; width: auto; }
         .links {
             display: flex; gap: 24px; flex-wrap: wrap;
             margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);
@@ -276,12 +286,19 @@
         </div>
 
         <h2>Pricing</h2>
-        <p><strong style="color: var(--text)">Plus</strong> — $6.99/mo or $39.99/yr (save 52%, with a 7-day free trial). The full system: every program and workout, the recovery-score Stoic Coach, the discipline alarm, the table, and the evening reckoning.</p>
-        <p><strong style="color: var(--text)">Plus Lifetime</strong> — $79.99 once. Everything in Plus, forever — and it unlocks the AI Coach layer: an AI-generated Stoic morning brief tuned to your recovery score, premium voice narration, and generative sleep audio.</p>
+        <p><strong style="color: var(--text)">Plus</strong> — $9.99/mo or $59.99/yr (save 50%, with a 7-day free trial on the annual plan). The full system: every program and workout, the recovery-score Stoic Coach, the discipline alarm, the table, and the evening reckoning.</p>
+        <p><strong style="color: var(--text)">Plus Lifetime</strong> — $129.99 once. Everything in Plus, forever — and it unlocks the AI Coach layer: an AI-generated Stoic morning brief tuned to your recovery score, premium voice narration, and generative sleep audio.</p>
 
         <h2>Get Discipline Matters</h2>
-        <p>Free to start. 7-day free trial on the annual plan. Cancel anytime.</p>
-        <a class="cta" href="https://apps.apple.com/app/id6766293475">Download on the App Store →</a>
+        <p>Free to start on the iOS App Store and Google Play. 7-day free trial on the annual plan. Cancel anytime. Same pricing on both platforms.</p>
+        <div class="store-badges">
+            <a href="https://apps.apple.com/app/id6766293475" aria-label="Download Discipline Matters on the App Store">
+                <img src="/assets/app-store-badge.svg" alt="Download on the App Store" width="144" height="48" loading="lazy" decoding="async">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.disciplinematters.app" aria-label="Get Discipline Matters on Google Play">
+                <img src="/assets/google-play-badge.svg?v=2" alt="Get it on Google Play" width="162" height="48" loading="lazy" decoding="async">
+            </a>
+        </div>
 
         <div class="links">
             <a href="support.html">Support</a>
