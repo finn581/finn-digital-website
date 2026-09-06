@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://finndigital.net/sitemap.xml
+Sitemap: https://finndigital.net/truehue/colors/sitemap.xml
