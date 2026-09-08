@@ -37,65 +37,30 @@
         </div>
     </nav>
 
-    <div class="container">
-
+    <main class="container">
         <h1>EasyRealty Privacy Policy</h1>
-        <p class="sub">Effective date: June 14, 2026. Applies to EasyRealty 1.0 and later on iOS.</p>
-
-        <h2>Introduction</h2>
-        <p>EasyRealty is published by <strong>Finn Digital LLC</strong> ("we," "us," or "our"). This policy explains what data the EasyRealty iOS app collects, how it is used, and your rights. EasyRealty is designed to be <strong>on-device first</strong>: your deals, clients, and signed contracts are stored on your device, not on our servers. We do not sell your data and we do not run third-party advertising.</p>
-
-        <h2>Data Stored on Your Device</h2>
-        <p>The following is created and stored locally on your iPhone or iPad and is not transmitted to us:</p>
-        <ul>
-            <li><strong>Deals, contacts &amp; activity</strong> — your pipeline, CRM contacts, showings, tasks, and notes.</li>
-            <li><strong>Documents &amp; signatures</strong> — contracts you create, scan, or import; signature and initial images; and the EasySign audit trail. Signed documents are stored <strong>AES-256-GCM encrypted</strong> at rest and protected by iOS Data Protection.</li>
-            <li><strong>Property &amp; financial entries</strong> — properties, mortgage calculations, and commission records you enter.</li>
-        </ul>
-
-        <h2>Data Used by Online Features</h2>
-        <p>Some features query public or third-party services to show you information. Only the minimum needed for the request is sent:</p>
-        <ul>
-            <li><strong>Location</strong> — when you grant access, used to find nearby properties and pre-fill addresses. It is used on-device and to query the mapping/data services below; we do not store your location on our servers.</li>
-            <li><strong>Mapping &amp; address search</strong> — Apple MapKit, used for address autocomplete and maps.</li>
-            <li><strong>Market data</strong> — the U.S. Federal Reserve (FRED) for mortgage rates, the U.S. Census Bureau (ACS) for area demographics, and FEMA for flood-zone data. These receive a location or area query, not your identity.</li>
-            <li><strong>Subscriptions</strong> — handled by Apple's App Store via StoreKit. Apple processes payment; we receive your subscription status, not your card details.</li>
-        </ul>
-
-        <h2>EasySign &amp; Your Contracts</h2>
-        <p>EasySign processes and signs contracts <strong>on your device</strong>. Documents are not uploaded to a server to be signed. Signatures are captured locally, the document is hashed and cryptographically signed, and the result is stored encrypted with a tamper-evident audit trail. You control sharing — when you export or email a completed contract or its Certificate of Completion, it goes only where you send it.</p>
-
-        <h2>Analytics &amp; Diagnostics</h2>
-        <p>EasyRealty may collect anonymized, aggregated usage and crash diagnostics to fix bugs and improve the app. These contain no contract contents and are not used for advertising or cross-app tracking.</p>
-
-        <h2>Data Retention &amp; Deletion</h2>
-        <ul>
-            <li>Because your records live on your device, removing the app deletes them. You can also clear data from within the app's settings.</li>
-            <li>Apple retains subscription/billing records under its own policies and financial regulations.</li>
-        </ul>
-
-        <h2>Your Rights</h2>
-        <ul>
-            <li><strong>Access &amp; portability</strong> — your records are on your device; export a contract or its certificate at any time.</li>
-            <li><strong>Deletion</strong> — clear data in the app or delete the app to remove your local data.</li>
-            <li><strong>California (CCPA)</strong> — we do not sell personal information; you may request access or deletion by emailing us.</li>
-            <li><strong>EEA/UK (GDPR)</strong> — our lawful basis is contractual necessity (to provide the app) and legitimate interest (diagnostics). You may contact your local supervisory authority.</li>
-        </ul>
-
-        <h2>Children</h2>
-        <p>EasyRealty is a professional tool intended for adults. We do not knowingly collect personal information from anyone under 18.</p>
-
-        <h2>Security</h2>
-        <p>Network requests use TLS. Signed contracts and signature data are encrypted at rest with AES-256-GCM and protected by iOS Data Protection. Encryption keys are stored in the iOS Keychain and never leave the device.</p>
-
-        <h2>Changes to This Policy</h2>
-        <p>If we make material changes we will update the effective date above and, where appropriate, notify users in-app.</p>
-
+        <p class="sub">Updated September 8, 2026. Remote signing provisions apply to EasyRealty 1.0.2 and later.</p>
+        <h2>What stays on your device</h2>
+        <p>EasyRealty by Finn Digital LLC stores your CRM contacts, deals, properties, tasks, local scans and calculations on your device. Connecting an EasySign account does not automatically upload or synchronize those records. When you choose remote signing, the selected document and its recipient details are uploaded as described below.</p>
+        <h2>EasySign accounts and remote signing</h2>
+        <p>We store your account name, email address, account identifier and a password hash to authenticate you. We do not store your plain-text password. For remote signing, our service stores the selected PDF, recipient names and email addresses, signature and initials images, document identifiers, signing status, consent, timestamps, IP addresses and browser/device information used for the audit trail. A contract may contain addresses, phone numbers, financial details and other information you or your clients include. Upload only documents you are authorized to share.</p>
+        <h2>How documents are protected and shared</h2>
+        <p>Network connections use HTTPS/TLS. Local signed documents and remote contract payloads use AES-256-GCM encryption at rest. Local keys are kept in the iOS Keychain; service keys are managed separately in Google Cloud Secret Manager. Our authorized service processes documents to display them to recipients and produce signed PDFs. This is not end-to-end encryption that excludes the service. Device biometrics stay with iOS; EasyRealty receives only the authentication result.</p>
+        <h2>Signing links and recipients</h2>
+        <p>You choose who receives a signing link through the iOS share sheet. Anyone holding an active link can access the document for that recipient, so share it only with the intended person. Links expire and pending requests can be revoked. A link does not independently verify the recipient’s identity. Recipients can keep copies they download; deleting your account cannot remove those copies. EasySign uses our own signing pipeline and does not require DocuSign.</p>
+        <h2>Online services and payments</h2>
+        <p>Google Cloud hosts account records, encrypted contract data, backups and service operation logs in the United States. Apple handles purchases through the App Store; EasyRealty receives subscription status, not card details. Apple mapping/geocoding and public data services including the FCC, U.S. Census Bureau, FEMA and FRED may receive location, address or area queries when you use their features. Optional MLS connections send queries to the provider you configure. Sharing through another app is governed by that app’s privacy practices.</p>
+        <h2>Diagnostics and advertising</h2>
+        <p>We use service health metrics and security logs to operate and protect EasySign. Signing events and network/browser information are retained with the document’s audit evidence. We do not sell personal data, use contract contents for advertising, or use them to train AI models. This version includes no third-party advertising or cross-app tracking SDK. Apple may provide diagnostics you choose to share under its own settings.</p>
+        <h2>Retention and account deletion</h2>
+        <p>Local records remain until you erase them in the app or remove the app. Remote documents and signing evidence remain with your EasySign account, including after a link expires. To delete the account, open Profile → Settings → Delete EasySign Account, save the copies you need, and confirm with your password. Deletion removes the account and its owned records from the active service and invalidates its signing links. Restricted recovery backups expire under their retention schedule, normally 14 days. Deleting an account does not erase local exports or recipients’ copies and does not cancel an App Store subscription. Manage subscriptions through your Apple account.</p>
+        <h2>Your choices and requests</h2>
+        <p>Use local features without an EasySign account, decline location/camera/photo permissions, export completed PDFs and certificates, revoke pending signing links, erase local data or delete your EasySign account. Export required records before deletion; local encrypted records use device-only keys and are excluded from device backups. For account access, correction, deletion or privacy requests, contact contact@finndigital.net. Requests from recipients can be matched to the relevant document owner. Rights and any lawful retention requirements depend on your location and circumstances.</p>
+        <h2>Children and policy changes</h2>
+        <p>EasyRealty is intended for adult real estate professionals. We do not knowingly collect children’s personal information. Contact us if you believe a child has supplied data. We will update this policy’s date when practices change and provide an in-app notice when appropriate.</p>
         <h2>Contact</h2>
-        <p>Privacy questions or data requests: <a href="mailto:contact@finndigital.net">contact@finndigital.net</a></p>
-        <p>Finn Digital LLC, Gainesville, FL 32608, United States.</p>
-
-    </div>
+        <p>Finn Digital LLC, Gainesville, FL 32608, United States. Privacy questions and support: contact@finndigital.net.</p>
+    </main>
 
 </body>
 </html>
