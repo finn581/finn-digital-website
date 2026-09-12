@@ -11,12 +11,13 @@
     <style>
         :root { --bg:#191C14; --surface:#232819; --text:#F4EFE5; --muted:#A8A497; --accent:#4CAF50; --unsafe:#C83737; --border:rgba(255,255,255,0.08); }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
-        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        html { overflow-wrap: anywhere; }
+        body { width: 100%; font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
         .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
         .nav a:hover { color: var(--text); }
         .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
-        .container { max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
+        .container { width: 100%; max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
         h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
         .updated { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
         h2 { font-size: 18px; font-weight: 700; margin: 32px 0 10px; color: var(--text); }
@@ -41,9 +42,9 @@
         </div>
     </nav>
 
-    <div class="container">
+    <main class="container">
         <h1>Terms of Service</h1>
-        <p class="updated">Last updated: May 6, 2026</p>
+        <p class="updated">Last updated: September 12, 2026</p>
 
         <div class="alert">
             <strong>READ FIRST &mdash; SAFEPLATE IS NOT A MEDICAL DEVICE.</strong> SafePlate is an informational consumer-software tool. It is not registered with, cleared by, or approved by the U.S. Food and Drug Administration (FDA), the European Medicines Agency or competent authorities under EU MDR 2017/745, the U.K. Medicines and Healthcare products Regulatory Agency (MHRA), Health Canada, the Australian Therapeutic Goods Administration (TGA), or any other regulatory authority. SafePlate is not intended to diagnose, prevent, treat, cure, mitigate, or monitor any disease, allergy, or medical condition. <strong>The presence or absence of an allergen highlight is not a guarantee that a product is or is not safe for any individual.</strong> Always read the manufacturer&rsquo;s allergen statement. <strong>In an emergency, call 911 (or your local emergency number) immediately</strong> &mdash; SafePlate does not call emergency services on your behalf.
@@ -53,9 +54,9 @@
         <p>By downloading, installing, or using SafePlate (the &ldquo;App&rdquo;), you agree to these Terms of Service (the &ldquo;Terms&rdquo;) and to the SafePlate <a href="privacy.html">Privacy Policy</a>. If you do not agree, do not use the App. The App is published by <strong>Finn Digital LLC</strong>, a Florida limited liability company (&ldquo;Finn Digital,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;).</p>
 
         <h2>2. What SafePlate is &mdash; and is not</h2>
-        <p>SafePlate is an informational tool that lets you store allergen profiles for one or more family members, scan product barcodes and food photographs, read ingredient text from public product databases or images, highlight ingredients that match the allergen profile you have configured, and display localized allergy cards. With a paid SafePlate PRO subscription it adds analytics, recall alerts based on the public OpenFDA dataset, and similar convenience features.</p>
+        <p>SafePlate is an informational tool that lets you store allergen profiles for one or more family members, scan product barcodes and food photographs, read ingredient text from public product databases or images, highlight ingredients that match the allergen profile you have configured, and display localized allergy cards. Feature access and usage limits are shown in the app. Emergency tools remain available without a subscription.</p>
         <p><strong>SafePlate is not, and does not hold itself out as: </strong>(a) a medical device, in vitro diagnostic, or clinical decision-support tool; (b) a substitute for reading the manufacturer&rsquo;s label, asking a restaurant about its preparation methods, or consulting a qualified medical professional, allergist, or dietitian; (c) a guarantee that a product is safe to consume; (d) an emergency-response service; (e) a HIPAA-covered entity or business associate; (f) a service intended for unsupervised use by children under 13; or (g) a food-handling, food-hygiene, or food-temperature verification service.</p>
-        <p><strong>SafePlate reads ingredient text only.</strong> Notwithstanding the App Store name &ldquo;SafePlate: Food Safety Scanner,&rdquo; the App does NOT inspect, measure, verify, or certify: cooking temperature; internal doneness; minimum-safe-internal-temperature compliance; cross-contamination during preparation, transport, or storage; refrigeration history; expiration dates; pathogen presence (including <em>Salmonella</em>, <em>E. coli</em>, <em>Listeria</em>, <em>Campylobacter</em>, <em>norovirus</em>, or any other microorganism); chemical contamination; or any other food-handling factor. Cooking-temperature reminders or hygiene tips that appear in the App are general consumer-education content drawn from public USDA / FDA guidance and are not a substitute for using a calibrated food thermometer or following safe food-handling practice. You, and not Finn Digital, are solely responsible for cooking food to a safe internal temperature, practicing safe food-handling, and verifying freshness.</p>
+        <p><strong>SafePlate compares available ingredient information.</strong> Notwithstanding the App Store name &ldquo;SafePlate: Food Safety Scanner,&rdquo; the App does NOT inspect, measure, verify, or certify: cooking temperature; internal doneness; minimum-safe-internal-temperature compliance; cross-contamination during preparation, transport, or storage; refrigeration history; expiration dates; pathogen presence (including <em>Salmonella</em>, <em>E. coli</em>, <em>Listeria</em>, <em>Campylobacter</em>, <em>norovirus</em>, or any other microorganism); chemical contamination; or any other food-handling factor. Cooking-temperature reminders or hygiene tips that appear in the App are general consumer-education content drawn from public USDA / FDA guidance and are not a substitute for using a calibrated food thermometer or following safe food-handling practice. You, and not Finn Digital, are solely responsible for cooking food to a safe internal temperature, practicing safe food-handling, and verifying freshness.</p>
 
         <h2>3. Informational accuracy &mdash; assumption of risk</h2>
         <p>Allergen highlighting is generated by matching ingredient text against the allergen list you have configured, plus a list of common synonyms. The result depends on factors outside our control, including: photo quality and lighting; legibility and completeness of the printed label; accuracy and freshness of third-party product databases (including <em>OpenFoodFacts</em> and <em>OpenFDA</em>); regional ingredient differences; unannounced reformulations; cross-contamination not disclosed on the label; and translations of allergy cards. <strong>You acknowledge that SafePlate may miss an allergen that is in fact present, or flag an allergen that is in fact absent.</strong></p>
@@ -72,7 +73,8 @@
         <p>You agree to indemnify, defend, and hold harmless Finn Digital and its members, officers, employees, contractors, and licensors from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys&rsquo; fees) arising out of or related to: (a) your use of the App; (b) your violation of these Terms; (c) your reliance on the App&rsquo;s output for a food-related decision; or (d) any content or data you submit, including profiles you create for other family members.</p>
 
         <h2>7. Subscriptions and payment</h2>
-        <p>SafePlate PRO is an auto-renewing subscription billed through your Apple ID. The free trial period converts to a paid period unless you cancel at least 24 hours before the trial ends. Cancel any time at iPhone <em>Settings &rsaquo; Subscriptions</em>. The Lifetime tier (where offered) is a one-time, non-recurring purchase. All payments are handled by Apple under Apple&rsquo;s terms; Finn Digital does not receive your card or Apple ID credentials.</p>
+        <p>SafePlate PRO subscriptions are billed by Apple on iOS and Google Play on Android. The price, billing period and any eligible offer are shown by the relevant store before purchase. Store subscriptions renew until canceled under that store’s terms. Manage iOS subscriptions in Settings → Subscriptions; manage Android subscriptions in Google Play → Payments &amp; subscriptions → Subscriptions. Access generally continues until the paid period ends. A lifetime purchase, where offered on iOS, does not renew; Android offers monthly and annual plans.</p>
+        <p>Android’s initial local trial does not initiate a purchase or charge automatically. A store free-trial offer is different: if you accept it through the store, it converts to the displayed paid plan unless you cancel before renewal. Payments and refunds are handled by the store. Deleting your SafePlate account or uninstalling the app does not cancel a store subscription. We do not receive your card details or store password.</p>
 
         <h2>8. Acceptable use</h2>
         <ul>
@@ -95,7 +97,7 @@
         <h2>12. Binding arbitration and class-action waiver</h2>
         <p><strong>Please read this section carefully &mdash; it affects your legal rights.</strong> Except for claims that may be brought in small-claims court, you and Finn Digital agree that any dispute, claim, or controversy arising out of or related to these Terms or the App will be resolved by <strong>binding individual arbitration</strong> administered by the American Arbitration Association under its Consumer Arbitration Rules. The arbitration will take place in Alachua County, Florida (or by video conference at your request). The arbitrator&rsquo;s decision will be final and binding.</p>
         <p><strong>YOU AND FINN DIGITAL AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, CONSOLIDATED, OR REPRESENTATIVE PROCEEDING.</strong> The arbitrator may not consolidate more than one person&rsquo;s claims and may not preside over any form of representative or class proceeding. If this class-action waiver is found unenforceable, then the entirety of this Section 12 is null and void.</p>
-        <p><strong>30-Day Right to Opt Out.</strong> You may opt out of this arbitration agreement by sending written notice to <a href="mailto:safeplateapp@gmail.com">safeplateapp@gmail.com</a> within 30 days of first accepting these Terms, including your full name and a clear statement that you wish to opt out.</p>
+        <p><strong>30-Day Right to Opt Out.</strong> You may opt out of this arbitration agreement by sending written notice to <a href="mailto:contact@finndigital.net">contact@finndigital.net</a> within 30 days of first accepting these Terms, including your full name and a clear statement that you wish to opt out.</p>
 
         <h2>13. Termination</h2>
         <p>You may stop using the App at any time. We may suspend or terminate your access to the App, with or without notice, for conduct that violates these Terms or that we determine in good faith to be harmful to other users, third parties, or our service. Sections 3 through 12, 14, and 15 survive termination.</p>
@@ -107,9 +109,9 @@
         <p>These Terms, together with the <a href="privacy.html">Privacy Policy</a> and any in-App disclosures, constitute the entire agreement between you and Finn Digital regarding the App. We may update these Terms; material changes will be reflected in the &ldquo;Last updated&rdquo; date and (where practical) announced in-App. Continued use of the App after a change constitutes acceptance of the revised Terms.</p>
 
         <h2>16. Contact</h2>
-        <p>Questions about these Terms: <a href="mailto:safeplateapp@gmail.com">safeplateapp@gmail.com</a> &mdash; Finn Digital LLC, Gainesville, Florida, USA.</p>
+        <p>Questions about these Terms: <a href="mailto:contact@finndigital.net">contact@finndigital.net</a> &mdash; Finn Digital LLC, Gainesville, Florida, USA.</p>
 
         <p style="margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 11px; color: var(--muted); line-height: 1.55;">SafePlate is an informational tool for personal allergen tracking. It is not a medical device, is not FDA cleared, and is not a substitute for reading the manufacturer&rsquo;s label or consulting a qualified medical professional. In an emergency, call 911.</p>
-    </div>
+    </main>
 </body>
 </html>

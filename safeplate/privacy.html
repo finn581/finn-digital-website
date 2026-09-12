@@ -11,12 +11,13 @@
     <style>
         :root { --bg:#191C14; --surface:#232819; --text:#F4EFE5; --muted:#A8A497; --accent:#4CAF50; --border:rgba(255,255,255,0.08); }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
-        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        html { overflow-wrap: anywhere; }
+        body { width: 100%; font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
         .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
         .nav a:hover { color: var(--text); }
         .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
-        .container { max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
+        .container { width: 100%; max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
         h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
         .updated { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
         h2 { font-size: 18px; font-weight: 700; margin: 32px 0 10px; color: var(--text); }
@@ -40,69 +41,37 @@
         </div>
     </nav>
 
-    <div class="container">
+    <main class="container">
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: June 3, 2026</p>
-
-        <p>SafePlate ("we", "our", or "us") is operated by Finn Digital LLC. This privacy policy explains what information we collect, how we use it, which third parties receive it, and the choices you have. It applies to the SafePlate iOS app and the website finndigital.net/safeplate.</p>
-
-        <h2>What stays on your device</h2>
-        <ul>
-            <li><strong>Barcode reads.</strong> Scanning a barcode happens on your device. Only the barcode number is used to look up the product &mdash; your camera frames are not uploaded.</li>
-            <li><strong>On-device scanning option.</strong> If you decline AI scanning, all food-photo analysis stays on your device and no image leaves your phone. (See "AI-powered scanning" below for the opt-in cloud option.)</li>
-            <li><strong>Family profiles + allergens.</strong> Names, allergens, and severity stay local in SwiftData on your iPhone. Sync to iCloud is your choice.</li>
-            <li><strong>EpiPen reminders.</strong> Stored in iOS local notifications.</li>
-        </ul>
-
-        <h2>What we collect (only if you opt in)</h2>
-        <ul>
-            <li><strong>Account ID.</strong> If you sign in with Apple, we receive an opaque user identifier and (optionally) a relay email so subscriptions and saved palettes can sync across devices.</li>
-            <li><strong>Saved scans.</strong> If you tap "Save to history," we store the resulting product reference, brand name, and the allergen-match summary in Firebase Firestore, scoped to your account. We do not store the raw camera image.</li>
-            <li><strong>Subscription status.</strong> Apple tells us whether you have an active SafePlate or PRO subscription. We never receive payment card or Apple ID details.</li>
-            <li><strong>Diagnostic data.</strong> Anonymous crash reports via Firebase Crashlytics.</li>
-        </ul>
-
-        <h2>AI-powered scanning (opt-in)</h2>
-        <p>SafePlate offers optional AI-powered scanning that identifies the foods on a plate (Plate Intel) and reads packaged-food labels. When you turn it on:</p>
-        <ul>
-            <li>The photo you capture is sent to <strong>Google's Gemini models via Google Cloud Vertex AI</strong> to identify the foods or text in the image.</li>
-            <li>It is <strong>opt-in</strong>: the first time it would run, SafePlate asks for your consent. Decline and scanning stays entirely on your device.</li>
-            <li>The photo is used <strong>only</strong> to analyze that one scan and is <strong>not stored</strong> by SafePlate afterward.</li>
-            <li>Under Google Cloud's terms, Vertex AI does not use your content to train its foundation models. The image is not linked to your identity and is never used for advertising or tracking.</li>
-            <li>The allergen and health information shown after a scan is produced by SafePlate's own logic from your saved profiles. Results are informational and are not medical advice.</li>
-        </ul>
-
-        <h2>What we do not collect</h2>
-        <ul>
-            <li>Outside the opt-in AI scan above, we do <strong>not</strong> upload, index, or store your camera frames as images.</li>
-            <li>We do <strong>not</strong> train any model on your scans, family profiles, or saved cards.</li>
-            <li>We do <strong>not</strong> sell your personal data to advertisers or data brokers.</li>
-            <li>We do <strong>not</strong> use third-party advertising SDKs.</li>
-            <li>We do <strong>not</strong> share your child&rsquo;s allergens with any third party.</li>
-        </ul>
-
-        <h2>Children's data</h2>
-        <p>SafePlate stores names, ages, and allergens for the children in your family at <strong>your</strong> direction, the parent or guardian. SafePlate is not intended for direct use by children under 13. Family-member data stays under your account and is removed when you delete your account or remove the family member.</p>
-
-        <h2>Third-party services</h2>
-        <ul>
-            <li><strong>Apple StoreKit</strong> &mdash; subscription management.</li>
-            <li><strong>Firebase Auth, Firestore, Storage, Crashlytics</strong> (Google) &mdash; account auth, optional cross-device sync, crash reporting.</li>
-            <li><strong>Apple MapKit</strong> &mdash; restaurant finder map display. No personal data sent.</li>
-            <li><strong>OpenFoodFacts and FDA OpenFDA</strong> (public APIs) &mdash; product database and recall alerts. No personal data sent.</li>
-            <li><strong>Google Cloud Vertex AI (Gemini)</strong> &mdash; used only when you opt in to AI-powered scanning, to analyze the photo you capture. Photos are not stored and are not used to train Google's models.</li>
-        </ul>
-
-        <h2>Your rights</h2>
-        <p>You can delete your account and all associated data via Profile &rsaquo; Settings &rsaquo; Delete Account. Data is permanently erased within 30 days. To request a data export, email <a href="mailto:safeplateapp@gmail.com">safeplateapp@gmail.com</a>.</p>
-
-        <h2>Changes</h2>
-        <p>We may update this policy. Material changes will be reflected in the "Last updated" date and announced in-app.</p>
-
-        <h2>Contact</h2>
-        <p>Privacy questions: <a href="mailto:safeplateapp@gmail.com">safeplateapp@gmail.com</a> &mdash; Finn Digital LLC.</p>
-
-        <p style="margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 11px; color: var(--muted); line-height: 1.55;">SafePlate is an informational tool for personal allergen tracking. It is not a medical device, is not FDA cleared, and is not a substitute for reading the manufacturer&rsquo;s label or consulting a qualified medical professional. In an emergency, call 911.</p>
-    </div>
+        <p class="updated">Last updated: September 12, 2026</p>
+        <p>SafePlate is published by Finn Digital LLC. This policy covers the SafePlate iOS and Android apps and finndigital.net/safeplate. Features and storage differ by platform as described below. Contact <a href="mailto:contact@finndigital.net">contact@finndigital.net</a> about privacy, access, correction or deletion.</p>
+        <h2>Accounts and service identifiers</h2>
+        <p>You can start without a personal sign-in. The app uses a Firebase anonymous account identifier for cloud requests, usage limits and service security. If you choose Google or Apple sign-in, Firebase also processes the provider identifier and any name or email the provider supplies. We do not receive your provider password. Service requests expose ordinary network information, including your IP address, to the services handling them.</p>
+        <h2>Family profiles and scan history</h2>
+        <p>Family profiles can contain names, birth dates, allergies, severity, custom allergens, selected health conditions, photos, preferred foods and emergency contact details. These are sensitive data. Only enter information you are authorized to manage, including information about a child in your care.</p>
+        <p>Android stores profiles in an app-private local database. Optional family backup requires personal sign-in and a separate “Enable backup” action. It uploads the profile fields, including an optional profile photo and emergency contact details, to your account in Google Firebase Firestore. Turning backup off stops future synchronization; it does not delete the existing cloud copy. Signing out leaves local family data on that device. Android does not use iCloud or Android automatic app backup. The iOS app uses local SwiftData storage; Apple device backup settings may apply.</p>
+        <p>Completed scans are saved locally. When personally signed in, scan history is automatically synchronized with Firebase; it is not conditional on a separate Save button. Records include the product, barcode, ingredient text, profile name, allergen findings, time and result. Android records may also include health-condition flags. Raw camera photos are not part of scan-history synchronization.</p>
+        <p>Android reaction-journal photos, EpiPen records, reminders, restaurant notes and cached menus are stored locally. Reminder notifications can be disabled in system settings. Recall notifications use Firebase Cloud Messaging and a device registration token associated with the app account.</p>
+        <h2>Camera, photos and optional AI</h2>
+        <p>Barcode detection and normal label text recognition run on the device. Product lookup sends the barcode to Open Food Facts and, through our authenticated server, USDA FoodData Central. Product-name search sends the words you enter to Open Food Facts. Food-name corrections send the food name to USDA through our server. These requests do not include the family profile or camera frames.</p>
+        <p>Optional cloud scanning sends the selected photo through our authenticated Google Cloud service to Gemini on Vertex AI to identify foods or read label text. The app asks for consent before cloud analysis. You can change consent in Profile. On Android, declining cloud analysis leaves barcode and local label scanning available; there is no offline food-photo recognition fallback.</p>
+        <p>The cloud scan request includes the app’s authentication token. Photos are processed for the requested analysis; SafePlate does not add these scan images to a photo library on our server. Google Cloud processing, security and abuse-monitoring retention may apply. We do not train models on your scans or profiles. See <a href="https://cloud.google.com/terms/cloud-privacy-notice">Google Cloud’s privacy notice</a>. Profile photos uploaded with family backup are a separate, persistent use of photos.</p>
+        <h2>Locations, recipes and shared cards</h2>
+        <p>Restaurant search uses a city you enter or foreground location you authorize. Approximate or precise coordinates and restaurant queries are processed by Google Places through our server; Android map display uses Google Maps. System geocoding services may also process a city query. Location is optional; the app does not request background location. Recipe searches and recipe images use TheMealDB. Recall feeds use FDA and USDA FSIS sources.</p>
+        <p>Sharing a card or report sends the information you select to the recipient or app you choose. Allergy-card links contain the profile name, listed allergens, severity and optional emergency contacts. Anyone with the link can read that snapshot; links are not password protected and cannot recall copies already shared. New Android card links keep the payload in the URL fragment, which is decoded in the recipient’s browser. Older path-based links may include the payload in hosting logs. The card page does not fetch a profile photo or add analytics.</p>
+        <h2>Purchases, diagnostics and analytics</h2>
+        <p>Apple processes iOS payments and Google Play processes Android payments. We receive product, transaction and subscription-status information needed to verify access and restore purchases. We do not receive payment-card numbers or store-account passwords. Android verification binds purchases to a SafePlate account and retains hashed ownership records to limit purchase-token replay.</p>
+        <p>Android uses Firebase Crashlytics for crash reports, stack traces, device/app information and installation identifiers, and Firebase Analytics for app interactions and purchase events. These are pseudonymous identifiers, not a promise of anonymity. Android’s custom analytics excludes names, barcode values, ingredient text, allergy results, health-condition selections and free-text errors. iOS analytics may include feature interactions and selected health-rule categories. Firebase may process standard device and usage metadata. See <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</p>
+        <p>SafePlate does not sell personal data, use third-party advertising SDKs, or use your family profiles and photos for advertising. Android does not request the advertising-ID permission.</p>
+        <h2>Support and AI-result reports</h2>
+        <p>If you contact us, we receive the message and contact details you provide. Android’s in-app AI reporting sends only the text you enter, the app account identifier, app version and submission time to Firebase for our review. No photo or family profile is automatically attached. Reports are not an emergency service; avoid including private details that are unnecessary to explain the issue.</p>
+        <h2>Retention and deletion</h2>
+        <p>Local data remains until you remove it, delete the account through the app, or clear/uninstall the Android app. Cloud profiles and history remain until deleted. Turning off backup or signing out does not erase stored cloud data. Deletion markers may remain to stop a removed profile from reappearing during synchronization. Shared exports and copies held by recipients are outside the app’s control.</p>
+        <p>Use Profile → Account → Delete account on Android, or the account-deletion control in the iOS Profile settings. You may need to sign in again. You can also request deletion without the app at <a href="delete-account.html">Delete your SafePlate account and data</a>. We verify ownership before acting on a request and aim to respond within 30 days. Request deletion of anonymous-account data by contacting us with available app/account details; do not send passwords or purchase tokens.</p>
+        <p>Limited transaction, fraud-prevention, security, backup and legally required records may remain where necessary. Provider-controlled diagnostic retention follows the provider’s settings and terms. Ask us which records apply to your request. Deleting SafePlate does not cancel a store subscription; cancel it through Apple or Google Play separately.</p>
+        <h2>Children and changes</h2>
+        <p>SafePlate is intended for adults managing their own or their family’s information, not for unsupervised use by children. Parents and guardians can request access, correction or deletion of information they manage. We update the date on this page when the policy changes.</p>
+        <p>SafePlate is an informational tool. It is not a medical device or a substitute for checking the manufacturer’s label and consulting a qualified medical professional. In an emergency, call local emergency services.</p>
+    </main>
 </body>
 </html>

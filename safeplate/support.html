@@ -11,12 +11,13 @@
     <style>
         :root { --bg:#191C14; --surface:#232819; --text:#F4EFE5; --muted:#A8A497; --accent:#4CAF50; --safe:#2E8B57; --warn:#DAA520; --border:rgba(255,255,255,0.08); }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
-        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        html { overflow-wrap: anywhere; }
+        body { width: 100%; font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
         .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
         .nav a:hover { color: var(--text); }
         .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
-        .container { max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
+        .container { width: 100%; max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
         h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
         .subtitle { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
         h2 { font-size: 18px; font-weight: 700; margin: 32px 0 10px; color: var(--text); }
@@ -42,7 +43,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <main class="container">
         <h1>Support</h1>
         <p class="subtitle">Questions, feedback, or a takedown request? Send us a note.</p>
 
@@ -51,42 +52,26 @@
         <div class="contact-card">
             <h3>Contact Us</h3>
             <p>For help with SafePlate — scanning, allergen profiles, restaurants, allergy cards, subscriptions, account deletion, or anything else:</p>
-            <p class="email"><a href="mailto:safeplateapp@gmail.com">safeplateapp@gmail.com</a></p>
-            <p style="color:#5a6a7e; font-size:14px; margin-top:8px;">We typically respond within 24 hours on weekdays. <strong style="color:#C83737;">For a real allergy emergency, call 911.</strong></p>
+            <p class="email"><a href="mailto:contact@finndigital.net">contact@finndigital.net</a></p>
+            <p style="color:#5a6a7e; font-size:14px; margin-top:8px;">Contact us with your device type and a description of the issue. <strong style="color:#C83737;">For an emergency, call your local emergency number.</strong></p>
         </div>
 
         <h2>Frequently Asked Questions</h2>
-
-        <h3>How does SafePlate match allergens?</h3>
-        <p>SafePlate compares the ingredient text it reads against the FDA&rsquo;s 9 major allergen categories plus gluten, sesame, sulfites, and mustard, including common synonyms (whey for milk, hydrolyzed soy protein for soy, etc.). It is an informational tool that may miss, mislabel, or over-flag ingredients depending on photo quality, label legibility, regional reformulations, &ldquo;may contain&rdquo; cross-contamination warnings, and database completeness. <strong>Always read the manufacturer&rsquo;s label yourself</strong> &mdash; SafePlate is not a substitute for the manufacturer&rsquo;s allergen statement and is not a medical device.</p>
-
-        <h3>How do I add a family member with a different set of allergens?</h3>
-        <p>Profile tab &rsaquo; <em>+ Add Member</em>. You can add unlimited family members, each with their own allergens and the severity tier you assign (mild, moderate, severe, &ldquo;life-threatening&rdquo;). When you scan a product, the app highlights which configured allergens were matched against each profile so you can decide whether to serve it.</p>
-
-        <h3>What does SafePlate PRO unlock?</h3>
-        <p>PRO adds: ingredient health analysis, scan trends &amp; analytics, product side-by-side comparison, FDA recall alerts on items in your scan history, safe-recipe discovery, and (in the PLUS tier) a meal planner. Free trial is 7 days. Monthly $4.99, annual $39.99 (33% off), no commitment.</p>
-
-        <h3>What stays free forever?</h3>
-        <p>Unlimited barcode + label scans, AI food-photo recognition, restaurant menu scanner, GPS restaurant finder, allergy cards in 11 languages, multiple family profiles, EpiPen expiration reminders, and the SOS emergency screen. <strong>We will never put emergency features behind a paywall.</strong></p>
-
-        <h3>How do I cancel my subscription?</h3>
-        <p>iPhone <em>Settings</em> &rsaquo; tap your name &rsaquo; <em>Subscriptions</em> &rsaquo; <em>SafePlate</em>. PRO features stay active until the end of the current billing period.</p>
-
-        <h3>Restoring purchases on a new device</h3>
-        <p>Open SafePlate, go to <em>Profile &rsaquo; Manage Subscription &rsaquo; Restore Purchases</em>. Subscription is tied to your Apple ID and restores automatically.</p>
-
-        <h3>Allergy cards aren't showing in my language</h3>
-        <p>SafePlate ships with cards in 11 languages: English, Spanish, French, German, Italian, Portuguese, Mandarin, Japanese, Korean, Arabic, and Hindi. If your destination isn&rsquo;t covered, email us and we&rsquo;ll consider adding it.</p>
-
-        <h3>How do I delete my account?</h3>
-        <p>Profile &rsaquo; <em>Settings &rsaquo; Delete Account</em>. We permanently remove all family profiles, scan history, custom allergens, and saved cards. Data is erased within 30 days.</p>
-
-        <h3>Does SafePlate use my scans for AI training?</h3>
-        <p>No. Photos and barcodes are processed for the immediate result and stored only in your private scan history. We do not train any model on user uploads.</p>
-
+        <h3>How does SafePlate check ingredients?</h3>
+        <p>It compares available ingredient text with the allergies you configure. Photo recognition and product databases can be incomplete or wrong. Always check the manufacturer’s label and ask the person preparing the food about ingredients and cross-contact.</p>
+        <h3>What does PRO include?</h3>
+        <p>Open Manage Subscription in the app to see the current features, usage limits and store prices. Android offers monthly and annual subscriptions. Emergency tools and family allergy cards remain available without a subscription. Android’s local introductory trial does not charge automatically.</p>
+        <h3>How do I cancel or restore a subscription?</h3>
+        <p>On iOS, manage it in Settings → Subscriptions. On Android, use Google Play → Payments &amp; subscriptions → Subscriptions. In SafePlate Profile, Restore purchases checks the current store account. Use the original SafePlate account and the store account that made the purchase.</p>
+        <h3>How do family profiles and cards work?</h3>
+        <p>Add or edit profiles in the Profile tab. Android includes cards in 11 languages. A shared card contains the information you selected; anyone with the card link can read it. The browser card is a snapshot and does not update when you edit the original profile.</p>
+        <h3>How do I delete my data?</h3>
+        <p>Use the in-app account-deletion control or <a href="delete-account.html">request account and data deletion without the app</a>. Turning backup off or signing out does not delete cloud data. Cancel a store subscription separately.</p>
+        <h3>Does AI scanning upload my photo?</h3>
+        <p>Cloud AI scanning uploads the selected photo only after consent. Barcode detection and normal label text recognition run locally. Android does not offer offline food-photo recognition. Read the <a href="privacy.html">Privacy Policy</a> for backup, diagnostics and provider details.</p>
         <p style="margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 11px; color: var(--muted); line-height: 1.55;">SafePlate is an informational tool for personal allergen tracking. It is not a medical device, is not FDA cleared, and is not a substitute for reading the manufacturer&rsquo;s label or consulting a qualified medical professional. In an emergency, call 911.</p>
 
-    </div>
+    </main>
 
 </body>
 </html>
