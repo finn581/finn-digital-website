@@ -31,11 +31,11 @@
       "@context": "https://schema.org",
       "@type": "MobileApplication",
       "name": "SafePlate",
-      "operatingSystem": "iOS",
+      "operatingSystem": "iOS, Android",
       "applicationCategory": "LifestyleApplication",
       "description": "Informational allergen-tracking app for families: barcode and photo ingredient scanning, per-profile allergen highlighting, restaurant finder, allergy cards in 11 languages, FDA recall alerts. SafePlate is not a medical device.",
       "url": "https://finndigital.net/safeplate/",
-      "downloadUrl": "https://apps.apple.com/app/id6761733448",
+      "downloadUrl": ["https://apps.apple.com/app/id6761733448", "https://play.google.com/store/apps/details?id=com.finn581.safeplate"],
       "image": "https://finndigital.net/assets/icons/safeplate.png",
       "publisher": { "@type": "Organization", "name": "Finn Digital LLC", "url": "https://finndigital.net" },
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -128,6 +128,16 @@
             transition: transform 0.15s ease;
         }
         .cta:hover { transform: translateY(-2px); }
+        .store-badges {
+            display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+            margin-top: 8px;
+        }
+        .store-badges a {
+            display: inline-flex; line-height: 0; border-radius: 8px;
+            transition: transform 0.15s ease;
+        }
+        .store-badges a:hover { transform: translateY(-2px); }
+        .store-badges img { display: block; height: 48px; width: auto; }
         .links {
             display: flex; gap: 24px; flex-wrap: wrap;
             margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);
@@ -364,8 +374,15 @@
         </div>
 
         <h2>Get SafePlate</h2>
-        <p>Free on the iOS App Store. Universal app for iPhone and iPad. Optional SafePlate PRO unlocks the premium toolbox with a 7-day free trial.</p>
-        <a class="cta" href="https://apps.apple.com/app/id6761733448">Download on the App Store &rarr;</a>
+        <p>Free on the App Store (iPhone and iPad) and on Google Play. Optional SafePlate PRO unlocks the premium toolbox with a 7-day free trial.</p>
+        <div class="store-badges">
+            <a href="https://apps.apple.com/app/id6761733448" aria-label="Download SafePlate on the App Store">
+                <img src="/assets/app-store-badge.svg" alt="Download on the App Store" width="144" height="48" loading="lazy" decoding="async">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.finn581.safeplate&referrer=utm_source%3Dfinndigital%26utm_medium%3Dsite%26utm_campaign%3Dsafeplate-subpage" aria-label="Get SafePlate on Google Play">
+                <img src="/assets/google-play-badge.svg?v=2" alt="Get it on Google Play" width="162" height="48" loading="lazy" decoding="async">
+            </a>
+        </div>
 
         <div class="links">
             <a href="support.html">Support</a>

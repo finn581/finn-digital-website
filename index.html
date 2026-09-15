@@ -141,11 +141,11 @@
       "@context": "https://schema.org",
       "@type": "MobileApplication",
       "name": "SafePlate",
-      "operatingSystem": "iOS",
+      "operatingSystem": "iOS, Android",
       "applicationCategory": "LifestyleApplication",
       "description": "Informational allergen-tracking app for families: barcode and photo ingredient scanning, per-profile allergen highlighting, restaurant finder, allergy cards in 11 languages, FDA recall alerts. Not a medical device.",
       "url": "https://finndigital.net/safeplate/",
-      "downloadUrl": "https://apps.apple.com/app/id6761733448",
+      "downloadUrl": ["https://apps.apple.com/app/id6761733448", "https://play.google.com/store/apps/details?id=com.finn581.safeplate"],
       "image": "https://finndigital.net/assets/icons/safeplate.png",
       "publisher": { "@type": "Organization", "name": "Finn Digital LLC" },
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -363,9 +363,14 @@
                             <span>Learn more</span>
                             <span class="link-arrow">&rarr;</span>
                         </a>
-                        <a href="https://apps.apple.com/app/id6761733448" target="_blank" rel="noopener noreferrer" class="app-store-link" aria-label="Download SafePlate on the App Store">
-                            <img src="assets/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge" width="120" height="40" loading="lazy" decoding="async">
-                        </a>
+                        <span class="store-badge-pair">
+                            <a href="https://apps.apple.com/app/id6761733448" target="_blank" rel="noopener noreferrer" class="app-store-link" aria-label="Download SafePlate on the App Store">
+                                <img src="assets/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge" width="120" height="40" loading="lazy" decoding="async">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.finn581.safeplate&referrer=utm_source%3Dfinndigital%26utm_medium%3Dsite%26utm_campaign%3Dsafeplate-home" target="_blank" rel="noopener noreferrer" class="app-store-link" aria-label="Get SafePlate on Google Play">
+                                <img src="assets/google-play-badge.svg?v=2" alt="Get it on Google Play" class="app-store-badge" width="135" height="40" loading="lazy" decoding="async">
+                            </a>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -502,7 +507,7 @@
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat">
-                    <span class="stat-number">4</span>
+                    <span class="stat-number">5</span>
                     <span class="stat-label">Android Apps</span>
                 </div>
             </div>
