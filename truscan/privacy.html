@@ -4,13 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
-    <meta http-equiv="refresh" content="0; url=/truscan/privacy/">
-    <meta name="robots" content="noindex">
     <title>TruScan Privacy Policy</title>
-    <link rel="canonical" href="https://finndigital.net/truscan/privacy/">
+    <meta name="description" content="TruScan Privacy Policy — what stays on your iPhone, what cloud sync and AI enhancement send, and how to delete everything.">
+    <link rel="canonical" href="https://finndigital.net/truscan/privacy.html">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <style>
+        :root { --bg:#17140F; --surface:#201C15; --text:#F3EEE3; --muted:#A8A08F; --accent:#D4AF6E; --border:rgba(255,255,255,0.07); }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { overflow-wrap: anywhere; }
+        body { width: 100%; font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .nav { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid var(--border); }
+        .nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .nav a:hover { color: var(--text); }
+        .nav .brand { color: var(--accent); font-weight: 700; font-size: 16px; letter-spacing: 0.5px; }
+        .container { width: 100%; max-width: 720px; margin: 0 auto; padding: 48px 32px 80px; }
+        h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+        .updated { color: var(--muted); margin-bottom: 32px; font-size: 14px; }
+        h2 { font-size: 18px; font-weight: 700; margin: 32px 0 10px; color: var(--text); }
+        h3 { font-size: 16px; font-weight: 600; margin: 24px 0 8px; color: var(--text); }
+        p, li { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+        ul { padding-left: 24px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        strong { color: var(--text); }
+        @media (max-width: 600px) { .container { padding: 32px 20px 60px; } .nav { padding: 16px 20px; } }
+    </style>
 </head>
 <body>
-    <p>The TruScan Privacy Policy has moved to <a href="/truscan/privacy/">finndigital.net/truscan/privacy/</a>.</p>
+    <nav class="nav">
+        <a href="/" class="brand">Finn Digital</a>
+        <div>
+            <a href="/truscan/privacy.html">Privacy</a> &nbsp;
+            <a href="/truscan/terms.html">Terms</a> &nbsp;
+            <a href="mailto:contact@finndigital.net?subject=TruScan%20Support">Support</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Privacy Policy</h1>
+        <p class="updated">Effective: September 18, 2026</p>
+        <p>TruScan is published by Finn Digital LLC. This policy covers the TruScan iOS app and finndigital.net/truscan. Contact <a href="mailto:contact@finndigital.net">contact@finndigital.net</a> about privacy, access, correction or deletion.</p>
+
+        <h2>Scanning happens on your iPhone</h2>
+        <p>Capture, page-edge detection, perspective correction, image enhancement, text recognition (OCR), document classification and naming, passport and ID photo measurement, and machine-readable-zone reading all run <strong>on the device</strong>, using Apple&rsquo;s Vision framework and, on supported iPhones, Apple Intelligence. Scanning works with no account and no network connection.</p>
+        <p><strong>No scan leaves your phone unless you sign in and turn on cloud sync, or you use AI photo enhancement.</strong> Those two features are described below. Neither is required to use TruScan.</p>
+
+        <h2>Accounts and service identifiers</h2>
+        <p>TruScan uses Firebase Authentication. You can continue without a personal sign-in, in which case the app uses an anonymous Firebase account identifier for cloud requests, usage limits and service security. If you choose Sign in with Apple or Google sign-in, Firebase also processes the provider identifier and any name or email the provider supplies; an existing anonymous account is linked to it. We do not receive your Apple or Google password. Service requests expose ordinary network information, including your IP address, to the services handling them.</p>
+
+        <h2>Cloud sync</h2>
+        <p>Cloud sync is optional and off until you sign in with Apple or Google <em>and</em> hold a TruScan Pro subscription or the lifetime unlock. It is never on for an anonymous account and never on for the free tier. When it is on, the documents, pages and photographs you have scanned &mdash; the images and their metadata, including recognized text, titles and dates &mdash; are stored in Google Firebase (Cloud Firestore and Cloud Storage) on servers in the United States, under your account only. Your local library remains the offline copy on the device.</p>
+        <p>Turning sync off stops future synchronization; it does not by itself delete the copy already stored in your account. Deleting your account removes it &mdash; see Retention and deletion below.</p>
+
+        <h2>AI photo enhancement</h2>
+        <p>Enhancement is an optional, per-photograph action. The app asks for your consent before the first enhancement. When you enhance a photograph, TruScan uploads that photograph to your account and sends it through Finn Digital&rsquo;s enhancement service, which processes it with third-party AI models hosted by <a href="https://fal.ai/" rel="noopener" target="_blank">fal.ai</a>. The enhanced result is stored in your account alongside the original, and earlier versions are kept so you can go back.</p>
+        <p>What is kept, and where: the photograph you selected is stored in your account, the enhanced result is stored beside it, and every earlier version is kept so you can go back to one &mdash; until you delete the photograph in the app, or delete your account, at which point all of them go. Enhancement never touches your scanned <em>documents</em>: only a photograph you choose, one at a time. The request includes the app&rsquo;s authentication token and that one photograph. It does not include your document library. <strong>Your photographs are not used to train models</strong> &mdash; not by Finn Digital and not by the model providers under the terms we use. Provider-side processing, security and abuse-monitoring retention may apply while a request is handled.</p>
+
+        <h2>Advertising, tracking and analytics</h2>
+        <p>TruScan contains no advertising, no third-party advertising SDK and no tracking. It does not use an analytics SDK by default and does not request the advertising identifier. This version of TruScan links no crash-reporting or analytics SDK at all &mdash; there is nothing to opt out of. If a future version adds crash reporting it will be opt-in, and this page will say so before it ships. We do not sell personal data.</p>
+
+        <h2>Purchases</h2>
+        <p>Apple processes all payments. We receive the product, transaction and subscription-status information needed to verify access and restore purchases. We do not receive payment-card numbers or your Apple Account password.</p>
+
+        <h2>Photos, files and system permissions</h2>
+        <p>TruScan asks for camera access to scan, and for photo-library access only when you import a photograph or save an export. Files you export &mdash; PDFs and images &mdash; go where you send them; once shared, copies held by a recipient are outside the app&rsquo;s control.</p>
+
+        <h2>Retention and deletion</h2>
+        <p>Local scans stay on the device until you delete them or remove the app. Anything in your account stays until you delete it. <strong>Profile &rarr; Delete Account removes everything</strong>: the stored files, the document and photograph records, and the account itself. You may need to sign in again first. You can also request deletion by writing to <a href="mailto:contact@finndigital.net">contact@finndigital.net</a>; we verify ownership before acting on a request and aim to respond within 30 days.</p>
+        <p><strong>One account across our apps.</strong> TruScan and our photo-restoration app Revivo share a single Finn Digital account service. If you sign in to both with the same Apple ID or Google account, they are the <em>same</em> account &mdash; and deleting it from either app deletes what <em>both</em> apps have stored under it: TruScan&rsquo;s scans, pages and photographs, and Revivo&rsquo;s photographs, albums and versions. Each app&rsquo;s own on-device library is untouched by the deletion and stays on that device until you delete it there.</p>
+        <p>Limited transaction, fraud-prevention, security, backup and legally required records may remain where necessary. Deleting TruScan or your account does not cancel an App Store subscription; cancel that through Apple separately.</p>
+
+        <h2>Children</h2>
+        <p>TruScan is not directed at children under 13 and is not designed for unsupervised use by children. If you believe a child has provided information through the app, contact us and we will delete it.</p>
+
+        <h2>Changes</h2>
+        <p>We update the date on this page when the policy changes, and where practical announce material changes in the app.</p>
+
+        <h2>Contact</h2>
+        <p>Finn Digital LLC &mdash; <a href="mailto:contact@finndigital.net">contact@finndigital.net</a>.</p>
+    </main>
 </body>
 </html>
