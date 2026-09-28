@@ -52,6 +52,7 @@
     --color-revivo: #22d3ee;
     --color-disciplinematters: #c9a06b;
     --color-krate: #f59e0b;
+    --color-truscan: #2dd4bf;
 
     --font-display: 'Syne', sans-serif;
     --font-body: 'DM Sans', sans-serif;
@@ -223,6 +224,8 @@ a {
 .dot-disciplinematters:hover { box-shadow: 0 0 16px rgba(201, 160, 107, 0.6); }
 .dot-krate { background: var(--color-krate); }
 .dot-krate:hover { box-shadow: 0 0 16px rgba(245, 158, 11, 0.6); }
+.dot-truscan { background: var(--color-truscan); }
+.dot-truscan:hover { box-shadow: 0 0 16px rgba(45, 212, 191, 0.6); }
 
 .scroll-indicator {
     position: absolute;
