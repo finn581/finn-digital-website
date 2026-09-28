@@ -9,7 +9,7 @@
     <link rel="canonical" href="https://finndigital.net/truscan/privacy.html">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <style>
-        :root { --bg:#17140F; --surface:#201C15; --text:#F3EEE3; --muted:#A8A08F; --accent:#D4AF6E; --border:rgba(255,255,255,0.07); }
+        :root { --bg:#070d10; --surface:#0f181c; --text:#eef2f6; --muted:#8b98a8; --accent:#2dd4bf; --border:rgba(255,255,255,0.08); }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { overflow-wrap: anywhere; }
         body { width: 100%; font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
@@ -34,9 +34,10 @@
     <nav class="nav">
         <a href="/" class="brand">Finn Digital</a>
         <div>
+            <a href="/truscan/">About</a> &nbsp;
+            <a href="/truscan/support.html">Support</a> &nbsp;
             <a href="/truscan/privacy.html">Privacy</a> &nbsp;
-            <a href="/truscan/terms.html">Terms</a> &nbsp;
-            <a href="mailto:contact@finndigital.net?subject=TruScan%20Support">Support</a>
+            <a href="/truscan/terms.html">Terms</a>
         </div>
     </nav>
 
@@ -52,6 +53,7 @@
         <h2>The copy that stays on your iPhone</h2>
         <p><strong>Everything TruScan stores on the device is protected by iOS Data Protection.</strong> Your scans, their text, the database that indexes them and the temporary files an export is staged in are all written in the class Apple calls <em>complete unless open</em>: a file TruScan is not actively writing cannot be read while your iPhone is locked, including by anyone with the phone in their hand.</p>
         <p><strong>You can also put TruScan itself behind Face ID or Touch ID.</strong> In Profile &rarr; Privacy &amp; Security, &ldquo;Lock with Face ID&rdquo; asks for your face, fingerprint or passcode before the app will open, and you choose when it re-locks: immediately, or after 1, 5 or 15 minutes in the background. Whether or not that lock is on, TruScan covers its own screen when you leave the app, so your scans are not in the picture the iPhone puts in the app switcher.</p>
+        <p>TruScan can also list your scans in the iPhone&rsquo;s own Spotlight search, if <em>Show scans in Spotlight</em> is on in Profile &rarr; Privacy &amp; Security. A scan is listed by its title and kind. Only when TruScan has recognised it as an everyday document &mdash; a receipt, invoice, bill, letter, contract, notes or book &mdash; are the first three lines of its first page added, and not even then if that page looks like an ID (a driver&rsquo;s licence, a personal ID number, a heading such as &ldquo;Passport&rdquo; or &ldquo;Identity card&rdquo;, an ID&rsquo;s field labels such as DOB or EXP, or a passport&rsquo;s machine-readable zone) or the scan carries an ID&rsquo;s details. IDs, and anything TruScan hasn&rsquo;t recognised as an everyday document (a form, a business card, a tax or medical document, a certificate, or a scan TruScan could not classify), are listed by kind and title only, and their title is shown only if you typed it on this iPhone; otherwise it is listed by what it is (&ldquo;Passport&rdquo;, &ldquo;Scan&rdquo;). A photo is listed by its caption, if it has a short one, and its date. No image, file, tag or full text is ever indexed. The index is built and kept on your iPhone by iOS, under the same Data Protection as your scans, and it is never sent to us, whether or not your library is encrypted. Turning on the app lock turns it off and empties it, because an app you have locked must not answer the system search field with the titles of your documents. While the lock is on, Siri and Shortcuts cannot search your scans either, and on a locked iPhone Siri asks you to unlock it before it opens one.</p>
         <p>None of this is a promise about a phone with no passcode on it. Data Protection has nothing to lock with until you set one.</p>
 
         <h2>Accounts and service identifiers</h2>
