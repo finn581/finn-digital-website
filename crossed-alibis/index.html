@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossed Alibis — Crossword Mysteries for iOS &amp; Android</title>
+    <meta name="description" content="Solve words, uncover evidence, and catch the lie. Crossed Alibis includes 200 mystery cases and 100 championship crosswords for iPhone, iPad and Android. Play offline, with no ads or in-app purchases.">
+    <meta name="apple-itunes-app" content="app-id=6818844780">
+    <link rel="canonical" href="https://finndigital.net/crossed-alibis/">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <meta property="og:title" content="Crossed Alibis — Crosswords Meet Cozy Mysteries">
+    <meta property="og:description" content="Every word is a clue. Explore 200 mystery cases and 100 championship crosswords, all included and ready to play offline.">
+    <meta property="og:image" content="https://finndigital.net/assets/icons/crossed-alibis.png">
+    <meta property="og:image:alt" content="Crossed Alibis app icon: a magnifying glass over a crossword grid">
+    <meta property="og:url" content="https://finndigital.net/crossed-alibis/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Finn Digital">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Crossed Alibis — Crosswords Meet Cozy Mysteries">
+    <meta name="twitter:description" content="Solve the words. Find the contradiction. 300 puzzles included, with offline play and local competition.">
+    <meta name="twitter:image" content="https://finndigital.net/assets/icons/crossed-alibis.png">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Crossed Alibis",
+      "operatingSystem": "iOS, Android",
+      "applicationCategory": "GameApplication",
+      "description": "Crossword mysteries with 200 story cases and 100 championship puzzles. Solve words, uncover evidence, and find the contradiction. Play offline with no ads or in-app purchases.",
+      "url": "https://finndigital.net/crossed-alibis/",
+      "downloadUrl": [
+        "https://apps.apple.com/app/id6818844780",
+        "https://play.google.com/store/apps/details?id=com.crossedalibis.game"
+      ],
+      "image": "https://finndigital.net/assets/icons/crossed-alibis.png",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Finn Digital LLC",
+        "url": "https://finndigital.net"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "4.99",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Syne';
+            font-style: normal;
+            font-weight: 100 1000;
+            font-display: swap;
+            src: url('/assets/fonts/Syne.woff2') format('woff2-variations');
+        }
+
+        :root {
+            --bg: #101f1a;
+            --surface: #1b2d25;
+            --text: #e8f0e8;
+            --muted: #9aa89a;
+            --accent: #d7b975;
+            --border: rgba(255,255,255,0.08);
+            --font-display: 'Syne', -apple-system, sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .studio-header {
+            text-align: center;
+            padding: 40px 32px 0;
+        }
+        .studio-wordmark {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: clamp(28px, 4vw, 40px);
+            letter-spacing: -0.02em;
+            color: var(--text);
+            text-decoration: none;
+            display: inline-block;
+        }
+        .studio-wordmark .dot { color: var(--accent); }
+        .studio-nav {
+            display: flex; justify-content: center; align-items: center; gap: 24px;
+            padding: 16px 32px 24px; border-bottom: 1px solid var(--border);
+        }
+        .studio-nav a { color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+        .studio-nav a:hover { color: var(--text); }
+        .container { max-width: 820px; margin: 0 auto; padding: 60px 32px; }
+        .hero {
+            text-align: center; padding: 60px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 48px;
+        }
+        .hero-icon {
+            width: 160px; height: 160px; margin: 0 auto 28px;
+            border-radius: 36px;
+            box-shadow: 0 24px 64px rgba(215, 185, 117, 0.28);
+            display: block;
+        }
+        h1 {
+            font-size: 44px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px;
+            background: linear-gradient(135deg, #fff, #e8d6ad);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+        .tagline { font-size: 18px; color: var(--muted); max-width: 540px; margin: 0 auto; }
+        h2 {
+            font-size: 24px; font-weight: 700; margin: 48px 0 16px; color: var(--text);
+        }
+        p { color: var(--muted); margin-bottom: 16px; font-size: 15px; }
+        .features {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px; margin: 24px 0;
+        }
+        .feature {
+            background: var(--surface); padding: 20px; border-radius: 14px;
+            border: 1px solid var(--border);
+        }
+        .feature-icon { font-size: 28px; margin-bottom: 10px; }
+        .feature-title { color: var(--text); font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+        .feature-desc { color: var(--muted); font-size: 13px; line-height: 1.5; }
+        .cta {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: var(--accent); color: #101f1a; text-decoration: none;
+            padding: 14px 28px; border-radius: 999px; font-weight: 700;
+            font-size: 15px; margin-top: 8px;
+            transition: transform 0.15s ease;
+        }
+        .cta:hover { transform: translateY(-2px); }
+        .store-badges {
+            display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+            margin-top: 8px;
+        }
+        .store-badges a {
+            display: inline-flex; line-height: 0; border-radius: 8px;
+            transition: transform 0.15s ease;
+        }
+        .store-badges a:hover { transform: translateY(-2px); }
+        .store-badges img { display: block; height: 48px; width: auto; }
+        .links {
+            display: flex; gap: 24px; flex-wrap: wrap;
+            margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);
+        }
+        .links a { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 500; }
+        footer {
+            text-align: center; color: var(--muted); font-size: 12px;
+            padding: 40px 16px; border-top: 1px solid var(--border); margin-top: 60px;
+        }
+        footer a { color: var(--muted); text-decoration: none; margin: 0 8px; }
+        footer a:hover { color: var(--text); }
+        .promo-video {
+            position: relative;
+            width: 100%;
+            max-width: 820px;
+            margin: 0 auto 48px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--border);
+        }
+        .promo-video video {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .promo-label {
+            text-align: center;
+            font-size: 12px;
+            color: var(--muted);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin: 0 0 14px;
+        }
+        .promo-credit {
+            text-align: center;
+            font-size: 11px;
+            color: var(--muted);
+            margin: 12px 0 48px;
+            opacity: 0.7;
+        }
+        .promo-credit a { color: var(--muted); text-decoration: underline; }
+        .promo-credit a:hover { color: var(--text); }
+        .demo-clip {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            border-radius: 24px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--border);
+        }
+        .demo-clip video {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    
+        @media (max-width: 400px) {
+            .studio-header { padding-left: 16px; padding-right: 16px; }
+            .studio-wordmark { font-size: clamp(22px, 7vw, 28px); }
+            .studio-nav { gap: 16px; padding-left: 16px; padding-right: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="studio-header">
+        <a href="/" class="studio-wordmark">FINN<span class="dot">.</span>DIGITAL</a>
+    </header>
+    <nav class="studio-nav" aria-label="App information">
+        <a href="support/">Support</a>
+        <a href="privacy/">Privacy</a>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <picture>
+                <source srcset="/assets/icons/crossed-alibis.webp" type="image/webp">
+                <img class="hero-icon" src="/assets/icons/crossed-alibis.png" alt="Crossed Alibis app icon" width="160" height="160">
+            </picture>
+            <h1>Crossed Alibis</h1>
+            <p class="tagline">Every word is a clue. Every alibi has a story. Crosswords meet cozy mysteries, on iPhone, iPad and Android.</p>
+        </section>
+
+        <h2>Solve the words. Find the contradiction.</h2>
+        <p>Step into the Bellwether Agency, where each crossword opens a new investigation. Fill the eight-clue grid, uncover four evidence exhibits, and compare three witness accounts. Connect a witness with the two records that reveal a story that doesn’t add up.</p>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon" aria-hidden="true">🔎</div>
+                <div class="feature-title">200 mystery cases</div>
+                <div class="feature-desc">Explore 20 atmospheric collections, from quiet libraries to faraway expeditions. Close cases to unlock ten connected scenes of The Missing Page.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon" aria-hidden="true">✏️</div>
+                <div class="feature-title">Your level, your pace</div>
+                <div class="feature-desc">Choose Easy, Medium or Hard for story cases. Start with gentle guidance or take on wordplay clues and sealed evidence. A daily dispatch revisits the included casebook.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon" aria-hidden="true">🏆</div>
+                <div class="feature-title">100 championship crosswords</div>
+                <div class="feature-desc">Take on Expert, Master and Grandmaster grids. Up to eight local players can compare earned rankings on one device. No online rivals or account required.</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon" aria-hidden="true">📖</div>
+                <div class="feature-title">Your casebook, anywhere</div>
+                <div class="feature-desc">Play offline from the first launch. Keep field notes, save progress automatically, and export a backup. Larger reading text and reduced motion help you settle in.</div>
+            </div>
+        </div>
+
+        <h2>Get Crossed Alibis</h2>
+        <p>Available on the App Store and Google Play. One purchase includes all 300 puzzles. No ads, subscriptions or in-app purchases.</p>
+        <div class="store-badges">
+            <a href="https://apps.apple.com/app/id6818844780" aria-label="Download Crossed Alibis on the App Store">
+                <img src="/assets/app-store-badge.svg" alt="Download on the App Store" width="144" height="48" loading="lazy" decoding="async">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.crossedalibis.game&amp;referrer=utm_source%3Dfinndigital%26utm_medium%3Dsite%26utm_campaign%3Dcrossed-alibis-subpage" aria-label="Get Crossed Alibis on Google Play">
+                <img src="/assets/google-play-badge.svg?v=2" alt="Get it on Google Play" width="162" height="48" loading="lazy" decoding="async">
+            </a>
+        </div>
+
+        <div class="links">
+            <a href="support/">Support</a>
+            <a href="privacy/">Privacy Policy</a>
+            <a href="/">Finn Digital</a>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 Finn Digital LLC · <a href="/">finndigital.net</a> · <a href="mailto:contact@finndigital.net">Contact</a>
+        <div style="margin-top: 8px; font-size: 10px; opacity: 0.6;">Google Play and the Google Play logo are trademarks of Google LLC. App Store is a trademark of Apple Inc.</div>
+    </footer>
+</body>
+</html>

@@ -53,6 +53,7 @@
     --color-disciplinematters: #c9a06b;
     --color-krate: #f59e0b;
     --color-truscan: #2dd4bf;
+    --color-crossed-alibis: #d7b975;
 
     --font-display: 'Syne', sans-serif;
     --font-body: 'DM Sans', sans-serif;
@@ -226,6 +227,8 @@ a {
 .dot-krate:hover { box-shadow: 0 0 16px rgba(245, 158, 11, 0.6); }
 .dot-truscan { background: var(--color-truscan); }
 .dot-truscan:hover { box-shadow: 0 0 16px rgba(45, 212, 191, 0.6); }
+.dot-crossed-alibis { background: var(--color-crossed-alibis); }
+.dot-crossed-alibis:hover { box-shadow: 0 0 16px rgba(215, 185, 117, 0.6); }
 
 .scroll-indicator {
     position: absolute;
