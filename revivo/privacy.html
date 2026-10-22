@@ -42,19 +42,19 @@
 
     <div class="container">
         <h1>Privacy Policy</h1>
-                <p class="updated">Last updated: April 23, 2026</p>
+                <p class="updated">Last updated: October 22, 2026</p>
         
-                <p>Revivo ("we", "our", or "us") is operated by Finn Digital LLC. This privacy policy explains what information we collect, how we use it, which third parties receive it, and the choices you have. It applies to the Revivo iOS app and the website revivo.app.</p>
+                <p>Revivo ("we", "our", or "us") is operated by Finn Digital LLC. This privacy policy explains what information we collect, how we use it, which third parties receive it, and the choices you have. It applies to the Revivo Android and iOS apps and the Revivo pages at finndigital.net.</p>
         
                 <h2>Information We Collect</h2>
                 <ul>
                     <li><strong>Photos you upload.</strong> Images you choose to enhance or animate are uploaded to our secure cloud storage so the AI pipeline can process them. You remain the owner of your photos at all times. Photos are linked to your Revivo user identifier.</li>
-                    <li><strong>Face detection results.</strong> Before upload, Revivo uses Apple's on-device Vision framework to detect whether a face is present in your photo and its bounding rectangle. This face detection runs locally on your device. No face-print, face embedding, face signature, or biometric identifier is generated, stored, or transmitted. When a face is present and you have chosen to restore it, the image pixels are sent to our face-restoration provider (see Third-Party AI Providers below) solely to produce a higher-quality result, not to identify the person.</li>
+                    <li><strong>Face processing and optional People profiles.</strong> Face detection runs on your device. If you choose People profiles, Revivo calculates a numeric face representation on the device and stores it in your account with the name and reference photos you supply. This supports matching people in your saved library and optional appearance preservation. Animation with a selected person may send reference photos to Replicate. Delete a People profile from its detail screen, or request account deletion to remove all profiles.</li>
                     <li><strong>Account identifiers.</strong> When you sign in with Apple or Google (optional), we receive a Firebase User ID and, for Apple, optionally a name and relay email address. If you do not sign in, we use an anonymous Firebase user ID that is not linked to any personal identity.</li>
-                    <li><strong>Subscription status.</strong> Apple tells us whether you have an active Revivo subscription and at what tier. We never receive your payment card, Apple ID, or billing details.</li>
-                    <li><strong>Diagnostic data.</strong> If the app crashes, we collect anonymous crash reports via Firebase Crashlytics to diagnose and fix the problem.</li>
+                    <li><strong>Subscription status.</strong> Google Play or the App Store provides purchase information used to verify access and deliver credits. On Android, Revivo processes product IDs, purchase tokens and order references, and sends Google Play a hashed Revivo account identifier. The stores process payment details; Revivo does not receive your payment-card number.</li>
+                    <li><strong>Diagnostic data.</strong> If the app crashes, we collect crash reports and diagnostic identifiers via Firebase Crashlytics to diagnose and fix the problem.</li>
                     <li><strong>Performance data.</strong> Aggregated, non-personally-identifying timing metrics via Firebase Performance Monitoring.</li>
-                    <li><strong>Device information.</strong> Basic device model and iOS version, for compatibility and bug reports.</li>
+                    <li><strong>Device information.</strong> Basic device model and Android or iOS version, for compatibility and bug reports.</li>
                 </ul>
         
                 <h2>How We Use Your Information</h2>
@@ -73,31 +73,32 @@
                     <li>We do <strong>not</strong> train any AI models on your photos.</li>
                     <li>We do <strong>not</strong> sell your personal data or photos to anyone.</li>
                     <li>We do <strong>not</strong> use your data for third-party advertising, cross-app tracking, or ad targeting.</li>
-                    <li>We do <strong>not</strong> share your photos publicly or with other Revivo users.</li>
-                    <li>We do <strong>not</strong> perform face recognition, biometric identification, or any attempt to identify individuals from their photos.</li>
+                    <li>You can deliberately share photos, videos, albums or download links. Anyone with an exported copy or a working download link may access that content. Revivo cannot remove copies other people have saved.</li>
+                    <li>People matching is optional and uses the profiles you create; see the face-processing disclosure above.</li>
                 </ul>
         
                 <h2>Third-Party Sub-Processors</h2>
-                <p>Revivo uses the following third-party services to deliver the app. Each provider receives only the data needed to perform its specific function and is contractually prohibited from retaining or training on your content beyond the duration of the request.</p>
+                <p>Revivo uses the following third-party services to deliver the app. The data sent depends on the feature you select. The linked provider policies describe their processing and retention terms.</p>
                 <ul>
-                    <li><strong>fal.ai</strong> (photo restoration via NAFNet and CodeFormer; short-form animation via Kling 2.6 Pro). Receives: the image pixels you submit for enhancement or animation. <a href="https://fal.ai/privacy-policy" target="_blank" rel="noopener">fal.ai privacy policy</a>.</li>
-                    <li><strong>Replicate</strong> (upscaling via Real-ESRGAN; colorization via DDColor). Receives: the image pixels you submit for enhancement. <a href="https://replicate.com/privacy" target="_blank" rel="noopener">Replicate privacy policy</a>.</li>
+                    <li><strong>fal.ai</strong> (restoration, colorization, upscaling, Super Enhance and animation). Receives: the image pixels you submit for enhancement or animation. <a href="https://fal.ai/privacy-policy" target="_blank" rel="noopener">fal.ai privacy policy</a>.</li>
+                    <li><strong>Replicate</strong> (optional appearance preservation during animation). Receives: selected reference photos and the source photo when using that feature. <a href="https://replicate.com/privacy" target="_blank" rel="noopener">Replicate privacy policy</a>.</li>
                     <li><strong>Anthropic</strong> (Claude, for caption and reel-script generation). Receives: short textual prompts describing your photo and optionally a low-resolution version of the enhanced image. <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic privacy policy</a>.</li>
-                    <li><strong>ElevenLabs</strong> (voice synthesis for narrated reels). Receives: the reel-script text you requested to narrate. It does not receive your photos. <a href="https://elevenlabs.io/privacy-policy" target="_blank" rel="noopener">ElevenLabs privacy policy</a>.</li>
+                    <li><strong>Google Gemini</strong> (voice synthesis for narrated reels). Receives: the reel-script text you requested to narrate. It does not receive your photos. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google privacy policy</a>.</li>
                     <li><strong>Google Firebase</strong> (Authentication, Firestore, Cloud Storage, Cloud Functions, Crashlytics, Performance Monitoring). Hosts your Revivo account, photos, and app metadata in the US region. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy policy</a>.</li>
+                    <li><strong>Google Play</strong> (Android purchases and subscription verification). <a href="https://policies.google.com/privacy">Google privacy policy</a>.</li>
                     <li><strong>Apple</strong> (StoreKit for subscriptions; Sign in with Apple for optional account). Handles payments and, if chosen, provides your Apple-relay email. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple privacy policy</a>.</li>
                 </ul>
                 <p>Before your first photo upload, Revivo presents an in-app consent sheet that discloses these sub-processors and requires your affirmative acceptance.</p>
         
                 <h2>Data Storage &amp; Retention</h2>
                 <p>Your photos and restored results are stored in Google Firebase Storage (US region). Metadata about your photos, albums, and captions is stored in Firestore. All data is encrypted in transit (TLS 1.2+) and at rest.</p>
-                <p>You can delete individual photos, albums, or your entire account at any time from Settings &rsaquo; Delete Account. When you delete a photo or your account, the item is removed from the Revivo app immediately and from Firebase Storage and Firestore within 24 hours. Backup copies made for disaster recovery purposes are purged within 30 days. After 30 days, no copy of your deleted content remains in any Revivo system.</p>
-                <p>Third-party sub-processors process your photos transiently to return the enhanced result and do not retain copies after the request completes.</p>
-                <p>Anonymous crash and performance data is retained for up to 90 days in aggregate form and cannot be linked back to you.</p>
-        
+                <p>Request photo or account deletion in the app, or use the <a href="delete-account.html">web deletion request process</a>. Account deletion covers photos, restored versions, animation files, People profiles and references, albums and sharing records. Deletion is performed by a server process so closing the app does not cancel an accepted request. Limited purchase-verification and deletion records may be retained to prevent duplicate credit claims and enforce deletion; these do not include the deleted photos.</p>
+                <p>Third-party provider retention follows the provider terms linked above. A completed request cannot withdraw copies already exported or saved by a recipient. Contact us about a deletion request that has not completed.</p>
+                <p>In-app AI reports contain your chosen reason, description, account identifier and any referenced content IDs. Authorized support staff can review these reports. Reports expire after 90 days and are removed as part of account deletion.</p>
+
                 <h2>Photo Animation &amp; AI Content</h2>
                 <p>Revivo uses generative AI to animate still photos into short video clips. You retain ownership of animated outputs for personal use. When sharing AI-generated animations publicly, we recommend disclosing that the content was AI-generated. Do not use Revivo to animate a photo of a living person without their knowledge or consent.</p>
-                <p>If a photo or animation violates someone's rights (for example, a photo used without consent), please email <a href="mailto:revivoapp@gmail.com">revivoapp@gmail.com</a> with the subject line "Takedown Request" and we will remove the content within 48 hours in accordance with the TAKE IT DOWN Act.</p>
+                <p>If a photo or animation violates someone's rights (for example, a photo used without consent), please email <a href="mailto:support@finndigital.net">support@finndigital.net</a> with the subject line "Takedown Request" and we will remove the content within 48 hours in accordance with the TAKE IT DOWN Act.</p>
         
                 <h2>Your Rights</h2>
                 <p>You may:</p>
@@ -108,7 +109,7 @@
                     <li>Withdraw consent to third-party AI processing (this disables enhancement but the app still runs)</li>
                     <li>Delete your account and all associated data at any time from Settings &rsaquo; Delete Account</li>
                 </ul>
-                <p>California residents (CCPA/CPRA) and residents of the European Economic Area, United Kingdom, and Switzerland (GDPR) have additional rights including the right to know what personal information we collect, the right to data portability, the right to delete, and the right not to be discriminated against for exercising those rights. To exercise any of these rights, contact us at <a href="mailto:revivoapp@gmail.com">revivoapp@gmail.com</a>. We will respond within 30 days.</p>
+                <p>California residents (CCPA/CPRA) and residents of the European Economic Area, United Kingdom, and Switzerland (GDPR) have additional rights including the right to know what personal information we collect, the right to data portability, the right to delete, and the right not to be discriminated against for exercising those rights. To exercise any of these rights, contact us at <a href="mailto:support@finndigital.net">support@finndigital.net</a>. We will respond within 30 days.</p>
                 <p>We do not "sell" personal information as defined by the CCPA/CPRA.</p>
         
                 <h2>International Data Transfers</h2>
@@ -125,7 +126,7 @@
         
                 <h2>Contact Us</h2>
                 <p>Finn Digital LLC<br>
-                Email: <a href="mailto:revivoapp@gmail.com">revivoapp@gmail.com</a></p>
+                Email: <a href="mailto:support@finndigital.net">support@finndigital.net</a></p>
         
             </div>
     </div>
