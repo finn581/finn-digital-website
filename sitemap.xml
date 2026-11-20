@@ -242,7 +242,7 @@
     </url>
     <url>
         <loc>https://finndigital.net/truscan/privacy.html</loc>
-        <lastmod>2026-09-28</lastmod>
+        <lastmod>2026-11-20</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
@@ -253,10 +253,22 @@
         <priority>0.3</priority>
     </url>
     <url>
+        <loc>https://finndigital.net/truscan/terms-android.html</loc>
+        <lastmod>2026-11-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
         <loc>https://finndigital.net/truscan/support.html</loc>
-        <lastmod>2026-09-28</lastmod>
+        <lastmod>2026-11-20</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://finndigital.net/truscan/delete-account.html</loc>
+        <lastmod>2026-11-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
     </url>
   <url><loc>https://finndigital.net/truehue/colors/</loc></url>
     <url>
